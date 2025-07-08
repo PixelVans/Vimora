@@ -1,7 +1,7 @@
 import Navbar from "@components/Navbar";
 import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2,FileText, Globe, Layers3, UserCircle2,
   Repeat, Zap, Settings2, Palette, Twitter, Facebook, Youtube, Instagram,
-  Database, ShieldCheck,  ShoppingCart } from "lucide-react";
+  Database, ShieldCheck,  ShoppingCart,CheckCircle } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -25,37 +25,37 @@ const testimonials = [
     name: "Marisela A.",
     title: "Owner - Twin Lakes Photography",
     quote: "The pay as you go plan is so much better. I did the math and I'm saving like, 70% on delivery costs. Works good, I'm happy.",
-    image: "/avatars/marisela.jpg",
+    image: "/profiles/p2.jpg",
   },
   {
     name: "Christina E.",
     title: "Owner - Marketplace Photography",
     quote: "My clients LOVE LOVE LOVE VIMORA. Some realtors aren't really that techy, so having an interface that's designed so ANYONE can use it is just so helpful.",
-    image: "/avatars/christina.jpg",
+    image: "/profiles/null.png",
   },
   {
     name: "Justin T.",
     title: "Owner - Chicago REP",
     quote: "VIMORA just works so much better. I moved from photohub and it just looks so clean, and I'm paying LESS.",
-    image: "/avatars/justin.jpg",
+    image: "/profiles/p4.jpg",
   },
   {
     name: "Ronald M.",
     title: "Owner - SnapHome Media",
     quote: "It's clean, it's cheap, and the invoices with line items make my clients so much happier.",
-    image: "/avatars/ronald.jpg",
+    image: "/profiles/null.png",
   },
   {
     name: "Thomas T.",
     title: "Owner - Pen RE Media Group",
     quote: "Easy to use and snappy. I like them property websites.",
-    image: "/avatars/thomas.jpg",
+    image: "/profiles/null.png",
   },
   {
     name: "JJ.",
     title: "Owner - Pen RE Media Group",
     quote: "Easy to use and snappy. I like them property websites.",
-    image: "/avatars/thomas.jpg",
+    image: "/profiles/null.png",
   },
 ];
 
@@ -94,7 +94,7 @@ function MarqueeRow({ items, reverse = false, speed = 50 }: MarqueeRowProps) {
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-9 h-9 rounded-full object-cover border border-blue-500"
+                className="w-9 h-9 rounded-full object-cover border border-slate-900"
               />
               <div>
                 <p className="font-semibold text-slate-800">{t.name}</p>
@@ -155,10 +155,10 @@ export default function LandingPage() {
       
       {/* propelling section */}
 
-    <section className="bg-slate-100 py-20 px-6 rounded-t-[250px] rounded-tl-none shadow-md">
+    <section className="bg-slate-100 py-20 px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:rounded-tr-[250px]  shadow-md">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-950 to-blue-600 text-transparent bg-clip-text">
+        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
       Propelling You Forward.
     </h2>
 
@@ -209,53 +209,53 @@ export default function LandingPage() {
       </section>
       
 
-      <section className="bg-white py-24 px-6 md:px-9">
-  <div className="max-w-full mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r
+      <section className="bg-white py-24 px-0 md:px-9">
+      <div className="max-w-full mx-auto">
+          <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r
      from-blue-500 to-blue-700 text-transparent bg-clip-text">
-      Over 650,000 Images Delivered
+        Over <span className="text-blue-900">650,000</span>  Images Delivered
           </h2>
           <div className="text-center mb-12">
-  <h3 className="text-2xl sm:text-3xl font-semibold text-slate-800 mb-2">
-  The Proof Is in the Platform
-  </h3>
-  <p className="text-slate-600 text-lg">
-    Real feedback from real professionals who rely on VIMORA every day.
-  </p>
-</div>
+          <h3 className="text-2xl sm:text-3xl font-semibold text-slate-800 mb-2 px-6">
+          The Proof Is in the Platform
+          </h3>
+          <p className="text-slate-600 text-lg px-6">
+            Real feedback from real professionals who rely on VIMORA every day.
+          </p>
+        </div>
 
-    {/* Gradient wrapper */}
-    <div className="relative overflow-hidden">
-      {/* Left Gradient */}
-      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+            {/* Gradient wrapper */}
+            <div className="relative overflow-hidden">
+              {/* Left Gradient */}
+              <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
 
-      {/* Right Gradient */}
-      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+              {/* Right Gradient */}
+              <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
-      {/* Marquee rows */}
-      <div className="space-y-8">
-        <MarqueeRow items={testimonials} speed={60} />
-        <MarqueeRow items={testimonials} speed={40} />
-      </div>
-    </div>
-  </div>
+              {/* Marquee rows */}
+              <div className="space-y-8">
+                <MarqueeRow items={testimonials} speed={60} />
+                <MarqueeRow items={testimonials} speed={40} />
+              </div>
+            </div>
+          </div>
       </section>
       
 
 
       {/* key feature of vimora */}
-      <section className="bg-slate-50 py-20 px-6">
+      <section className="bg-slate-50 py-20 px-6 shadow">
   <div className="max-w-7xl mx-auto text-center">
     <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter">
       Key VIMORA Features
     </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 text-left divide-y sm:divide-y-0 
-    sm:divide-x border-t border-slate-300 divide-slate-300 pt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-5 sm:mt-12 text-left divide-y sm:divide-y-0 
+    sm:divide-x border-t border-slate-300 divide-slate-300 pt-10 ">
       
       {/* Feature Item */}
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <FileText className="w-8 h-8 text-blue-600" />
+        <FileText className="w-8 h-8 text-blue-600 " />
         <h3 className="font-semibold text-slate-900">Line-Itemed Invoices</h3>
         <p className="text-sm text-slate-600">
           Never chase payments again. VIMORA generates line-itemed invoices and collects payment before download.
@@ -263,7 +263,7 @@ export default function LandingPage() {
       </div>
 
             <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Globe className="w-8 h-8 text-blue-600" />
+        <Globe className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Premium Property Websites</h3>
         <p className="text-sm text-slate-600">
           Beautiful, mobile-friendly listing sites included in Growth and Pro tiers — all at no additional cost!
@@ -271,7 +271,7 @@ export default function LandingPage() {
       </div>
 
             <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Layers3 className="w-8 h-8 text-blue-600" />
+        <Layers3 className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Built For Scale</h3>
         <p className="text-sm text-slate-600">
           Whether you're solo or managing 20+, VIMORA handles media, payments, edits, and scheduling in one place.
@@ -279,7 +279,7 @@ export default function LandingPage() {
       </div>
 
             <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <UserCircle2 className="w-8 h-8 text-blue-600" />
+        <UserCircle2 className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Modern Client Portals</h3>
         <p className="text-sm text-slate-600">
           Branded, easy-to-use delivery pages with everything your clients need — photos, videos, floor plans, and links.
@@ -287,7 +287,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Repeat className="w-8 h-8 text-blue-600" />
+        <Repeat className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Built-In Revision System</h3>
         <p className="text-sm text-slate-600">
           Let clients request sky swaps, object removals, or special edits — with optional add-on charges.
@@ -295,7 +295,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Zap className="w-8 h-8 text-blue-600" />
+        <Zap className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Clean, Lightning-Fast UX</h3>
         <p className="text-sm text-slate-600">
           Built for 2025 & beyond. No bloated menus or clunky dashboards — just speed and simplicity.
@@ -303,7 +303,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Settings2 className="w-8 h-8 text-blue-600" />
+        <Settings2 className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Ultimate Flexibility</h3>
         <p className="text-sm text-slate-600">
           Flexible pricing for creators and teams — use what you need. Unused credits roll over!
@@ -311,7 +311,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Palette className="w-8 h-8 text-blue-600" />
+        <Palette className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Branded Delivery</h3>
         <p className="text-sm text-slate-600">
           Your logo. Your colors. Your domain. VIMORA puts your brand front and center.
@@ -319,7 +319,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Database className="w-8 h-8 text-blue-600" />
+        <Database className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Storage Transparency</h3>
         <p className="text-sm text-slate-600">
           One month of active access, eleven months archived, then optional deletion or extension.
@@ -327,7 +327,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <ShieldCheck className="w-8 h-8 text-blue-600" />
+        <ShieldCheck className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Team Permissions & Roles</h3>
         <p className="text-sm text-slate-600">
           Assign roles for admins, shooters, editors — perfect for media companies and brokerages.
@@ -335,7 +335,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Users className="w-8 h-8 text-blue-600" />
+        <Users className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Referral & Affiliate Tools</h3>
         <p className="text-sm text-slate-600">
           Reward loyal clients and attract new ones with built-in affiliate tracking and free months of VIMORA.
@@ -343,7 +343,7 @@ export default function LandingPage() {
       </div>
 
       <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <ShoppingCart className="w-8 h-8 text-blue-600" />
+        <ShoppingCart className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
         <h3 className="font-semibold text-slate-900">Enhanced Shopping Cart</h3>
         <p className="text-sm text-slate-600">
           Smart upsells increase your AOV — give your clients more value and earn more per sale.
@@ -358,8 +358,8 @@ export default function LandingPage() {
 
 
   
-      {/* pricing section */}
-      <section className="container rounded-3xl py-24 px-6 bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
+  {/* pricing section */}
+<section className="container rounded-3xl py-24 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
   <div className="max-w-6xl mx-auto text-center">
     <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter">
       Find the Right Plan for You
@@ -369,16 +369,16 @@ export default function LandingPage() {
     </p>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-      
+
       {/* Pay As You Go */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
         <div className="text-4xl font-bold text-blue-600 mb-1">$3</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
-          <li> No Subscription</li>
-          <li> Predictable Costs</li>
-          <li> Standard Support</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Subscription</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Predictable Costs</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support</li>
         </ul>
         <button className="mt-6 bg-blue-600 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
@@ -390,10 +390,10 @@ export default function LandingPage() {
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Solo</h3>
         <div className="text-4xl font-bold text-blue-600 mb-1">$40</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per month</p>
-        <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left ">
-          <li>15 Deliveries</li>
-          <li>Roll Over Listings</li>
-          <li> Standard Support</li>
+        <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 15 Deliveries</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Roll Over Listings</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support</li>
         </ul>
         <button className="mt-6 bg-blue-600 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
@@ -401,19 +401,19 @@ export default function LandingPage() {
       </div>
 
       {/* Growth — FEATURED */}
-            <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white rounded-2xl p-8 shadow-xl 
-      transform scale-105 flex flex-col z-10">
-        <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-3 py-1 rounded-br-xl rounded-tl-xl">
+            <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white rounded-2xl p-8 mx-3 sm:mx-0
+      shadow-xl transform scale-105 flex flex-col z-10">
+        <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-4 py-1 rounded-br-xl rounded-tl-xl">
           Most Popular
         </div>
         <h3 className="text-lg font-semibold mb-2">Growth</h3>
         <div className="text-4xl font-bold mb-1">$70</div>
         <p className="text-sm mb-6">per month</p>
-        <ul className="text-sm space-y-2 flex-1 text-left ">
-          <li> 40 Monthly Deliveries</li>
-          <li> Property Sites Included</li>
-          <li> Roll Over Listings</li>
-          <li> Standard Support</li>
+        <ul className="text-sm space-y-2 flex-1 text-left">
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> 40 Monthly Deliveries</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> Property Sites Included</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> Roll Over Listings</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> Standard Support</li>
         </ul>
         <button className="mt-6 bg-white text-blue-600 rounded-md py-2 px-4 font-medium hover:bg-slate-100 transition">
           Get Started
@@ -426,14 +426,15 @@ export default function LandingPage() {
         <div className="text-4xl font-bold text-blue-600 mb-1">$120</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per month</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
-          <li> 100 Monthly Deliveries</li>
-          <li> Roll Over Listings</li>
-          <li> Dedicated Support</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 100 Monthly Deliveries</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Roll Over Listings</li>
+          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Dedicated Support</li>
         </ul>
         <button className="mt-6 bg-blue-600 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
         </button>
       </div>
+
     </div>
   </div>
 </section>
@@ -495,10 +496,10 @@ export default function LandingPage() {
       </section>
       
 
-  <section className="bg-blue-50 py-20 px-6 rounded-t-[200px]">
+  <section className="bg-blue-50 py-20 px-6 rounded-t-[140px] md:rounded-t-[200px]">
   <div className="max-w-5xl mx-auto text-center">
     <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
-      Everything You Need. <br className="hidden sm:block" /> Nothing You Don’t.
+      Everything You Need. <br className="hidden sm:block" /> <span className="text-blue-950">Nothing You Don’t.</span>
     </h2>
     <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
       VIMORA cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
@@ -519,13 +520,13 @@ export default function LandingPage() {
       ].map((item, idx) => (
         <div
           key={idx}
-          className="flex items-center space-x-3 text-slate-700 text-base"
+          className="flex items-center space-x-3 text-slate-900 text-base"
           data-aos="fade-up"
           data-aos-delay={idx * 50}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-blue-600 flex-shrink-0"
+            className="h-5 w-5 text-blue-700 flex-shrink-0"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
