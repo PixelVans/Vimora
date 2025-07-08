@@ -118,7 +118,7 @@ export default function LandingPage() {
     
     {/* Text Content */}
     <div className="space-y-6 lg:space-y-9">
-      <div className="text-4xl sm:text-5xl font-bold leading-tight font-inter text-slate-800 flex flex-col space-y-2 ">
+      <div className="text-3xl sm:text-5xl mt-5 font-bold leading-tight font-inter text-slate-800 flex flex-col sm:space-y-2 ">
         <h1>Better than Spiro.</h1>
         <h1>Cheaper than Aryeo.</h1>
         <h1 className="text-primary">Easier than Both.</h1>
@@ -158,7 +158,7 @@ export default function LandingPage() {
     <section className="bg-slate-100 py-20 px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:rounded-tr-[250px]  shadow-md">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
+        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-400 text-transparent bg-clip-text">
       Propelling You Forward.
     </h2>
 
@@ -246,7 +246,7 @@ export default function LandingPage() {
       {/* key feature of vimora */}
       <section className="bg-slate-50 py-20 px-6 shadow">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter">
+    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Key VIMORA Features
     </h2>
 
@@ -361,7 +361,7 @@ export default function LandingPage() {
   {/* pricing section */}
 <section className="container rounded-3xl py-24 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
   <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter">
+    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Find the Right Plan for You
     </h2>
     <p className="text-slate-600 text-lg mb-16">
@@ -445,7 +445,7 @@ export default function LandingPage() {
 <section className="bg-white py-20 px-6">
   <div className="max-w-6xl mx-auto text-center">
     {/* Heading */}
-    <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter">
+    <h2 className="text-3xl sm:text-4xl  font-bold text-slate-900 mb-4 font-inter">
       Who VIMORA is For
     </h2>
 
@@ -496,9 +496,9 @@ export default function LandingPage() {
       </section>
       
 
-  <section className="bg-blue-50 py-20 px-6 rounded-t-[140px] md:rounded-t-[200px]">
+  <section className="bg-blue-50 py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
   <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
+    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
       Everything You Need. <br className="hidden sm:block" /> <span className="text-blue-950">Nothing You Don’t.</span>
     </h2>
     <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
