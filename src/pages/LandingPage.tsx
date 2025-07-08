@@ -1,9 +1,23 @@
 import Navbar from "@components/Navbar";
 import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2,FileText, Globe, Layers3, UserCircle2,
-  Repeat, Zap, Settings2, Palette,CheckCircle2,Mail, Twitter, Facebook, Youtube, Instagram,
+  Repeat, Zap, Settings2, Palette, Twitter, Facebook, Youtube, Instagram,
   Database, ShieldCheck,  ShoppingCart } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+
+
+type MarqueeItem = {
+  image: string;
+  name: string;
+  title: string;
+  quote: string;
+};
+
+type MarqueeRowProps = {
+  items: MarqueeItem[];
+  reverse?: boolean;
+  speed?: number;
+};
 
 // Sample testimonials data
 const testimonials = [
@@ -45,10 +59,9 @@ const testimonials = [
   },
 ];
 
-
-function MarqueeRow({ items, reverse = false, speed = 50 }) {
+function MarqueeRow({ items, reverse = false, speed = 50 }: MarqueeRowProps) {
   const controls = useAnimation();
-  const rowRef = useRef();
+  const rowRef = useRef<HTMLDivElement>(null); 
 
   useEffect(() => {
     controls.start({
@@ -95,6 +108,7 @@ function MarqueeRow({ items, reverse = false, speed = 50 }) {
     </div>
   );
 }
+
 export default function LandingPage() {
   return (
     <>
