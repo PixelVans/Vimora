@@ -496,17 +496,24 @@ export default function LandingPage() {
       </section>
       
 
-  <section className="bg-blue-50 py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
-  <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
-      Everything You Need. <br className="hidden sm:block" /> <span className="text-blue-950">Nothing You Don’t.</span>
-    </h2>
-    <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
-      VIMORA cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
-    </p>
 
-    {/* Flex Items */}
-    <div className="flex flex-wrap justify-center gap-6 sm:gap-10 max-w-4xl mx-auto">
+
+      {/* Everything You need */}
+      <section className="bg-blue-50 py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
+  <div className="max-w-5xl mx-auto">
+    {/* Heading */}
+    <div className="text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
+        Everything You Need. <br className="hidden sm:block" />
+        <span className="text-blue-900">Nothing You Don’t.</span>
+      </h2>
+      <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
+        VIMORA cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
+      </p>
+    </div>
+
+    {/* Feature List - Left aligned */}
+    <div className="max-w-4xl mx-auto flex flex-wrap justify-start gap-6 sm:gap-10 text-left ml-4 md:ml-0">
       {[
         "Clean, branded delivery pages",
         "Automated payment collection",
@@ -538,13 +545,16 @@ export default function LandingPage() {
       ))}
     </div>
 
-    <div className="mt-12">
+    {/* CTA */}
+    <div className="mt-12 text-center">
       <button className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
         Get Started For Free
       </button>
     </div>
   </div>
 </section>
+
+
 
       
 {/* CTA */}
@@ -571,7 +581,7 @@ export default function LandingPage() {
     
     {/* Top - Email Form */}
     <div className="text-center">
-      <h2 className="text-4xl font-bold text-slate-900 mb-9">Try VIMORA For Free</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-9">Try VIMORA For Free</h2>
       <form className="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
       <input
         type="email"
