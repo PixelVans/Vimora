@@ -1,0 +1,11 @@
+-- to allow sanity commands in cli
+npm install -g @sanity/cli 
+
+-- allow fetching data from frontend for  react vite development
+sanity cors add http://localhost:5173
+sanity cors add https://vimora-landing-page.netlify.app
+
+-- to add all origins to acess the blogs
+sanity cors add "*"
+
+

@@ -31,31 +31,31 @@ const testimonials = [
     name: "Christina E.",
     title: "Owner - Marketplace Photography",
     quote: "My clients LOVE LOVE LOVE VIMORA. Some realtors aren't really that techy, so having an interface that's designed so ANYONE can use it is just so helpful.",
-    image: "/profiles/null.png",
+    image: "/profiles/p-6.jpeg",
   },
   {
     name: "Justin T.",
     title: "Owner - Chicago REP",
     quote: "VIMORA just works so much better. I moved from photohub and it just looks so clean, and I'm paying LESS.",
-    image: "/profiles/p4.jpg",
+    image: "/profiles/p-7.jpeg",
   },
   {
     name: "Ronald M.",
     title: "Owner - SnapHome Media",
     quote: "It's clean, it's cheap, and the invoices with line items make my clients so much happier.",
-    image: "/profiles/null.png",
+    image: "/profiles/p-8.jpeg",
   },
   {
     name: "Thomas T.",
     title: "Owner - Pen RE Media Group",
     quote: "Easy to use and snappy. I like them property websites.",
-    image: "/profiles/null.png",
+    image: "/profiles/p-9.jpeg",
   },
   {
     name: "JJ.",
     title: "Owner - Pen RE Media Group",
     quote: "Easy to use and snappy. I like them property websites.",
-    image: "/profiles/null.png",
+    image: "/profiles/p-4.jpg",
   },
 ];
 
@@ -113,27 +113,35 @@ export default function LandingPage() {
   return (
     <>
       <Navbar />
-      <section className="container pt-24 min-h-[100dvh] flex justify-center">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <section className="container pt-20 min-h-[100dvh] flex justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
     
     {/* Text Content */}
     <div className="space-y-6 lg:space-y-9">
-      <div className="text-3xl sm:text-5xl mt-5 font-bold leading-tight font-inter text-slate-800 flex flex-col sm:space-y-2 ">
+      <div className="text-3xl md:text-4xl lg:text-5xl mt-5 font-bold leading-tight font-inter text-slate-800 flex flex-col sm:space-y-2 ">
         <h1>Better than Spiro.</h1>
         <h1>Cheaper than Aryeo.</h1>
         <h1 className="text-primary">Easier than Both.</h1>
       </div>
 
-      <p className="text-lg text-slate-700">
-              <strong>VIMORA</strong> is the all-in-one platform for real estate photographers to upload & deliver real estate media,
-              and get paid: All without the dated and clunky tools or high monthly fees.
+      <p className="text-sm sm:text-lg text-slate-700 flex items-center flex-wrap gap-">
+        <img
+          src="/Logo_one-3.png"
+          alt="Vimora logo"
+          className="h-5 sm:h-6 object-contain inline-block "
+        />
+        is the all-in-one platform for real estate photographers to upload & deliver real estate media,
+        and get paid: All without the dated and clunky tools or high monthly fees.
       </p>
 
+
+
+
       <div className="flex flex-col sm:flex-row gap-4">
-        <button className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+        <button className="bg-primary  text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
           Get Started For Free
         </button>
-        <button className="bg-white ring-1 ring-primary text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
+        <button className="bg-white ring-1  ring-primary text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
           Compare Between Competitors
         </button>
       </div>
@@ -159,8 +167,8 @@ export default function LandingPage() {
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-400 text-transparent bg-clip-text">
-      Propelling You Forward.
-    </h2>
+        Propelling You Forward.
+       </h2>
 
         <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-12  ">
           We took all the best aspects of every real estate media delivery platform and streamlined it,
@@ -373,14 +381,14 @@ export default function LandingPage() {
       {/* Pay As You Go */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
-        <div className="text-4xl font-bold text-blue-600 mb-1">$3</div>
+        <div className="text-4xl font-bold text-blue-800 mb-1">$3</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Subscription</li>
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Predictable Costs</li>
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support</li>
         </ul>
-        <button className="mt-6 bg-blue-600 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
         </button>
       </div>
@@ -388,14 +396,14 @@ export default function LandingPage() {
       {/* Solo */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Solo</h3>
-        <div className="text-4xl font-bold text-blue-600 mb-1">$40</div>
+        <div className="text-4xl font-bold text-blue-800 mb-1">$40</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per month</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 15 Deliveries</li>
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Roll Over Listings</li>
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support</li>
         </ul>
-        <button className="mt-6 bg-blue-600 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
         </button>
       </div>
@@ -423,14 +431,14 @@ export default function LandingPage() {
       {/* Pro */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pro</h3>
-        <div className="text-4xl font-bold text-blue-600 mb-1">$120</div>
+        <div className="text-4xl font-bold text-blue-800 mb-1">$120</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per month</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 100 Monthly Deliveries</li>
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Roll Over Listings</li>
           <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Dedicated Support</li>
         </ul>
-        <button className="mt-6 bg-blue-600 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
         </button>
       </div>
@@ -488,7 +496,7 @@ export default function LandingPage() {
 
     {/* CTA */}
     <div className="mt-12">
-      <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
         Get Started For Free
       </button>
     </div>
@@ -547,7 +555,7 @@ export default function LandingPage() {
 
     {/* CTA */}
     <div className="mt-12 text-center">
-      <button className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+      <button className="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
         Get Started For Free
       </button>
     </div>
@@ -590,7 +598,7 @@ export default function LandingPage() {
       />
         <button
           type="submit"
-          className="bg-blue-600 text-white px-6 py-3 w-64 rounded-md hover:bg-blue-700 transition"
+          className="bg-blue-500 text-white px-6 py-3 w-64 rounded-md hover:bg-blue-700 transition"
         >
           Get Started
         </button>

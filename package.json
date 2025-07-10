@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^7.6.0",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.0",
