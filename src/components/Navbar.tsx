@@ -45,7 +45,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-9 items-center text-md text-slate-950 font-inter">
           <li className="hover:text-blue-600">
-            <Link to="/pricing">Pricing</Link>
+          <a href="#pricing">Pricing</a>
           </li>
 
           {/* Resources Dropdown */}

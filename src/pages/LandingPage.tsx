@@ -263,7 +263,7 @@ const pricing = {
       <div className="max-w-full mx-auto">
           <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
           Over <span className="text-blue-900">
-          <CountUp start={649860} end={650000} duration={150} separator="," />
+          <CountUp start={649760} end={650000} duration={150} separator="," />
 
           </span> Images Delivered
         </h2>
@@ -333,7 +333,7 @@ const pricing = {
 
   
   {/* pricing section */}
-  <section className="container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
+  <section className="scroll-mt-20 container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
   <div className="max-w-6xl mx-auto text-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Find the Right Plan for You
@@ -548,30 +548,10 @@ const pricing = {
 
       
 {/* CTA */}
-<section className="bg-blue-900 text-white py-16 px-6 my-16">
-      <div className="max-w-3xl mx-auto text-center space-y-4">
-        <h2 className="text-3xl sm:text-4xl font-bold">
-          Start Your 14 Day Free Trial Today
-        </h2>
-        <p className="text-white/80 text-lg">
-          No contracts. No hidden fees. Cancel anytime.
-        </p>
-        <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-blue-100 transition">
-          Start Your 14 Day Free Trial
-        </button>
-      </div>
-    </section>
-
-
-
-
-   {/* footer section */}
-<footer className="bg-white text-slate-800 pt-16 pb-8 px-6 mt-9">
-  <div className="max-w-7xl mx-auto space-y-16">
-    
-    {/* Top - Email Form */}
-    <div className="text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-9">Try VIMORA For Free</h2>
+<section className="bg-gradient-to-b from-white via-blue-50 to-white  py-24 px-6 my-12 md:my-20">
+       {/* Top - Email Form */}
+    <div className="text-center shadow-md shadow-slate-200 p-7 md:p-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-9">Start Your 14 day free trial</h2>
       <form className="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
       <input
         type="email"
@@ -586,6 +566,16 @@ const pricing = {
         </button>
       </form>
     </div>
+    </section>
+
+
+
+
+   {/* footer section */}
+<footer className="bg-white text-slate-800 pt-16 pb-8 px-6 mt-9">
+  <div className="max-w-7xl mx-auto space-y-16">
+    
+   
 
     {/* Middle - Links */}
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 text-sm">
