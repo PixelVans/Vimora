@@ -177,7 +177,7 @@ export default function Navbar() {
           {/* Content */}
           <div className="p-6 pt-20 space-y-4 font-inter text-slate-900 text-sm">
             <Link
-              to="/pricing"
+              to="/#pricing"
               onClick={() => setMenuOpen(false)}
               className="block font-medium hover:text-blue-600"
             >
@@ -222,7 +222,7 @@ export default function Navbar() {
               {moreOpen && (
                 <div className="ml-4 mt-2 space-y-2 border-l border-gray-200 pl-3">
                   <Link
-                    to="/about"
+                    to="/comparison"
                     onClick={() => setMenuOpen(false)}
                     className="block text-blue-600 font-medium"
                   >
@@ -230,7 +230,7 @@ export default function Navbar() {
                   </Link>
                   <hr className="border-gray-200" />
                   <Link
-                    to="/careers"
+                    to="/meaning"
                     onClick={() => setMenuOpen(false)}
                     className="block text-blue-600 font-medium"
                   >
