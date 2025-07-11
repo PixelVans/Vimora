@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, X, PanelLeft } from "lucide-react";
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -9,6 +8,9 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const sidebarRef = useRef<HTMLDivElement | null>(null);
+  
+
+ 
 
   // Detect screen size
   useEffect(() => {
@@ -45,7 +47,8 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-9 items-center text-md text-slate-950 font-inter">
           <li className="hover:text-blue-600">
-          <a href="#pricing">Pricing</a>
+          <Link to="/#pricing">Pricing</Link>
+
           </li>
 
           {/* Resources Dropdown */}

@@ -3,12 +3,12 @@ import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2, Twitt
   CheckCircle, ArrowRight, LayoutGrid,
   Rocket, 
 } from "lucide-react";
-
 import { motion, useAnimation } from "framer-motion";
 import { useEffect,  useState,  } from "react";
 import CountUp from 'react-countup';
 import { FeatureMarqueeRow, MarqueeRow, splitIntoRows,   } from "@/components/ui/landing/marquee";
 import { features, essentials, testimonials } from "@/components/ui/landing/constants";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -102,12 +102,22 @@ function EverythingYouNeedMarquee() {
 }
 
 
-
-
-
-
-
 export default function LandingPage() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      // Wait for DOM to render before scrolling
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); 
+    }
+  }, [location]);
 
   const [yearly, setYearly] = useState(false);
 
@@ -507,7 +517,7 @@ const pricing = {
       </button>
     </div>
   </div>
-      </section>
+  </section>
       
 
 
