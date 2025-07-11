@@ -1,74 +1,38 @@
 import Navbar from "@components/Navbar";
-import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2,FileText, Globe, Layers3, UserCircle2,
-  Repeat, Zap, Settings2, Palette, Twitter, Facebook, Youtube, Instagram,
-  Database, ShieldCheck,  ShoppingCart,CheckCircle, ArrowRight, LayoutGrid,
-  Rocket,  } from "lucide-react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState,  } from "react";
-import CountUp from 'react-countup';
+import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2, Twitter, Facebook, Youtube, Instagram,
+  CheckCircle, ArrowRight, LayoutGrid,
+  Rocket, 
+} from "lucide-react";
 
-type MarqueeItem = {
-  image: string;
-  name: string;
-  title: string;
-  quote: string;
+import { motion, useAnimation } from "framer-motion";
+import { useEffect,  useState,  } from "react";
+import CountUp from 'react-countup';
+import { FeatureMarqueeRow, MarqueeRow, splitIntoRows,   } from "@/components/ui/landing/marquee";
+import { features, essentials, testimonials } from "@/components/ui/landing/constants";
+
+
+
+const testimonialRows = splitIntoRows(testimonials, 2);
+const featureRows = splitIntoRows(features, 2);
+
+
+// Helper to split essentials into N rows
+const splitEssentialsIntoRows = (arr: string[], rows: number) => {
+  const res = Array.from({ length: rows }, () => [] as string[]);
+  arr.forEach((item, i) => res[i % rows].push(item));
+  return res;
 };
 
-type MarqueeRowProps = {
-  items: MarqueeItem[];
+function EssentialsMarqueeRow({
+  items,
+  reverse = false,
+  speed = 40,
+}: {
+  items: string[];
   reverse?: boolean;
   speed?: number;
-};
-
-// Sample testimonials data
-const testimonials = [
-  {
-    name: "Marisela A.",
-    title: "Owner - Twin Lakes Photography",
-    quote: "The pay as you go plan is so much better. I did the math and I'm saving like, 70% on delivery costs. Works good, I'm happy.",
-    image: "/profiles/p2.jpg",
-  },
-  {
-    name: "Christina E.",
-    title: "Owner - Marketplace Photography",
-    quote: "My clients LOVE LOVE LOVE VIMORA. Some realtors aren't really that techy, so having an interface that's designed so ANYONE can use it is just so helpful.",
-    image: "/profiles/p-6.jpeg",
-  },
-  {
-    name: "Justin T.",
-    title: "Owner - Chicago REP",
-    quote: "VIMORA just works so much better. I moved from photohub and it just looks so clean, and I'm paying LESS.",
-    image: "/profiles/p-7.jpeg",
-  },
-  {
-    name: "Ronald M.",
-    title: "Owner - SnapHome Media",
-    quote: "It's clean, it's cheap, and the invoices with line items make my clients so much happier.",
-    image: "/profiles/p-8.jpeg",
-  },
-  {
-    name: "Thomas T.",
-    title: "Owner - Pen RE Media Group",
-    quote: "Easy to use and snappy. I like them property websites.",
-    image: "/profiles/p-9.jpeg",
-  },
-  {
-    name: "JJ.",
-    title: "Owner - Pen RE Media Group",
-    quote: "Easy to use and snappy. I like them property websites.",
-    image: "/profiles/p-4.jpg",
-  },
-];
-
-
-
-
-
-
-
-function MarqueeRow({ items, reverse = false, speed = 50 }: MarqueeRowProps) {
+}) {
   const controls = useAnimation();
-  const rowRef = useRef<HTMLDivElement>(null); 
 
   useEffect(() => {
     controls.start({
@@ -87,34 +51,57 @@ function MarqueeRow({ items, reverse = false, speed = 50 }: MarqueeRowProps) {
   return (
     <div className="overflow-hidden">
       <motion.div
-        className="flex gap-6"
+        className="flex gap-8"
         animate={controls}
-        ref={rowRef}
         style={{ willChange: "transform" }}
       >
-        {[...items, ...items].map((t, i) => (
+        {[...items, ...items].map((item, idx) => (
           <div
-            key={i}
-            className="bg-white rounded-xl shadow-md w-[300px] flex-shrink-0 p-6"
+            key={idx}
+            className="flex items-center text-slate-900 text-base w-[300px] flex-shrink-0"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <img
-                src={t.image}
-                alt={t.name}
-                className="w-9 h-9 rounded-full object-cover border border-slate-900"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-blue-700 flex-shrink-0 mr-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
               />
-              <div>
-                <p className="font-semibold text-slate-800">{t.name}</p>
-                <p className="text-xs text-slate-500">{t.title}</p>
-              </div>
-            </div>
-            <p className="text-slate-600 text-sm italic">&ldquo;{t.quote}&rdquo;</p>
+            </svg>
+            <span>{item}</span>
           </div>
         ))}
       </motion.div>
     </div>
   );
 }
+
+function EverythingYouNeedMarquee() {
+  const rows = splitEssentialsIntoRows(essentials, 4);
+
+  return (
+    <div className="relative space-y-4 py-6">
+      <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none" />
+
+      {rows.map((items, i) => (
+        <EssentialsMarqueeRow
+          key={i}
+          items={items}
+          speed={40} 
+        />
+      ))}
+    </div>
+  );
+}
+
+
 
 
 
@@ -140,7 +127,6 @@ const pricing = {
 
       {/* landing section */}
       <section className="pt-20 min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100 to-white">
-
       <div className="grid grid-cols-1 lg:grid-cols-2  md:gap-10 items-center container">
         
         {/* Text Content */}
@@ -270,7 +256,9 @@ const pricing = {
       </div>
       </section>
       
+      
 
+      {/* testimonials */}
       <section className="bg-white py-24 px-0 md:px-9">
       <div className="max-w-full mx-auto">
           <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
@@ -298,8 +286,13 @@ const pricing = {
 
               {/* Marquee rows */}
               <div className="space-y-8">
-                <MarqueeRow items={testimonials} speed={60} />
-                <MarqueeRow items={testimonials} speed={40} />
+                {testimonialRows.map((row, i) => (
+                  <MarqueeRow
+                    key={i}
+                    items={row}
+                    speed={40}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -310,117 +303,29 @@ const pricing = {
       {/* key feature of vimora */}
       <section className="bg-slate-50 py-20 px-6 shadow">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
+    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
       Key VIMORA Features
     </h2>
 
-    <div
-  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-5 sm:mt-12 text-left 
-    border-t border-slate-300 divide-y sm:divide-y-0 divide-slate-300 pt-10 
-    [&>div]:sm:border-l [&>div:nth-child(4n+1)]:lg:border-l-0 [&>div:nth-child(2n+1)]:sm:border-l-0"
->
+    {/* Gradient wrapper */}
+    <div className="relative overflow-hidden">
+      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
-
-      
-      {/* Feature Item */}
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <FileText className="w-8 h-8 text-blue-600 " />
-        <h3 className="font-semibold text-slate-900">Line-Itemed Invoices</h3>
-        <p className="text-sm text-slate-600">
-          Never chase payments again. VIMORA generates line-itemed invoices and collects payment before download.
-        </p>
-      </div>
-
-            <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Globe className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Premium Property Websites</h3>
-        <p className="text-sm text-slate-600">
-          Beautiful, mobile-friendly listing sites included in Growth and Pro tiers — all at no additional cost!
-        </p>
-      </div>
-
-            <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Layers3 className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Built For Scale</h3>
-        <p className="text-sm text-slate-600">
-          Whether you're solo or managing 20+, VIMORA handles media, payments, edits, and scheduling in one place.
-        </p>
-      </div>
-
-            <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <UserCircle2 className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Modern Client Portals</h3>
-        <p className="text-sm text-slate-600">
-          Branded, easy-to-use delivery pages with everything your clients need — photos, videos, floor plans, and links.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Repeat className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Built-In Revision System</h3>
-        <p className="text-sm text-slate-600">
-          Let clients request sky swaps, object removals, or special edits — with optional add-on charges.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Zap className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Clean, Lightning-Fast UX</h3>
-        <p className="text-sm text-slate-600">
-          Built for 2025 & beyond. No bloated menus or clunky dashboards — just speed and simplicity.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Settings2 className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Ultimate Flexibility</h3>
-        <p className="text-sm text-slate-600">
-          Flexible pricing for creators and teams — use what you need. Unused credits roll over!
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Palette className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Branded Delivery</h3>
-        <p className="text-sm text-slate-600">
-          Your logo. Your colors. Your domain. VIMORA puts your brand front and center.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Database className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Storage Transparency</h3>
-        <p className="text-sm text-slate-600">
-          One month of active access, eleven months archived, then optional deletion or extension.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <ShieldCheck className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Team Permissions & Roles</h3>
-        <p className="text-sm text-slate-600">
-          Assign roles for admins, shooters, editors — perfect for media companies and brokerages.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <Users className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Referral & Affiliate Tools</h3>
-        <p className="text-sm text-slate-600">
-          Reward loyal clients and attract new ones with built-in affiliate tracking and free months of VIMORA.
-        </p>
-      </div>
-
-      <div data-aos="fade-up" className="px-4 flex flex-col items-center text-center space-y-3">
-        <ShoppingCart className="w-8 h-8 text-blue-600 mt-5 md:mt-0" />
-        <h3 className="font-semibold text-slate-900">Enhanced Shopping Cart</h3>
-        <p className="text-sm text-slate-600">
-          Smart upsells increase your AOV — give your clients more value and earn more per sale.
-        </p>
-      </div>
+      {/* Marquee rows */}
+      <div className="space-y-8">
+      {featureRows.map((row, i) => (
+        <FeatureMarqueeRow
+          key={i}
+          items={row}
+          speed={50}
+        />
+      ))}
+    </div>
     </div>
   </div>
 </section>
+   
 
 
 
@@ -625,37 +530,10 @@ const pricing = {
     </div>
 
     {/* Feature List - Left aligned */}
-    <div className="max-w-4xl mx-auto flex flex-wrap justify-start gap-6 sm:gap-10 text-left ml-4 md:ml-0">
-      {[
-        "Clean, branded delivery pages",
-        "Automated payment collection",
-        "Client access tracking",
-        "Lightning fast uploads",
-        "Affordable, down-to-earth pricing",
-        "No contracts, no hidden fees",
-        "Built-in upsell tools",
-        "Modern property websites",
-        "Agent-friendly user interface for simple use",
-      ].map((item, idx) => (
-        <div
-          key={idx}
-          className="flex items-center space-x-3 text-slate-900 text-base"
-          data-aos="fade-up"
-          data-aos-delay={idx * 50}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-blue-700 flex-shrink-0"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-          <span>{item}</span>
-        </div>
-      ))}
-    </div>
+    <div className="max-w-5xl mx-auto mt-12">
+  <EverythingYouNeedMarquee />
+</div>
+
 
     {/* CTA */}
     <div className="mt-12 text-center">

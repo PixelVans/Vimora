@@ -39,7 +39,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between p-3  mx-1 lg:mx-12 mt-2 sm:mt-4">
         {/* Logo */}
         <Link to="/">
-          <img src="/Logo_one-1.png" alt="Vimora Logo" className="h-9 lg:h-12" />
+          <img src="/Logo_one-1.png" alt="Vimora Logo" className="h-8 lg:h-12" />
         </Link>
 
         {/* Desktop Nav */}
