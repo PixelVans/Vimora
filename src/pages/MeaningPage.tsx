@@ -1,7 +1,11 @@
-import { MailIcon, InfoIcon, Sparkles, Send, ImageIcon, HomeIcon } from 'lucide-react';
+import {  Send, ImageIcon, HomeIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { keyFeatures } from '@/components/ui/landing/constants';
+
+
+  
 
 export default function MeaningPage() {
     return (
@@ -68,35 +72,45 @@ export default function MeaningPage() {
         </div>
 
         {/* Feature Highlights */}
-        <div className="mt-16 space-y-6">
-          <h2 className="text-2xl font-semibold text-center text-blue-900 mb-6">Why Use VIMORA?</h2>
+        <div className="mt-20 px-4 md:px-8">
+      <h2
+        className="text-3xl font-bold text-center text-blue-900 mb-12"
+        data-aos="fade-up"
+      >
+        Why Use VIMORA?
+      </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              'Ridiculously Easy to Use – No learning curve. Just upload, deliver, and get paid.',
-              'Cheapest in the Game – Lower fees than Aryeo, Spiro, or HDPhotoHub.',
-              'Fast File Delivery – Clients get media instantly in a clean, branded layout.',
-              'Built for Real Estate Creators – Designed by working media pros.',
-              'Automated Workflows – File delivery, payments, and marketing handled.',
-              'Client-Friendly Interface – Looks pro, feels intuitive.',
-              'Mobile-Optimized – Works flawlessly on phones or desktops.',
-              'All-in-One Platform – No need for multiple tools.',
-              'Constantly Improving – Feedback-based updates, monthly releases.',
-              "You're Not Locked In – No contracts. No nonsense.",
-            ].map((feature, idx) => (
-              <div key={idx} className="flex items-start gap-3 bg-white rounded-xl p-4 shadow hover:shadow-md transition">
-                <Sparkles className="text-blue-700 mt-1" size={20} />
-                <p className="text-slate-700">{feature}</p>
-              </div>
-            ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {keyFeatures.map(({ text, icon: Icon }, idx) => (
+          <motion.div
+          key={idx}
+          className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all group border border-slate-100 min-h-[140px] flex"
+          data-aos="fade-up"
+          data-aos-delay={idx * 75}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          <div className="flex items-start gap-4">
+            <Icon
+              className="text-blue-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+              size={24}
+            />
+            <p className="text-slate-700 leading-relaxed font-medium">
+              {text}
+            </p>
           </div>
-        </div>
+        </motion.div>
+        
+        ))}
+      </div>
+    </div>
 
-        {/* Call to Action */}
+
+     {/* Call to Action */}
       
       </div>
-            </div>
-            <Footer/>
-            </>
+        </div>
+        <Footer/>
+      </>
   );
 }

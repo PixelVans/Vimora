@@ -8,7 +8,24 @@ import { Users, FileText, Globe, Layers3, UserCircle2,
   Mail,
   Link,
      
-  } from "lucide-react";
+} from "lucide-react";
+  
+import {
+  FaBolt,
+  FaDollarSign,
+  FaCameraRetro,
+  FaMobileAlt,
+} from 'react-icons/fa';
+import {
+  FiSend,
+  FiUnlock,
+} from 'react-icons/fi';
+import {
+  HiOutlineCog,
+  HiOutlineCubeTransparent,
+  HiOutlineUserGroup,
+  HiOutlineChartBar,
+} from 'react-icons/hi';
 
   
 //Essentials
@@ -200,4 +217,50 @@ export const features = [
       quote: "Easy to use and snappy. I like them property websites.",
       image: "/profiles/p-4.jpg",
     },
-  ];
+];
+  
+
+
+
+export const keyFeatures = [
+  {
+    text: 'Ridiculously Easy to Use – No learning curve. Just upload, deliver, and get paid.',
+    icon: FaBolt,
+  },
+  {
+    text: 'Cheapest in the Game – Lower fees than Aryeo, Spiro, or HDPhotoHub.',
+    icon: FaDollarSign,
+  },
+  {
+    text: 'Fast File Delivery – Clients get media instantly in a clean, branded layout.',
+    icon: FiSend,
+  },
+  {
+    text: 'Built for Real Estate Creators – Designed by working media pros.',
+    icon: FaCameraRetro,
+  },
+  {
+    text: 'Automated Workflows – File delivery, payments, and marketing handled.',
+    icon: HiOutlineCog,
+  },
+  {
+    text: 'Client-Friendly Interface – Looks pro, feels intuitive.',
+    icon: HiOutlineUserGroup,
+  },
+  {
+    text: 'Mobile-Optimized – Works flawlessly on phones or desktops.',
+    icon: FaMobileAlt,
+  },
+  {
+    text: 'All-in-One Platform – No need for multiple tools.',
+    icon: HiOutlineCubeTransparent,
+  },
+  {
+    text: 'Constantly Improving – Feedback-based updates, monthly releases.',
+    icon: HiOutlineChartBar,
+  },
+  {
+    text: "You're Not Locked In – No contracts. No nonsense.",
+    icon: FiUnlock,
+  },
+];
