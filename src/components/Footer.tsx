@@ -6,19 +6,19 @@ export default function Footer() {
     <footer className="bg-white text-slate-800 pt-16 pb-8 px-6 mt-9">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Top - Email Form */}
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-9">
+        <div className="text-center mb-48">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-9">
             Try VIMORA For Free
           </h2>
           <form className="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-3 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
+              className="w-full px-4 py-2 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
             />
             <button
               type="submit"
-              className="bg-blue-600 text-white px-6 py-3 w-64 rounded-md hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-6 py-2 w-64 rounded-md hover:bg-blue-700 transition"
             >
               Get Started
             </button>

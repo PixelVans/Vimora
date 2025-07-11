@@ -125,10 +125,10 @@ export default function Navbar() {
                     transform ${moreOpen ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-2 scale-95 pointer-events-none"}
                   `}
                 >
-                  <Link to="/about" className="text-sm text-gray-700 hover:text-blue-600 pb-2 font-inter">
+                  <Link to="/comparison" className="text-sm text-gray-700 hover:text-blue-600 pb-2 font-inter">
                     Vimora Vs Others
                   </Link>
-                  <Link to="/careers" className="text-sm text-gray-700 hover:text-blue-600 pt-2 font-inter">
+                  <Link to="/meaning" className="text-sm text-gray-700 hover:text-blue-600 pt-2 font-inter">
                     What does Vimora mean
                   </Link>
                 </div>

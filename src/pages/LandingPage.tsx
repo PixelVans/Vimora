@@ -328,6 +328,9 @@ const pricing = {
    
 
 
+
+
+
   
   {/* pricing section */}
   <section className="scroll-mt-20 container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
