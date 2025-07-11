@@ -523,7 +523,7 @@ const pricing = {
 
 
       {/* Everything You need */}
-      <section className="bg-blue-50 py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
+      <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
   <div className="max-w-5xl mx-auto">
     {/* Heading */}
     <div className="text-center">
@@ -544,9 +544,11 @@ const pricing = {
 
     {/* CTA */}
     <div className="mt-12 text-center">
-      <button className="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
-        Get Started For Free
-      </button>
+      <button className="bg-blue-500 text-white px-6 py-2 sm:py-3 rounded-full font-semibold transition-transform duration-300
+     hover:bg-blue-600 hover:shadow-lg hover:scale-105">
+      Get Started For Free
+    </button>
+
     </div>
   </div>
 </section>
@@ -555,9 +557,9 @@ const pricing = {
 
       
 {/* CTA */}
-<section className="bg-gradient-to-b from-white via-blue-50 to-white  py-24 px-6 my-12 md:my-20">
+<section className="bg-gradient-to-b from-white via-blue-50 to-white  py-24 px-6 my-12 md:my-20 ">
        {/* Top - Email Form */}
-    <div className="text-center shadow-md shadow-slate-200 p-7 md:p-12">
+    <div className="text-center container rounded-b-3xl shadow-md shadow-slate-300 p-7 md:p-12">
       <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-9">Start Your 14 day free trial</h2>
       <form className="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
       <input
