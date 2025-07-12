@@ -1,7 +1,8 @@
 import Navbar from "@components/Navbar";
 import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2, Twitter, Facebook, Youtube, Instagram,
   CheckCircle, ArrowRight, LayoutGrid,
-  Rocket, 
+  Rocket,
+  ChevronDownIcon, 
 } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect,  useState,  } from "react";
@@ -87,8 +88,8 @@ function EverythingYouNeedMarquee() {
 
   return (
     <div className="relative space-y-4 py-6">
-      <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 h-full w-2 sm:w-4 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 h-full w-2 sm:w-4 bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none" />
 
       {rows.map((items, i) => (
         <EssentialsMarqueeRow
@@ -198,7 +199,7 @@ const pricing = {
           }}
         >
           <img
-            src="/Banner.png"
+            src="/banner.jpeg"
             alt="Landing visual"
             className="max-w-full h-auto rounded-xl "
           />
@@ -210,33 +211,35 @@ const pricing = {
       
       {/* propelling section */}
 
-    <section className="bg-slate-100 py-20 px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px]  shadow-md">
+      <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
       <div className="max-w-6xl mx-auto text-center">
+
         {/* Heading */}
         <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-400 text-transparent bg-clip-text">
-        Propelling You Forward.
-       </h2>
+          Propelling You Forward.
+        </h2>
 
-        <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-12  ">
+        <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-12">
           We took all the best aspects of every real estate media delivery platform and streamlined it,
-          improving upon the user experience in every way so you don't have something holding you back -
+          improving upon the user experience in every way so you don't have something holding you back —
           you have something propelling you forward.
         </p>
 
-        {/* Subheading */}
-          <h3 className="relative inline-block px-6 md:px-9 py-4  text-2xl sm:text-3xl font-semibold text-slate-950 mb-10 rounded-2xl backdrop-blur-md shadow-xl 
-          before:absolute before:inset-0 before:-z-10 before:rounded-[inherit] before:bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.3)_0%,_transparent_80%)]">
-          3 Steps To Deliver A Listing
-        </h3>
+        {/* Down Arrow */}
+        <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
 
-
+          {/* Subheading */}
+          <div className="bg-blue-0 md:p-6 md:pb-12 rounded-3xl md:shadow-md">
+          <h3 className="text-3xl font-semibol my-6 mb-9">3 Steps To Deliver A Listing</h3>
 
         {/* Steps Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Step 1 */}
           <div className="bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
             <UploadIcon className="h-10 w-10 text-blue-700 mb-4" />
-            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">Upload your media</h4>
+            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">
+              Upload your media
+            </h4>
             <p className="text-slate-700 text-sm text-center">
               Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more.
               Branded delivery pages are auto-generated and easy to use.
@@ -246,7 +249,9 @@ const pricing = {
           {/* Step 2 */}
           <div className="bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
             <Share2Icon className="h-10 w-10 text-blue-700 mb-4" />
-            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">Share with a click</h4>
+            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">
+              Share with a click
+            </h4>
             <p className="text-slate-600 text-sm text-center">
               Send your media right to your client in a clean, professional link straight to their phone and email —
               with no login required.
@@ -256,20 +261,23 @@ const pricing = {
           {/* Step 3 */}
           <div className="bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
             <DollarSignIcon className="h-10 w-10 text-blue-700 mb-4" />
-            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">Get paid instantly</h4>
+            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">
+              Get paid instantly
+            </h4>
             <p className="text-slate-600 text-sm text-center">
               VIMORA automatically tracks orders, services provided, and payments, and sends a clean,
               line-itemed invoice — so you don't have to.
             </p>
-          </div>
+              </div>
+              </div>
         </div>
       </div>
-      </section>
+    </section>
       
       
 
       {/* testimonials */}
-      <section className="bg-white py-24 px-0 md:px-9">
+      <section className="bg-white py-24 px-0 md:px-6">
       <div className="max-w-full mx-auto">
           <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
           Over <span className="text-blue-900">
@@ -311,16 +319,16 @@ const pricing = {
 
 
       {/* key feature of vimora */}
-      <section className="bg-slate-50 py-20 px-6 shadow">
-  <div className="max-w-7xl mx-auto text-center">
+      <section className="bg-slate-50 py-20  shadow">
+    <div className="md:px-6 mx-auto text-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
       Key VIMORA Features
     </h2>
 
     {/* Gradient wrapper */}
     <div className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 right-0 h-full w-4 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
       {/* Marquee rows */}
       <div className="space-y-8">
@@ -339,8 +347,11 @@ const pricing = {
 
 
   
-  {/* pricing section */}
-  <section className="scroll-mt-20 container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9" id="pricing">
+ {/* pricing section */}
+<section
+  className="scroll-mt-20 container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9"
+  id="pricing"
+>
   <div className="max-w-6xl mx-auto text-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Find the Right Plan for You
@@ -348,43 +359,6 @@ const pricing = {
     <p className="text-slate-600 text-lg mb-16">
       Transparent pricing. No surprises. Just pure value.
     </p>
-
-    {/* Pay As You Go Card (solo) */}
-    <div className="grid grid-cols-1 max-w-md mx-auto mb-20">
-  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col relative overflow-hidden">
-    
-    {/* Rocket Icon */}
-    <div className=" bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
-      <Rocket className="w-6 h-6" />
-    </div>
-
-    <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
-    <div className="text-4xl font-bold text-blue-800 mb-1">$3</div>
-    <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
-    <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
-      <li className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-        No Monthly Subscription
-      </li>
-      <li className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-        No Hidden Costs
-      </li>
-      <li className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-        Predictable Expense
-      </li>
-      <li className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-        Standard Support
-      </li>
-    </ul>
-    <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
-      Get Started
-    </button>
-  </div>
-</div>
-
 
     {/* Premium Subscriptions Header */}
     <h3 className="text-2xl font-semibold text-slate-800 mb-4">Premium Subscriptions</h3>
@@ -400,23 +374,31 @@ const pricing = {
           }`}
         />
       </button>
-      <span className={` font-bold ${yearly ? "text-blue-600" : "text-slate-600"}`}>Yearly <span className="text-green-600 font-semibold">(2 months free)</span></span>
+      <span className={` font-bold ${yearly ? "text-blue-600" : "text-slate-600"}`}>
+        Yearly <span className="text-green-600 font-semibold">(2 months free)</span>
+      </span>
     </div>
 
     {/* Subscription Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-      
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
       {/* Solo */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col">
-
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Solo</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">${pricing.solo}</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">{yearly ? "per year" : "per month"}</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 15 Deliveries</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Property Sites Included</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Unused Listings Roll Over</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support</li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 15 Deliveries
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Property Sites Included
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Unused Listings Roll Over
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support
+          </li>
         </ul>
         <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
@@ -425,7 +407,6 @@ const pricing = {
 
       {/* Growth – Featured */}
       <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white transition-all duration-300 delay-100 ease-out hover:scale-95 active:scale-95 rounded-2xl p-8 shadow-xl transform scale-105 flex flex-col z-10">
-
         <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-4 py-1 rounded-br-xl rounded-tl-xl">
           Most Popular
         </div>
@@ -433,10 +414,18 @@ const pricing = {
         <div className="text-4xl font-bold mb-1">${pricing.growth}</div>
         <p className="text-sm mb-6">{yearly ? "per year" : "per month"}</p>
         <ul className="text-sm space-y-2 flex-1 text-left">
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> 40 Monthly Deliveries</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> Property Sites Included</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> Roll Over Listings</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-white mt-0.5" /> Standard Support</li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-white mt-0.5" /> 40 Monthly Deliveries
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-white mt-0.5" /> Property Sites Included
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-white mt-0.5" /> Roll Over Listings
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-white mt-0.5" /> Standard Support
+          </li>
         </ul>
         <button className="mt-6 bg-white text-blue-600 rounded-md py-2 px-4 font-medium hover:bg-slate-100 transition">
           Get Started
@@ -445,15 +434,55 @@ const pricing = {
 
       {/* Pro */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col">
-
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pro</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">${pricing.pro}</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">{yearly ? "per year" : "per month"}</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 100 Monthly Deliveries</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Property Sites Included</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Unused Listings Roll Over</li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Dedicated Support</li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 100 Monthly Deliveries
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Property Sites Included
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Unused Listings Roll Over
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Dedicated Support
+          </li>
+        </ul>
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    {/* Pay As You Go Card (moved here) */}
+    <div className="grid grid-cols-1 max-w-md mx-auto">
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col relative overflow-hidden">
+        <div className=" bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
+          <Rocket className="w-6 h-6" />
+        </div>
+        <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
+        <div className="text-4xl font-bold text-blue-800 mb-1">$3</div>
+        <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
+        <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
+            No Monthly Subscription
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
+            No Hidden Costs
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
+            Predictable Expense
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
+            Standard Support
+          </li>
         </ul>
         <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
           Get Started
@@ -463,10 +492,11 @@ const pricing = {
   </div>
 </section>
 
+
       
 
   {/* Who is vilmora for section */}
-<section className="bg-white py-20 px-6">
+<section className="bg-white py-20 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto text-center">
     {/* Heading */}
     <h2 className="text-3xl sm:text-4xl  font-bold text-slate-900 mb-4 font-inter">
@@ -524,7 +554,7 @@ const pricing = {
 
       {/* Everything You need */}
       <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
-  <div className="max-w-5xl mx-auto">
+  <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">
       <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
@@ -537,17 +567,14 @@ const pricing = {
     </div>
 
     {/* Feature List - Left aligned */}
-    <div className="max-w-5xl mx-auto mt-12">
+    <div className=" mt-12">
   <EverythingYouNeedMarquee />
 </div>
 
 
     {/* CTA */}
     <div className="mt-12 text-center">
-      <button className="bg-blue-500 text-white px-6 py-2 sm:py-3 rounded-full font-semibold transition-transform duration-300
-     hover:bg-blue-600 hover:shadow-lg hover:scale-105">
-      Get Started For Free
-    </button>
+     
 
     </div>
   </div>
@@ -557,11 +584,12 @@ const pricing = {
 
       
 {/* CTA */}
-<section className="bg-gradient-to-b from-white via-blue-50 to-white  py-24 px-6 my-12 md:my-20 ">
+<section className="bg-gradient-to-b from-white via-blue-50 to-white  py-24 px-4 sm:px-6 my-5 md:my-20 ">
        {/* Top - Email Form */}
     <div className="text-center container rounded-b-3xl shadow-md shadow-slate-300 p-7 md:p-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-9">Start Your 14 day free trial</h2>
-      <form className="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-">Start Your 14 day free trial</h2>
+          <p className="mb-8 my-3 text-slate-800 ">No contracts. No hidden fees. Cancel anytime.</p>
+      <form className="max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-4">
       <input
         type="email"
         placeholder="Your Email"
@@ -569,9 +597,9 @@ const pricing = {
       />
         <button
           type="submit"
-          className="bg-blue-500 text-white px-6 py-3 w-64 rounded-md hover:bg-blue-700 transition"
+          className="bg-blue-500 text-white px-2  py-3 w-full  rounded-md hover:bg-blue-700 transition"
         >
-          Get Started
+          Get Started For Free
         </button>
       </form>
     </div>

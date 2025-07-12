@@ -18,7 +18,7 @@ import {
 } from 'react-icons/fa';
 import {
   FiSend,
-  FiUnlock,
+  
 } from 'react-icons/fi';
 import {
   HiOutlineCog,
@@ -259,8 +259,5 @@ export const keyFeatures = [
     text: 'Constantly Improving – Feedback-based updates, monthly releases.',
     icon: HiOutlineChartBar,
   },
-  {
-    text: "You're Not Locked In – No contracts. No nonsense.",
-    icon: FiUnlock,
-  },
+  
 ];

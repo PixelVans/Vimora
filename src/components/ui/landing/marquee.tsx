@@ -64,7 +64,8 @@ export function FeatureMarqueeRow({
           return (
             <div
               key={i}
-              className="bg-white rounded-xl shadow-md w-[300px] flex-shrink-0 p-6 text-center flex flex-col items-center space-y-3"
+              className="bg-white rounded-xl shadow-md max-w-[320px] flex-shrink-0 px-4 
+              sm:px-4 text-center flex flex-col items-center my-1 py-4 "
             >
               <Icon className="w-8 h-8 text-blue-600" />
               <h3 className="font-semibold text-slate-900">{feature.title}</h3>
@@ -107,10 +108,11 @@ export function MarqueeRow({
         ref={rowRef}
         style={{ willChange: "transform" }}
       >
-        {[...items, ...items].map((t, i) => (
+        {[...items, ...items, ...items].map((t, i) => (
+
           <div
-            key={i}
-            className="bg-white rounded-xl shadow-md w-[300px] flex-shrink-0 p-6"
+          key={i}
+          className="bg-white rounded-xl shadow-md max-w-[320px] flex-shrink-0 p-4 my-2"
           >
             <div className="flex items-center gap-4 mb-4">
               <img
@@ -131,64 +133,6 @@ export function MarqueeRow({
   );
 }
 
-export function EssentialsMarqueeRow({
-  items,
-  reverse = false,
-  speed = 40,
-}: {
-  items: string[];
-  reverse?: boolean;
-  speed?: number;
-}) {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start({
-      x: reverse ? "100%" : "-100%",
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: speed,
-          ease: "linear",
-        },
-      },
-    });
-  }, [controls, reverse, speed]);
-
-  return (
-    <div className="overflow-hidden">
-      <motion.div
-        className="flex gap-8"
-        animate={controls}
-        style={{ willChange: "transform" }}
-      >
-        {[...items, ...items].map((item, idx) => (
-          <div
-            key={idx}
-            className="flex items-center text-slate-900 text-base w-[300px] flex-shrink-0"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-blue-700 flex-shrink-0 mr-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            <span>{item}</span>
-          </div>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
 
 
 export function splitFeaturesIntoRows(features: Feature[], rows: number): Feature[][] {
