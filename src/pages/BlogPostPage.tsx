@@ -4,6 +4,7 @@ import { PortableText } from "@portabletext/react";
 //@ts-ignore
 import { client } from "../sanity/sanity";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 type BlogPost = {
   _id: string;
@@ -93,8 +94,8 @@ export default function BlogPostPage() {
   return (
     < >
       <Navbar />
-      <div className="max-w-7xl mx-auto mt-24 px-6 bg-slate-50 p-2 sm:p-9 ">
-        <div className="flex flex-col lg:flex-row gap-12">
+      <div className="container mx-auto mt-24 px-6 bg-slate-50 p-4 sm:p-10 ">
+        <div className="flex flex-col lg:flex-row gap-12 mt-9">
           {/* Main Blog Post */}
           <div className="w-full lg:w-2/3">
             <h1 className="text-2xl sm:text-3xl font-bold mb-4">{post.title}</h1>
@@ -119,7 +120,7 @@ export default function BlogPostPage() {
           <aside className="w-full lg:w-1/3">
             {relatedPosts.length > 0 && (
               <div className="sticky top-24">
-                <h2 className="text-xl font-semibold text-blue-800 mb-4 mt-9 md:mt-16 py-7">
+                <h2 className="text-xl font-semibold text-blue-800 mb-4 mt-9 md:mt-24 py-7">
                   More in this category
                 </h2>
                 <div className="space-y-6">
@@ -152,6 +153,7 @@ export default function BlogPostPage() {
           </aside>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
