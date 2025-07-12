@@ -12,6 +12,4 @@ sanity cors add "*"
 
 
 
-
-we are now working on the pricing section, what we need to do now is, the pay as you go card should come first and stay alone not with the rest, and then for the other cards they should come just below it and above it, a name written premium sunsriptins and then a toggle button below the word to toogle between mothly and yearly, yearly we get 2 months free so we can tell the user that we save some percentage there, the toggle should be visible and modern also the entire update should be cool looking , show me the ful section for me to update it,  
-
+vimora-studio

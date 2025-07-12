@@ -138,7 +138,7 @@ const pricing = {
 
       {/* landing section */}
       <section className="pt-20 min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100 to-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2  md:gap-10 items-center container">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 items-center container">
         
         {/* Text Content */}
         <motion.div
@@ -662,8 +662,9 @@ const pricing = {
 
     {/* Bottom - Copyright */}
     <div className="border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
-      © 2025 All rights reserved
+      © {new Date().getFullYear()} All rights reserved
     </div>
+
   </div>
 </footer>
 
