@@ -281,7 +281,7 @@ const pricing = {
       <div className="max-w-full mx-auto">
           <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
           Over <span className="text-blue-900">
-          <CountUp start={649760} end={650000} duration={150} separator="," />
+          <CountUp start={649700} end={650000} duration={190} separator="," />
 
           </span> Images Delivered
         </h2>
