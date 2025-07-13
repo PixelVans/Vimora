@@ -162,15 +162,17 @@ const pricing = {
             {/* Animated Get Started Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-500 to-primary text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg"
+                className="group relative overflow-hidden bg-gradient-to-r from-blue-800 via-blue-700 to-primary text-white px-6 py-2
+               rounded-lg font-semibold flex items-center gap-2 shadow-lg "
             >
               <span className="z-10 relative">Get Started For Free</span>
               <ArrowRight
-                className="z-10 relative  transition-transform group-hover:translate-x-2 group-hover:-translate-y-[px] duration-300"
+                className="z-10 relative  transition-transform group-hover:translate-x-2  duration-300"
                 size={18}
               />
               {/* Overlay effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-lg" />
+                <span className="absolute inset-0 bg-gradient-to-r from-black  to-blue-300 opacity-0 
+              group-hover:opacity-30 transition-opacity duration-300 rounded-lg" />
             </motion.button>
 
             {/* Compare Button with Icon Slide-in */}
@@ -215,7 +217,7 @@ const pricing = {
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-400 text-transparent bg-clip-text">
+        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
           Propelling You Forward.
         </h2>
 
@@ -348,7 +350,7 @@ const pricing = {
 
   
  {/* pricing section */}
-<section
+ <section
   className="scroll-mt-20 container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9"
   id="pricing"
 >
@@ -360,10 +362,9 @@ const pricing = {
       Transparent pricing. No surprises. Just pure value.
     </p>
 
-    {/* Premium Subscriptions Header */}
     <h3 className="text-2xl font-semibold text-slate-800 mb-4">Premium Subscriptions</h3>
     <div className="mb-12 flex items-center justify-center gap-3">
-      <span className={` font-bold ${!yearly ? "text-blue-600" : "text-slate-600"}`}>Monthly</span>
+      <span className={`font-bold ${!yearly ? "text-blue-600" : "text-slate-600"}`}>Monthly</span>
       <button
         onClick={toggleBilling}
         className="relative inline-flex h-6 w-12 items-center rounded-full bg-blue-500 transition"
@@ -374,21 +375,21 @@ const pricing = {
           }`}
         />
       </button>
-      <span className={` font-bold ${yearly ? "text-blue-600" : "text-slate-600"}`}>
-        Yearly <span className="text-green-600 font-semibold">(2 months free)</span>
+      <span className={`font-bold ${yearly ? "text-blue-600" : "text-slate-600"}`}>
+        Yearly <span className="text-green-600 font-semibold">(Save 17%)</span>
       </span>
     </div>
 
-    {/* Subscription Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
       {/* Solo */}
-      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col">
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Solo</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">${pricing.solo}</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">{yearly ? "per year" : "per month"}</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 15 Deliveries
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
+            {yearly ? "180 Annual Deliveries" : "15 Monthly Deliveries"}
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Property Sites Included
@@ -400,13 +401,13 @@ const pricing = {
             <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support
           </li>
         </ul>
-        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
           Get Started
         </button>
       </div>
 
-      {/* Growth – Featured */}
-      <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white transition-all duration-300 delay-100 ease-out hover:scale-95 active:scale-95 rounded-2xl p-8 shadow-xl transform scale-105 flex flex-col z-10">
+      {/* Growth */}
+      <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white transition-all duration-300 delay-100 ease-out hover:scale-[1.02] active:scale-[1.01] rounded-2xl p-8 shadow-xl flex flex-col z-10">
         <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-4 py-1 rounded-br-xl rounded-tl-xl">
           Most Popular
         </div>
@@ -415,7 +416,8 @@ const pricing = {
         <p className="text-sm mb-6">{yearly ? "per year" : "per month"}</p>
         <ul className="text-sm space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-white mt-0.5" /> 40 Monthly Deliveries
+            <CheckCircle className="w-4 h-4 text-white mt-0.5" />
+            {yearly ? "480 Annual Deliveries" : "40 Monthly Deliveries"}
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-white mt-0.5" /> Property Sites Included
@@ -427,19 +429,21 @@ const pricing = {
             <CheckCircle className="w-4 h-4 text-white mt-0.5" /> Standard Support
           </li>
         </ul>
-        <button className="mt-6 bg-white text-blue-600 rounded-md py-2 px-4 font-medium hover:bg-slate-100 transition">
-          Get Started
-        </button>
+        <button className="mt-6 bg-white text-blue-600 rounded-md py-2 px-4 font-medium hover:bg-slate-100 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+        Get Started
+      </button>
+
       </div>
 
       {/* Pro */}
-      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col">
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pro</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">${pricing.pro}</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">{yearly ? "per year" : "per month"}</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> 100 Monthly Deliveries
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
+            {yearly ? "1200 Annual Deliveries" : "100 Monthly Deliveries"}
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Property Sites Included
@@ -451,49 +455,49 @@ const pricing = {
             <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Dedicated Support
           </li>
         </ul>
-        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
           Get Started
         </button>
       </div>
-    </div>
 
-    {/* Pay As You Go Card (moved here) */}
-    <div className="grid grid-cols-1 max-w-md mx-auto">
-      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex flex-col relative overflow-hidden">
+      {/* Pay As You Go */}
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col relative overflow-hidden">
         <div className=" bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
-          <Rocket className="w-6 h-6" />
+          <Rocket className="w-5 h-5" />
         </div>
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">$3</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
         <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-            No Monthly Subscription
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Monthly Subscription
           </li>
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-            No Hidden Costs
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Hidden Costs
           </li>
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-            Predictable Expense
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Predictable Expense
           </li>
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" />
-            Standard Support
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support
           </li>
         </ul>
-        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 transition">
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
           Get Started
         </button>
+
       </div>
+            
+
     </div>
   </div>
 </section>
 
 
-      
+
+
+
+
 
   {/* Who is vilmora for section */}
 <section className="bg-white py-20 px-4 sm:px-6">
@@ -542,7 +546,8 @@ const pricing = {
 
     {/* CTA */}
     <div className="mt-12">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+            <button className="bg-blue-500  text-white font-semibold px-6 py-3 rounded-lg 
+      hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
         Get Started For Free
       </button>
     </div>
@@ -572,11 +577,8 @@ const pricing = {
 </div>
 
 
-    {/* CTA */}
-    <div className="mt-12 text-center">
-     
-
-    </div>
+   
+  
   </div>
 </section>
 
@@ -584,26 +586,26 @@ const pricing = {
 
       
 {/* CTA */}
-<section className="bg-gradient-to-b from-white via-blue-50 to-white  py-24 px-4 sm:px-6 my-5 md:my-20 ">
-       {/* Top - Email Form */}
-    <div className="text-center container rounded-b-3xl shadow-md shadow-slate-300 p-7 md:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-">Start Your 14 day free trial</h2>
-          <p className="mb-8 my-3 text-slate-800 ">No contracts. No hidden fees. Cancel anytime.</p>
-      <form className="max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-4">
-      <input
-        type="email"
-        placeholder="Your Email"
-        className="w-full px-4 py-3 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
-      />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-2  py-3 w-full  rounded-md hover:bg-blue-700 transition"
-        >
-          Get Started For Free
-        </button>
-      </form>
-    </div>
-    </section>
+  <section className="bg-gradient-to-b from-white via-blue-50 to-white  pb-5 px-4 sm:px-6 my-5 md:my-20 ">
+    {/* Top - Email Form */}
+<div className="text-center container rounded-b-3xl shadow-md shadow-slate-300 p-7 md:p-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-">Start Your 14 day free trial</h2>
+      <p className="mb-8 my-3 text-slate-800 ">No contracts. No hidden fees. Cancel anytime.</p>
+  <form className="max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-4">
+  <input
+    type="email"
+    placeholder="Your Email"
+    className="w-full min-w-72 px-4 py-3 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
+  />
+    <button
+      type="submit"
+      className="bg-blue-500 text-white px-2  py-3 w-full  rounded-md hover:bg-blue-700 transition"
+    >
+      Get Started For Free
+    </button>
+  </form>
+</div>
+</section>
 
 
 

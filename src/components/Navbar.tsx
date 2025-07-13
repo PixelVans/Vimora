@@ -142,10 +142,12 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <li className="flex items-center space-x-3">
-            <button className="bg-blue-500 px-3 py-2 rounded-lg text-white font-semibold text-sm lg:text-md">
+            <button className="bg-blue-500 px-3 py-2 rounded-lg text-white font-semibold text-sm lg:text-md
+            hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
               Get started free
             </button>
-            <button className="bg-white px-4 py-2 ring-1 ring-blue-500 rounded-lg text-blue-500 font-semibold text-sm lg:text-md">
+            <button className="bg-white px-4 py-2 ring-1 ring-blue-500 rounded-lg text-blue-500 font-semibold text-sm lg:text-md
+            hover:text-blue-900 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
               My account
             </button>
           </li>
