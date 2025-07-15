@@ -147,7 +147,7 @@ const pricing = {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="text-3xl md:text-4xl lg:text-5xl mt-5 font-bold leading-tight font-inter text-slate-800 flex flex-col sm:space-y-2">
+          <div className="text-3xl md:text-4xl lg:text-5xl mt-5 font-bold leading-tight font-inter text-slate-900 flex flex-col sm:space-y-2">
             <h1>Better than Spiro.</h1>
             <h1>Cheaper than Aryeo.</h1>
             <h1 className="text-primary">Easier than Both.</h1>
@@ -214,67 +214,96 @@ const pricing = {
       {/* propelling section */}
 
       <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
-      <div className="max-w-6xl mx-auto text-center">
+  <div className="max-w-7xl mx-auto text-center">
 
-        {/* Heading */}
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
-          Propelling You Forward.
-        </h2>
+    {/* Heading */}
+    <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
+      Propelling You Forward.
+    </h2>
 
-        <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-12">
-          We took all the best aspects of every real estate media delivery platform and streamlined it,
-          improving upon the user experience in every way so you don't have something holding you back —
-          you have something propelling you forward.
-        </p>
+    <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-10">
+      We took all the best aspects of every real estate media delivery platform and streamlined it,
+      improving upon the user experience in every way so you don't have something holding you back —
+      you have something propelling you forward.
+    </p>
 
-        {/* Down Arrow */}
-        <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
+    {/* Image */}
+    <motion.div
+  className="overflow-hidden mx-auto rounded-2xl max-w-5xl shadow-md mb-12"
+  animate={{ y: [0, -10, 0] }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}>
+  <img
+    src="/media/propel.jpg"
+    alt="Propelling Illustration"
+    className="w-full h-64 mx-auto sm:h-80 md:h-96 object-cover"
+  />
+</motion.div>
 
-          {/* Subheading */}
-          <div className="bg-blue-0 md:p-6 md:pb-12 rounded-3xl md:shadow-md">
-          <h3 className="text-3xl font-semibol my-6 mb-9">3 Steps To Deliver A Listing</h3>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Step 1 */}
-          <div className="bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-            <UploadIcon className="h-10 w-10 text-blue-700 mb-4" />
-            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">
-              Upload your media
-            </h4>
-            <p className="text-slate-700 text-sm text-center">
-              Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more.
-              Branded delivery pages are auto-generated and easy to use.
-            </p>
-          </div>
+    {/* Down Arrow */}
+    <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
 
-          {/* Step 2 */}
-          <div className="bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-            <Share2Icon className="h-10 w-10 text-blue-700 mb-4" />
-            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">
-              Share with a click
-            </h4>
-            <p className="text-slate-600 text-sm text-center">
-              Send your media right to your client in a clean, professional link straight to their phone and email —
-              with no login required.
-            </p>
-          </div>
+    {/* Subheading */}
+    <div className="bg-blue-0 md:p-6 md:pb-12 rounded-3xl md:shadow-md">
+      <h3 className="text-3xl md:text-4xl font-semibold my-6 mb-9 text-slate-800">3 Steps To Deliver A Listing</h3>
 
-          {/* Step 3 */}
-          <div className="bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-            <DollarSignIcon className="h-10 w-10 text-blue-700 mb-4" />
-            <h4 className="text-xl font-semibold text-slate-900 mb-2 text-center">
-              Get paid instantly
-            </h4>
-            <p className="text-slate-600 text-sm text-center">
-              VIMORA automatically tracks orders, services provided, and payments, and sends a clean,
-              line-itemed invoice — so you don't have to.
-            </p>
-              </div>
-              </div>
-        </div>
-      </div>
-    </section>
+      {/* Steps Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+{/* Step 1 */}
+<div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
+  <div className=" text-7xl mb-4 font-extrabold text-slate-300  select-none">1</div>
+  <div className="z-10 flex flex-col items-center">
+    <UploadIcon className="h-10 w-10 text-blue-700 mb-4" />
+    <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+      Upload your media
+    </h4>
+    <p className="text-slate-700 text-sm text-center">
+      Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more.
+      Branded delivery pages are auto-generated and easy to use.
+    </p>
+  </div>
+</div>
+
+{/* Step 2 */}
+<div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
+  <div className=" text-7xl mb-4 font-extrabold text-slate-300 z-0 select-none">2</div>
+  <div className="z-10 flex flex-col items-center">
+    <Share2Icon className="h-10 w-10 text-blue-700 mb-4" />
+    <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+      Share with a click
+    </h4>
+    <p className="text-slate-600 text-sm text-center">
+      Send your media right to your client in a clean, professional link straight to their phone and email —
+      with no login required.
+    </p>
+  </div>
+</div>
+
+{/* Step 3 */}
+<div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
+  <div className="  text-7xl mb-4 font-extrabold text-slate-300  z-0 select-none">3</div>
+  <div className="z-10 flex flex-col items-center">
+    <DollarSignIcon className="h-10 w-10 text-blue-700 mb-4" />
+    <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+      Get paid instantly
+    </h4>
+    <p className="text-slate-600 text-sm text-center">
+      VIMORA automatically tracks orders, services provided, and payments, and sends a clean,
+      line-itemed invoice — so you don't have to.
+    </p>
+  </div>
+</div>
+</div>
+
+    </div>
+  </div>
+</section>
+
       
       
 
@@ -501,60 +530,82 @@ const pricing = {
 
 
   {/* Who is vilmora for section */}
-<section className="bg-white py-20 px-4 sm:px-6">
-  <div className="max-w-6xl mx-auto text-center">
-    {/* Heading */}
-    <h2 className="text-3xl sm:text-4xl  font-bold text-slate-900 mb-4 font-inter">
+  <section className="bg-white py-20 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Who VIMORA is For
     </h2>
 
-    {/* Grid */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
-      
+
       {/* Real Estate Photographers */}
-      <div className="p-6 border border-slate-200 rounded-xl shadow hover:shadow-lg transition">
-        <Camera className="w-10 h-10 text-blue-700 mb-4" />
-        <h3 className="text-xl font-semibold text-slate-900 mb-2">Real Estate Photographers</h3>
-        <ul className="text-slate-600 text-sm space-y-2">
-          <li>Deliver polished media fast without chasing payments.</li>
-          <li>Impress agents with professional, branded listings.</li>
-          <li>Spend less time managing files, more time shooting.</li>
-        </ul>
+      <div className="group border border-slate-200 rounded-xl overflow-hidden shadow transition hover:shadow-xl">
+        <div className="overflow-hidden">
+          <img
+            src="/media/photographer-illustration.webp"
+            alt="Photographer Illustration"
+            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-6 bg-white">
+          <h3 className="text-xl font-semibold text-slate-900 mb-2">Real Estate Photographers</h3>
+          <ul className="text-slate-600 text-sm space-y-2">
+            <li>Deliver polished media fast without chasing payments.</li>
+            <li>Impress agents with professional, branded listings.</li>
+            <li>Spend less time managing files, more time shooting.</li>
+          </ul>
+        </div>
       </div>
 
       {/* Media Teams */}
-      <div className="p-6 border border-slate-200 rounded-xl shadow hover:shadow-lg transition">
-        <Users className="w-10 h-10 text-blue-700 mb-4" />
-        <h3 className="text-xl font-semibold text-slate-900 mb-2">Media Teams</h3>
-        <ul className="text-slate-600 text-sm space-y-2">
-          <li>Easily manage multiple shooters and deliveries in one place.</li>
-          <li>Keep your workflow tight with built-in invoicing and media handoff.</li>
-          <li>Scale your business without scaling your headaches.</li>
-        </ul>
+      <div className="group border border-slate-200 rounded-xl overflow-hidden shadow transition hover:shadow-xl">
+        <div className="overflow-hidden">
+          <img
+            src="/media/team-illustration.webp"
+            alt="Team Illustration"
+            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-6 bg-white">
+          <h3 className="text-xl font-semibold text-slate-900 mb-2">Media Teams</h3>
+          <ul className="text-slate-600 text-sm space-y-2">
+            <li>Easily manage multiple shooters and deliveries in one place.</li>
+            <li>Keep your workflow tight with built-in invoicing and media handoff.</li>
+            <li>Scale your business without scaling your headaches.</li>
+          </ul>
+        </div>
       </div>
 
       {/* Brokerages */}
-      <div className="p-6 border border-slate-200 rounded-xl shadow hover:shadow-lg transition">
-        <Building2 className="w-10 h-10 text-blue-700 mb-4" />
-        <h3 className="text-xl font-semibold text-slate-900 mb-2">Brokerages</h3>
-        <ul className="text-slate-600 text-sm space-y-2">
-          <li>Centralize your team’s media under one sleek dashboard.</li>
-          <li>Track, schedule, and distribute content effortlessly across agents.</li>
-          <li>Keep branding consistent and get listings to market faster.</li>
-        </ul>
+      <div className="group border border-slate-200 rounded-xl overflow-hidden shadow transition hover:shadow-xl">
+        <div className="overflow-hidden">
+          <img
+            src="/media/brokerage-illustration.webp"
+            alt="Brokerage Illustration"
+            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-6 bg-white">
+          <h3 className="text-xl font-semibold text-slate-900 mb-2">Brokerages</h3>
+          <ul className="text-slate-600 text-sm space-y-2">
+            <li>Centralize your team’s media under one sleek dashboard.</li>
+            <li>Track, schedule, and distribute content effortlessly across agents.</li>
+            <li>Keep branding consistent and get listings to market faster.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     {/* CTA */}
     <div className="mt-12">
-            <button className="bg-blue-500  text-white font-semibold px-6 py-3 rounded-lg 
-      hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+      <button className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg 
+        hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
         Get Started For Free
       </button>
     </div>
   </div>
-  </section>
-      
+</section>
+
 
 
 
@@ -583,27 +634,47 @@ const pricing = {
 
       
 {/* CTA */}
-  <section className="  pb-5 px-4 sm:px-6 ">
-    {/* Top - Email Form */}
-        <div className="text-center container rounded-b-3xl shadow-md shadow-slate-300  md:pb-12 bg-gradient-to-b from-white
- via-blue-50 to-blue-100">
-      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-">Start Your 14 day free trial</h2>
-      <p className="mb-8 my-3 text-slate-800 ">No contracts. No hidden fees. Cancel anytime.</p>
-  <form className="max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-4">
-  <input
-    type="email"
-    placeholder="Your Email"
-    className="w-full min-w-72 px-4 py-3 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
-  />
-    <button
-      type="submit"
-      className="bg-blue-500 text-white px-2  py-3 w-full  rounded-md hover:bg-blue-700 transition"
-    >
-      Get Started For Free
-    </button>
-  </form>
-</div>
+<section className="px-4 sm:px-6 pb-5">
+  <div className="max-w-7xl mx-auto bg-gradient-to-b from-white via-blue-50 to-blue-100 rounded-3xl shadow-md shadow-slate-300 overflow-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      {/* Left - Image */}
+      <div className=" h-full">
+        <img
+          src="/media/footer.jpg" // Replace with your image
+          alt="Free Trial"
+          className="w-96 h-full object-cover"
+        />
+      </div>
+
+      {/* Right - Text & Form */}
+      <div className="p-8 sm:p-12 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+          Start Your 14 Day Free Trial
+        </h2>
+        <p className="mb-8 mt-3 text-slate-800">
+          No contracts. No hidden fees. Cancel anytime.
+        </p>
+
+        <form className="justify-between mx-auto md:mx-0 flex flex-col  items-center gap-4">
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full px-4 py-3 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition w-full "
+          >
+            Get Started For Free
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 
 
