@@ -277,7 +277,7 @@ const pricing = {
           key={step}
           className="group relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1"
         >
-          <div className="text-6xl  mb-5 font-extrabold text-slate-300 select-none z-0">
+          <div className="text-6xl  mb-5 font-extrabold text-slate-300 select-none z-0 group-hover:text-slate-600">
             {step}
           </div>
 
