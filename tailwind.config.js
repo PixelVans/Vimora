@@ -9,14 +9,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-        nunito: ['Nunito', 'sans-serif'],
-        lato: ['Lato', 'sans-serif'],
-        opensans: ['Open Sans', 'sans-serif'],
-        rajdhani: ['Rajdhani', 'sans-serif'],
       },
       colors: {
-        primary: '#3b82f6', // this is Tailwind's default blue-600
+        primary: '#3b82f6', 
       },
     },
 
