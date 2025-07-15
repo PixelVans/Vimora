@@ -137,8 +137,8 @@ const pricing = {
       <Navbar />
 
       {/* landing section */}
-      <section className="pt-20 min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100 to-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 items-center container">
+      <section className="pt-20 mt-8 lg:mt-0 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100 to-white">
+      <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 items-center container">
         
         {/* Text Content */}
         <motion.div
@@ -583,9 +583,10 @@ const pricing = {
 
       
 {/* CTA */}
-  <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  pb-5 px-4 sm:px-6  ">
+  <section className="  pb-5 px-4 sm:px-6 ">
     {/* Top - Email Form */}
-<div className="text-center container rounded-b-3xl shadow-md shadow-slate-300 p-7 md:p-12">
+        <div className="text-center container rounded-b-3xl shadow-md shadow-slate-300  md:pb-12 bg-gradient-to-b from-white
+ via-blue-50 to-blue-100">
       <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-">Start Your 14 day free trial</h2>
       <p className="mb-8 my-3 text-slate-800 ">No contracts. No hidden fees. Cancel anytime.</p>
   <form className="max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-4">
