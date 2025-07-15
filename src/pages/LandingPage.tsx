@@ -150,7 +150,7 @@ const pricing = {
           <div className="text-3xl md:text-4xl lg:text-5xl mt-5 font-bold leading-tight font-inter text-slate-900 flex flex-col sm:space-y-2">
             <h1>Better than Spiro.</h1>
             <h1>Cheaper than Aryeo.</h1>
-            <h1 className="text-primary">Easier than Both.</h1>
+            <h1 className="text-blue-700">Easier than Both.</h1>
           </div>
 
           <p className="text-sm sm:text-lg text-slate-700 mx-2">
@@ -162,7 +162,7 @@ const pricing = {
             {/* Animated Get Started Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
-                className="group relative overflow-hidden bg-gradient-to-r from-blue-800 via-blue-700 to-primary text-white px-6 py-2
+                className="group relative overflow-hidden bg-primary text-white px-6 py-2
                rounded-lg font-semibold flex items-center gap-2 shadow-lg "
             >
               <span className="z-10 relative">Get Started For Free</span>
@@ -252,53 +252,46 @@ const pricing = {
       <h3 className="text-3xl md:text-4xl font-semibold my-6 mb-9 text-slate-800">3 Steps To Deliver A Listing</h3>
 
       {/* Steps Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          step: "1",
+          title: "Upload your media",
+          Icon: UploadIcon,
+          desc: "Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more. Branded delivery pages are auto-generated and easy to use.",
+        },
+        {
+          step: "2",
+          title: "Share with a click",
+          Icon: Share2Icon,
+          desc: "Send your media right to your client in a clean, professional link straight to their phone and email — with no login required.",
+        },
+        {
+          step: "3",
+          title: "Get paid instantly",
+          Icon: DollarSignIcon,
+          desc: "VIMORA automatically tracks orders, services provided, and payments, and sends a clean, line-itemed invoice — so you don't have to.",
+        },
+      ].map(({ step, title, Icon, desc }) => (
+        <div
+          key={step}
+          className="group relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1"
+        >
+          <div className="text-6xl  mb-5 font-extrabold text-slate-300 select-none z-0">
+            {step}
+          </div>
 
-      {/* Step 1 */}
-      <div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-        <div className="text-6xl sm:text-7xl mb-4 font-extrabold text-slate-300  select-none">1</div>
-        <div className="z-10 flex flex-col items-center">
-          <UploadIcon className="h-10 w-10 text-blue-700 mb-4" />
-          <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-            Upload your media
-          </h4>
-          <p className="text-slate-700 text-sm text-center">
-            Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more.
-            Branded delivery pages are auto-generated and easy to use.
-          </p>
+          <div className="z-10 flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
+            <Icon className="h-10 w-10 text-blue-700 mb-4 transform transition-transform duration-300 group-hover:scale-110" />
+            <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+              {title}
+            </h4>
+            <p className="text-slate-600 text-sm text-center">{desc}</p>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
 
-      {/* Step 2 */}
-      <div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-        <div className=" text-6xl sm:text-7xl mb-4 font-extrabold text-slate-300 z-0 select-none">2</div>
-        <div className="z-10 flex flex-col items-center">
-          <Share2Icon className="h-10 w-10 text-blue-700 mb-4" />
-          <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-            Share with a click
-          </h4>
-          <p className="text-slate-600 text-sm text-center">
-            Send your media right to your client in a clean, professional link straight to their phone and email —
-            with no login required.
-          </p>
-        </div>
-      </div>
-
-      {/* Step 3 */}
-      <div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-        <div className=" text-6xl sm:text-7xl mb-4 font-extrabold text-slate-300  z-0 select-none">3</div>
-        <div className="z-10 flex flex-col items-center">
-          <DollarSignIcon className="h-10 w-10 text-blue-700 mb-4" />
-          <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-            Get paid instantly
-          </h4>
-          <p className="text-slate-600 text-sm text-center">
-            VIMORA automatically tracks orders, services provided, and payments, and sends a clean,
-            line-itemed invoice — so you don't have to.
-          </p>
-        </div>
-      </div>
-      </div>
 
           </div>
         </div>
@@ -466,7 +459,8 @@ const pricing = {
       </div>
 
       {/* Growth */}
-      <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white transition-all duration-300 delay-100 ease-out hover:scale-[1.02] active:scale-[1.01] rounded-2xl p-8 shadow-xl flex flex-col z-10">
+            <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white transition-all duration-300 
+      delay-100 ease-out hover:scale-[1.02] active:scale-[1.01] rounded-2xl p-8  shadow-xl flex flex-col z-10">
         <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-4 py-1 rounded-br-xl rounded-tl-xl">
           Most Popular
         </div>
@@ -548,7 +542,7 @@ const pricing = {
           />
         </div>
         <div className="p-6 bg-white">
-          <h3 className="text-xl font-semibold text-slate-900 mb-2">Real Estate Photographers</h3>
+          <h3 className="text-xl font-semibold text-slate-950 mb-2">Real Estate Photographers</h3>
           <ul className="text-slate-600 text-sm space-y-2">
             <li>Deliver polished media fast without chasing payments.</li>
             <li>Impress agents with professional, branded listings.</li>
@@ -567,7 +561,7 @@ const pricing = {
           />
         </div>
         <div className="p-6 bg-white">
-          <h3 className="text-xl font-semibold text-slate-900 mb-2">Media Teams</h3>
+          <h3 className="text-xl font-semibold text-slate-950 mb-2">Media Teams</h3>
           <ul className="text-slate-600 text-sm space-y-2">
             <li>Easily manage multiple shooters and deliveries in one place.</li>
             <li>Keep your workflow tight with built-in invoicing and media handoff.</li>
@@ -586,7 +580,7 @@ const pricing = {
           />
         </div>
         <div className="p-6 bg-white">
-          <h3 className="text-xl font-semibold text-slate-900 mb-2">Brokerages</h3>
+          <h3 className="text-xl font-semibold text-slate-950 mb-2">Brokerages</h3>
           <ul className="text-slate-600 text-sm space-y-2">
             <li>Centralize your team’s media under one sleek dashboard.</li>
             <li>Track, schedule, and distribute content effortlessly across agents.</li>
@@ -610,7 +604,7 @@ const pricing = {
 
 
   {/* Everything You need */}
-  <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
+  <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[100px] lg:rounded-t-[220px]">
   <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">

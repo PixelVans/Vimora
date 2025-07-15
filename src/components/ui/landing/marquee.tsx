@@ -67,7 +67,7 @@ export function FeatureMarqueeRow({
               className="bg-white rounded-xl shadow-md max-w-[320px] flex-shrink-0 px-4 
               sm:px-4 text-center flex flex-col items-center my-1 py-4 "
             >
-              <Icon className="w-8 h-8 text-blue-600" />
+              <Icon className="w-8 h-8 sm:w-9 sm:h-9 text-blue-700 mb-3" />
               <h3 className="font-semibold text-slate-900">{feature.title}</h3>
               <p className="text-sm text-slate-600">{feature.description}</p>
             </div>
@@ -118,10 +118,10 @@ export function MarqueeRow({
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-9 h-9 rounded-full object-cover border border-slate-900"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover border border-slate-900"
               />
               <div>
-                <p className="font-semibold text-slate-800">{t.name}</p>
+                <p className="font-semibold text-sm sm:text-base text-slate-800">{t.name}</p>
                 <p className="text-xs text-slate-500">{t.title}</p>
               </div>
             </div>
