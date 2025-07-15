@@ -380,7 +380,37 @@ const pricing = {
       </span>
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
+
+       {/* Pay As You Go */}
+       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col relative overflow-hidden">
+        <div className=" bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
+          <Rocket className="w-5 h-5" />
+        </div>
+        <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
+        <div className="text-4xl font-bold text-blue-800 mb-1">$3</div>
+        <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
+        <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Monthly Subscription
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Hidden Costs
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Predictable Expense
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support
+          </li>
+        </ul>
+        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+          Get Started
+        </button>
+
+      </div> 
+
+
       {/* Solo */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col">
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Solo</h3>
@@ -460,35 +490,6 @@ const pricing = {
         </button>
       </div>
 
-      {/* Pay As You Go */}
-      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col relative overflow-hidden">
-        <div className=" bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
-          <Rocket className="w-5 h-5" />
-        </div>
-        <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
-        <div className="text-4xl font-bold text-blue-800 mb-1">$3</div>
-        <p className="text-sm text-slate-600 mb-6 font-semibold">per delivery</p>
-        <ul className="text-sm text-slate-800 space-y-2 flex-1 text-left">
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Monthly Subscription
-          </li>
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> No Hidden Costs
-          </li>
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Predictable Expense
-          </li>
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-blue-800 mt-0.5" /> Standard Support
-          </li>
-        </ul>
-        <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-          Get Started
-        </button>
-
-      </div>
-            
-
     </div>
   </div>
 </section>
@@ -557,8 +558,8 @@ const pricing = {
 
 
 
-      {/* Everything You need */}
-      <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
+  {/* Everything You need */}
+  <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[110px] md:rounded-t-[200px]">
   <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">
@@ -575,18 +576,14 @@ const pricing = {
     <div className=" mt-12">
   <EverythingYouNeedMarquee />
 </div>
-
-
-   
-  
-  </div>
+</div>
 </section>
 
 
 
       
 {/* CTA */}
-  <section className="bg-gradient-to-b from-white via-blue-50 to-white  pb-5 px-4 sm:px-6 my-5 md:my-20 ">
+  <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  pb-5 px-4 sm:px-6  ">
     {/* Top - Email Form */}
 <div className="text-center container rounded-b-3xl shadow-md shadow-slate-300 p-7 md:p-12">
       <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-">Start Your 14 day free trial</h2>
