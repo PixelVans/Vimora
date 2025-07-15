@@ -239,7 +239,7 @@ const pricing = {
         <img
           src="/media/propel.jpg"
           alt="Propelling Illustration"
-          className="w-full h-64 mx-auto sm:h-80 md:h-96 object-cover"
+          className="w-full h-60 mx-auto sm:h-80 md:h-96 lg:h-[450px] object-cover"
         />
       </motion.div>
 
@@ -276,10 +276,17 @@ const pricing = {
         <div
           key={step}
           className="group relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1"
-        >
-          <div className="text-6xl  mb-5 font-extrabold text-slate-300 select-none z-0 group-hover:text-slate-600">
-            {step}
-          </div>
+        > <div className="group">
+        <div className="text-5xl sm:text-6xl mb-5 font-extrabold text-slate-300 select-none z-0
+          group-hover:text-slate-500 transition-colors duration-300 delay-200">
+        {step}
+      </div>
+
+      </div>
+      
+    
+
+
 
           <div className="z-10 flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
             <Icon className="h-10 w-10 text-blue-700 mb-4 transform transition-transform duration-300 group-hover:scale-110" />
