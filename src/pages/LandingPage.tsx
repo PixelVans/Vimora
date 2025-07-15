@@ -1,5 +1,5 @@
 import Navbar from "@components/Navbar";
-import { DollarSignIcon, Share2Icon, UploadIcon, Camera, Users, Building2, Twitter, Facebook, Youtube, Instagram,
+import { DollarSignIcon, Share2Icon, UploadIcon,  Twitter, Facebook, Youtube, Instagram,
   CheckCircle, ArrowRight, LayoutGrid,
   Rocket,
   ChevronDownIcon, 
@@ -229,19 +229,19 @@ const pricing = {
 
     {/* Image */}
     <motion.div
-  className="overflow-hidden mx-auto rounded-2xl max-w-5xl shadow-md mb-12"
-  animate={{ y: [0, -10, 0] }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}>
-  <img
-    src="/media/propel.jpg"
-    alt="Propelling Illustration"
-    className="w-full h-64 mx-auto sm:h-80 md:h-96 object-cover"
-  />
-</motion.div>
+        className="overflow-hidden mx-auto rounded-2xl max-w-5xl shadow-md mb-12"
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}>
+        <img
+          src="/media/propel.jpg"
+          alt="Propelling Illustration"
+          className="w-full h-64 mx-auto sm:h-80 md:h-96 object-cover"
+        />
+      </motion.div>
 
 
     {/* Down Arrow */}
@@ -254,55 +254,55 @@ const pricing = {
       {/* Steps Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-{/* Step 1 */}
-<div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-  <div className=" text-7xl mb-4 font-extrabold text-slate-300  select-none">1</div>
-  <div className="z-10 flex flex-col items-center">
-    <UploadIcon className="h-10 w-10 text-blue-700 mb-4" />
-    <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-      Upload your media
-    </h4>
-    <p className="text-slate-700 text-sm text-center">
-      Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more.
-      Branded delivery pages are auto-generated and easy to use.
-    </p>
-  </div>
-</div>
+      {/* Step 1 */}
+      <div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
+        <div className="text-6xl sm:text-7xl mb-4 font-extrabold text-slate-300  select-none">1</div>
+        <div className="z-10 flex flex-col items-center">
+          <UploadIcon className="h-10 w-10 text-blue-700 mb-4" />
+          <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+            Upload your media
+          </h4>
+          <p className="text-slate-700 text-sm text-center">
+            Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more.
+            Branded delivery pages are auto-generated and easy to use.
+          </p>
+        </div>
+      </div>
 
-{/* Step 2 */}
-<div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-  <div className=" text-7xl mb-4 font-extrabold text-slate-300 z-0 select-none">2</div>
-  <div className="z-10 flex flex-col items-center">
-    <Share2Icon className="h-10 w-10 text-blue-700 mb-4" />
-    <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-      Share with a click
-    </h4>
-    <p className="text-slate-600 text-sm text-center">
-      Send your media right to your client in a clean, professional link straight to their phone and email —
-      with no login required.
-    </p>
-  </div>
-</div>
+      {/* Step 2 */}
+      <div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
+        <div className=" text-6xl sm:text-7xl mb-4 font-extrabold text-slate-300 z-0 select-none">2</div>
+        <div className="z-10 flex flex-col items-center">
+          <Share2Icon className="h-10 w-10 text-blue-700 mb-4" />
+          <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+            Share with a click
+          </h4>
+          <p className="text-slate-600 text-sm text-center">
+            Send your media right to your client in a clean, professional link straight to their phone and email —
+            with no login required.
+          </p>
+        </div>
+      </div>
 
-{/* Step 3 */}
-<div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
-  <div className="  text-7xl mb-4 font-extrabold text-slate-300  z-0 select-none">3</div>
-  <div className="z-10 flex flex-col items-center">
-    <DollarSignIcon className="h-10 w-10 text-blue-700 mb-4" />
-    <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-      Get paid instantly
-    </h4>
-    <p className="text-slate-600 text-sm text-center">
-      VIMORA automatically tracks orders, services provided, and payments, and sends a clean,
-      line-itemed invoice — so you don't have to.
-    </p>
-  </div>
-</div>
-</div>
+      {/* Step 3 */}
+      <div className="relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition flex flex-col items-center">
+        <div className=" text-6xl sm:text-7xl mb-4 font-extrabold text-slate-300  z-0 select-none">3</div>
+        <div className="z-10 flex flex-col items-center">
+          <DollarSignIcon className="h-10 w-10 text-blue-700 mb-4" />
+          <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
+            Get paid instantly
+          </h4>
+          <p className="text-slate-600 text-sm text-center">
+            VIMORA automatically tracks orders, services provided, and payments, and sends a clean,
+            line-itemed invoice — so you don't have to.
+          </p>
+        </div>
+      </div>
+      </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
       
       
