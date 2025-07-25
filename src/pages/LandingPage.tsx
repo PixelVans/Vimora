@@ -405,7 +405,7 @@ const pricing = {
         />
       </button>
       <span className={`font-bold ${yearly ? "text-blue-600" : "text-slate-600"}`}>
-        Yearly <span className="text-green-600 font-semibold">(Save 17%)</span>
+        Yearly <span className="text-green-600 font-semibold">(Get 2 Months Free)</span>
       </span>
     </div>
 
