@@ -564,7 +564,7 @@ const pricing = {
           <img
             src="/media/media-teams.png"
             alt="Team Illustration"
-            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
         <div className="p-6 bg-white">
@@ -583,7 +583,7 @@ const pricing = {
           <img
             src="/media/brokerages.png"
             alt="Brokerage Illustration"
-            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
         <div className="p-6 bg-white">
