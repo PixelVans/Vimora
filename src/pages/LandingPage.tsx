@@ -543,7 +543,7 @@ const pricing = {
       <div className="group border border-slate-200 rounded-xl overflow-hidden shadow transition hover:shadow-xl">
         <div className="overflow-hidden">
           <img
-            src="/media/photographer-illustration.webp"
+            src="/media/photographer.png"
             alt="Photographer Illustration"
             className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -562,7 +562,7 @@ const pricing = {
       <div className="group border border-slate-200 rounded-xl overflow-hidden shadow transition hover:shadow-xl">
         <div className="overflow-hidden">
           <img
-            src="/media/team-illustration.webp"
+            src="/media/media-teams.png"
             alt="Team Illustration"
             className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -581,7 +581,7 @@ const pricing = {
       <div className="group border border-slate-200 rounded-xl overflow-hidden shadow transition hover:shadow-xl">
         <div className="overflow-hidden">
           <img
-            src="/media/brokerage-illustration.webp"
+            src="/media/brokerages.png"
             alt="Brokerage Illustration"
             className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
           />
