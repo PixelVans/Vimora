@@ -545,7 +545,7 @@ const pricing = {
           <img
             src="/media/photographer.png"
             alt="Photographer Illustration"
-            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
         <div className="p-6 bg-white">
