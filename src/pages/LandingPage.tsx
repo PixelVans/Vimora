@@ -137,8 +137,8 @@ const pricing = {
       <Navbar />
 
       {/* landing section */}
-      <section className="pt-20 mt-8 lg:mt-0 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100 to-white">
-      <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 items-center container">
+      <section className="pt-20 mt-8 lg:mt-5 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100 to-white">
+      <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
         
         {/* Text Content */}
         <motion.div
@@ -147,7 +147,7 @@ const pricing = {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="text-3xl md:text-4xl lg:text-5xl mt-5 font-bold leading-tight font-inter text-slate-900 flex flex-col sm:space-y-2">
+          <div className="text-3xl md:text-4xl  xl:text-5xl mt-5 font-bold leading-tight font-inter text-slate-900 flex flex-col sm:space-y-2">
             <h1>Better than Spiro.</h1>
             <h1>Cheaper than Aryeo.</h1>
             <h1 className="text-blue-700">Easier than Both.</h1>
@@ -158,7 +158,7 @@ const pricing = {
             and get paid: All without the dated and clunky tools or high monthly fees.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col xl:flex-row gap-4">
             {/* Animated Get Started Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -642,9 +642,9 @@ const pricing = {
       {/* Left - Image */}
       <div className=" h-full">
         <img
-          src="/media/footer.jpg" // Replace with your image
+          src="/media/footer.png" 
           alt="Free Trial"
-          className="w-96 h-full object-cover"
+          className="w-[500px] h-full object-cover"
         />
       </div>
 
@@ -653,7 +653,7 @@ const pricing = {
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
           Start Your 14 Day Free Trial
         </h2>
-        <p className="mb-8 mt-3 text-slate-800">
+        <p className="mb-8 mt-3 text-slate-800 text-center">
           No contracts. No hidden fees. Cancel anytime.
         </p>
 
@@ -661,11 +661,11 @@ const pricing = {
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full px-4 py-3 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
+            className="w-[300px] px-4 py-2 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
           />
           <button
             type="submit"
-            className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition w-full "
+            className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition w-[300px] "
           >
             Get Started For Free
           </button>
