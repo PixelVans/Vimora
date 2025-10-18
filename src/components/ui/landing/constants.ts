@@ -181,42 +181,141 @@ export const features = [
 
   // Sample testimonials data
   export const testimonials = [
-    {
-      name: "Marisela A.",
-      title: "Owner - Twin Lakes Photography",
-      quote: "The pay as you go plan is so much better. I did the math and I'm saving like, 70% on delivery costs. Works good, I'm happy.",
-      image: "/profiles/p2.jpg",
-    },
-    {
-      name: "Christina E.",
-      title: "Owner - Marketplace Photography",
-      quote: "My clients LOVE LOVE LOVE VIMORA. Some realtors aren't really that techy, so having an interface that's designed so ANYONE can use it is just so helpful.",
-      image: "/profiles/p-6.jpeg",
-    },
-    {
-      name: "Justin T.",
-      title: "Owner - Chicago REP",
-      quote: "VIMORA just works so much better. I moved from photohub and it just looks so clean, and I'm paying LESS.",
-      image: "/profiles/p-7.jpeg",
-    },
-    {
-      name: "Ronald M.",
-      title: "Owner - SnapHome Media",
-      quote: "It's clean, it's cheap, and the invoices with line items make my clients so much happier.",
-      image: "/profiles/p-8.jpeg",
-    },
-    {
-      name: "Thomas T.",
-      title: "Owner - Pen RE Media Group",
-      quote: "Easy to use and snappy. I like them property websites.",
-      image: "/profiles/p-9.jpeg",
-    },
-    {
-      name: "JJ.",
-      title: "Owner - Pen RE Media Group",
-      quote: "Easy to use and snappy. I like them property websites.",
-      image: "/profiles/p-4.jpg",
-    },
+        {
+          name: "Marisela A.",
+          title: "Owner - Twin Lakes Photography",
+          quote: "The pay as you go plan is so much better. I did the math and I'm saving like, 70% on delivery costs. Works good, I'm happy.",
+          image: "/profiles/p2.jpg",
+        },
+        {
+          name: "Christina E.",
+          title: "Owner - Marketplace Photography",
+          quote: "My clients LOVE LOVE LOVE VIMORA. Some realtors aren't really that techy, so having an interface that's designed so ANYONE can use it is just so helpful.",
+          image: "/profiles/p-6.jpeg",
+        },
+        {
+          name: "Justin T.",
+          title: "Owner - Chicago REP",
+          quote: "VIMORA just works so much better. I moved from photohub and it just looks so clean, and I'm paying LESS.",
+          image: "/profiles/p-7.jpeg",
+        },
+        {
+          name: "Ronald M.",
+          title: "Owner - SnapHome Media",
+          quote: "It's clean, it's cheap, and the invoices with line items make my clients so much happier.",
+          image: "/profiles/p-8.jpeg",
+        },
+        {
+          name: "Thomas T.",
+          title: "Owner - Pen RE Media Group",
+          quote: "Easy to use and snappy. I like them property websites.",
+          image: "/profiles/p-9.jpeg",
+        },
+        {
+          name: "JJ.",
+          title: "Owner - Pen RE Media Group",
+          quote: "Easy to use and snappy. I like them property websites.",
+          image: "/profiles/p-4.jpg",
+        },
+        {
+        name: "Carlos D.",
+        title: "Owner - ShutterSpace Productions",
+        quote:
+          "The presentation is next level. My clients have actually complimented the way their galleries look — that never happened before.",
+        image: "/profiles/p6.jpg",
+      },
+      {
+        name: "Amber W.",
+        title: "Co-Founder - Realty Shots",
+        quote:
+          "Super intuitive platform. I didn’t even need a tutorial. The branding options make my deliveries look custom and premium.",
+        image: "/profiles/p7.jpg",
+      },
+      {
+        name: "Daniel K.",
+        title: "Owner - Northview Photography",
+        quote:
+          "I love how VIMORA automates delivery and billing. I used to spend hours managing that manually. Now it’s just… done.",
+        image: "/profiles/p8.jpg",
+      },
+      {
+        name: "Claudia R.",
+        title: "Founder - FocusFirst Media",
+        quote:
+          "What I love most is how fast everything loads. Uploads, client delivery — all seamless. It’s actually enjoyable sending galleries again!",
+        image: "/profiles/p9.jpg",
+      },
+      {
+        name: "David L.",
+        title: "Owner - Horizon Visuals",
+        quote:
+          "We switched the entire team to VIMORA last month. The transition was smoother than I expected and support was incredible. Game changer.",
+        image: "/profiles/p10.jpg",
+      },
+      {
+        name: "Samantha P.",
+        title: "Owner - Skyline Media Group",
+        quote:
+          "Our agents love how professional the listings look. It honestly makes our media stand out. I wish we made the switch sooner!",
+        image: "/profiles/p11.jpg",
+      },
+      {
+        name: "Leo N.",
+        title: "Freelance Real Estate Photographer",
+        quote:
+          "I’m a one-man show and this makes me look like a full production company. Super clean, super fast, no stress. Worth every cent.",
+        image: "/profiles/p12.jpg",
+      },
+        {
+        name: "Lydia S.",
+        title: "Founder - Visual Edge Media",
+        quote:
+          "Honestly, I didn’t expect setup to be this quick. Within minutes, I was uploading shoots and sending client links. So simple, and it just works.",
+        image: "/profiles/p13.jpg",
+      },
+        {
+        name: "Ariana F.",
+        title: "Owner - SharpFrame Media",
+        quote:
+          "VIMORA has honestly simplified my workflow so much. My clients get their listings faster, and everything just feels more polished and organized.",
+        image: "/profiles/p14.jpg",
+      },
+      {
+        name: "Marcus G.",
+        title: "Founder - BrightHaus Visuals",
+        quote:
+          "I’ve tried a few platforms before this, but VIMORA just nails the user experience. Uploading, delivering, even billing — it all feels smooth and thought-out.",
+        image: "/profiles/p15.jpg",
+      },
+      {
+        name: "Tanya R.",
+        title: "Owner - Modern View Photography",
+        quote:
+          "The client sites look so good! I literally had a realtor message me just to ask how I made the listings look so clean. That says it all.",
+        image: "/profiles/p16.jpg",
+      },
+      {
+        name: "Ethan K.",
+        title: "Lead Photographer - Apex Visuals",
+        quote:
+          "What sold me was the automation. My files get delivered, invoices sent, and I don’t even have to think about it. It’s like having a silent assistant.",
+        image: "/profiles/p17.jpg",
+      },
+      {
+        name: "Jasmine D.",
+        title: "Creative Director - HouseLens Studio",
+        quote:
+          "Support is actually responsive — real humans who understand what photographers deal with. That alone made the switch worth it.",
+        image: "/profiles/p18.jpg",
+      },
+      {
+        name: "Noah P.",
+        title: "Owner - ClearFocus Media",
+        quote:
+          "Every delivery feels like a branded experience now. Clients think I built some custom system just for them. Love how professional it looks.",
+        image: "/profiles/p19.jpg",
+      },
+
 ];
   
 
