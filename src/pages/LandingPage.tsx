@@ -147,7 +147,7 @@ const pricing = {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
 
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
             {/* Text Content */}
             <motion.div
               className="space-y-6 lg:space-y-9"
@@ -155,7 +155,7 @@ const pricing = {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 flex flex-col sm:space-y-2">
+                <div className="text-4xl xl:text-5xl  2xl:text-6xl  font-bold leading-tight text-slate-900 flex flex-col sm:space-y-2">
                   <h1>Better than Spiro.</h1>
                   <h1>Cheaper than Aryeo.</h1>
                   <h1 className="text-blue-700">Easier than Both.</h1>
@@ -232,7 +232,7 @@ const pricing = {
     </h2>
 
     {/* Logos */}
-    <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+    <div className="flex flex-wrap justify-center items-center gap-2 md:gap-16">
       {[
         "/media/logos/remax.png",
         "/media/logos/keller.png",
@@ -246,7 +246,7 @@ const pricing = {
           <img
             src={logo}
             alt="brand logo"
-            className="h-10 w-auto  group-hover:grayscale-0 transition duration-300"
+            className="h-7 sm:h-10 w-auto  group-hover:grayscale-0 transition duration-300"
           />
         </div>
       ))}
