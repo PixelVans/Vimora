@@ -137,87 +137,108 @@ const pricing = {
       <Navbar />
 
       {/* hero section */}
-    
-        <section className="relative pt-20 mt-8 lg:mt-5 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
-          {/* Background image (soft + subtle blur) */}
-          <img
-            src="/media/footer.jpg"
-            alt="Background pattern"
-            className="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
+    <section className="relative pt-20 mt-8 lg:mt-5 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
+        {/* --- Background image (soft blur pattern) --- */}
+        <img
+          src="/media/footer.jpg"
+          alt="Background pattern"
+          className="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm"
+        />
 
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
-            {/* Text Content */}
-            <motion.div
-              className="space-y-6 lg:space-y-9"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-                <div className="text-4xl xl:text-5xl  2xl:text-6xl  font-bold leading-tight text-slate-900 flex flex-col sm:space-y-2">
-                  <h1>Better than Spiro.</h1>
-                  <h1>Cheaper than Aryeo.</h1>
-                  <h1 className="text-blue-700">Easier than Both.</h1>
-                </div>
+        {/* --- Gradient overlay --- */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
 
-              <p className="text-sm sm:text-lg text-slate-700 mx-2">
-                <strong className="text-blue-950">Vimora</strong> is the all-in-one platform for real estate photographers to
-                upload & deliver real estate media, and get paid — all without the dated and clunky tools or high monthly fees.
-              </p>
+        {/* Right Half (zero-index background) --- */}
+      <div className="hidden absolute inset-y-0 right-12 w-1/2 lg:flex items-center justify-end overflow-hidden z-0 mt-16">
+        <div
+          className="text-[40vw] font-black text-slate-100 leading-none select-none pointer-events-none"
+          style={{
+            textShadow: `
+              2px 2px 0 #cbd5e1,
+              -2px -2px 0 #cbd5e1,
+              2px -2px 0 #cbd5e1,
+              -2px 2px 0 #cbd5e1
+            `,
+          }}
+        >
+          V
+        </div>
+      </div>
 
-              <div className="flex flex-col xl:flex-row gap-4">
-                {/* Animated Get Started Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="group relative overflow-hidden bg-primary text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg"
-                >
-                  <span className="z-10 relative">Get Started For Free</span>
-                  <ArrowRight
-                    className="z-10 relative transition-transform group-hover:translate-x-2 duration-300"
-                    size={18}
-                  />
-                  {/* Overlay effect */}
-                  <span
-                    className="absolute inset-0 bg-gradient-to-r from-black to-blue-300 opacity-0 
-                    group-hover:opacity-30 transition-opacity duration-300 rounded-lg"
-                  />
-                </motion.button>
 
-                {/* Compare Button */}
-                <motion.button
-                  whileHover={{ scale: 1.03 }}
-                  className="group relative bg-white/60 backdrop-blur-md ring-1 ring-primary text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
-                >
-                  <span className="z-10 relative">Compare Between Competitors</span>
-                  <LayoutGrid
-                    className="text-blue-950 transform transition-transform duration-500 group-hover:rotate-y-180"
-                    size={18}
-                  />
-                </motion.button>
-              </div>
-            </motion.div>
+        {/* --- Main Content --- */}
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
+          {/* Text Content */}
+          <motion.div
+            className="space-y-6 lg:space-y-9"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="text-4xl xl:text-5xl  2xl:text-6xl font-bold leading-tight text-slate-900 flex flex-col sm:space-y-2">
+              <h1>Better than Spiro.</h1>
+              <h1>Cheaper than Aryeo.</h1>
+              <h1 className="text-blue-700">Easier than Both.</h1>
+            </div>
 
-            {/* Image Section */}
-            <motion.div
-              className="relative flex justify-center lg:justify-end"
-              animate={{ scale: [1, 1.03, 1] }}
-              transition={{
-                repeat: Infinity,
-                duration: 5,
-                ease: "easeInOut",
-              }}
-            >
-              {/* Subtle glow behind image */}
-              <div className="absolute -inset-6 bg-blue-300/30  rounded-full"></div>
-              <img
-                src="/banner.jpeg"
-                alt="Landing visual"
-                className="relative z-10 max-w-full h-auto rounded-xl shadow-xl border border-slate-200 border-5"
-              />
-            </motion.div>
-          </div>
-        </section>
+            <p className="text-sm sm:text-lg text-slate-700 mx-2">
+              <strong className="text-blue-950">Vimora</strong> is the all-in-one platform for real estate photographers to
+              upload & deliver real estate media, and get paid — all without the dated and clunky tools or high monthly fees.
+            </p>
+
+            <div className="flex flex-col xl:flex-row gap-4">
+              {/* Buttons */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="group relative overflow-hidden bg-primary text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg"
+              >
+                <span className="z-10 relative">Get Started For Free</span>
+                <ArrowRight
+                  className="z-10 relative transition-transform group-hover:translate-x-2 duration-300"
+                  size={18}
+                />
+                <span
+                  className="absolute inset-0 bg-gradient-to-r from-black to-blue-300 opacity-0 
+                  group-hover:opacity-30 transition-opacity duration-300 rounded-lg"
+                />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                className="group relative bg-white/60 backdrop-blur-md ring-1 ring-primary text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
+              >
+                <span className="z-10 relative">Compare Between Competitors</span>
+                <LayoutGrid
+                  className="text-blue-950 transform transition-transform duration-500 group-hover:rotate-y-180"
+                  size={18}
+                />
+              </motion.button>
+            </div>
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            className="relative flex justify-center lg:justify-end"
+            animate={{ scale: [1, 1.03, 1] }}
+            transition={{
+              repeat: Infinity,
+              duration: 5,
+              ease: "easeInOut",
+            }}
+          >
+            <img
+              src="/banner.jpeg"
+              alt="Landing visual"
+              className="relative z-10 max-w-full h-auto rounded-xl shadow-xl border border-slate-200 border-5"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+
+
+
+        
 
      <section className="relative py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
   <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(0,102,255,0.05),_transparent_70%)]"></div>
@@ -255,13 +276,7 @@ const pricing = {
 </section>
 
 
-        
-
-
-
-
-      
-      {/* propelling section */}
+  {/* propelling section */}
 
       <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
       <div className="max-w-7xl mx-auto text-center">
