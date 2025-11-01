@@ -139,11 +139,11 @@ const pricing = {
       {/* hero section */}
     <section className="relative pt-20 mt-8 lg:mt-5 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
         {/* --- Background image (soft blur pattern) --- */}
-        <img
+        {/* <img
           src="/media/footer.jpg"
           alt="Background pattern"
           className="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm"
-        />
+        /> */}
 
         {/* --- Gradient overlay --- */}
         <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
@@ -151,7 +151,7 @@ const pricing = {
         {/* Right Half (zero-index background) --- */}
       <div className="hidden absolute inset-y-0 right-12 w-1/2 lg:flex items-center justify-end overflow-hidden z-0 mt-16">
         <div
-          className="text-[40vw] font-black text-slate-100 leading-none select-none pointer-events-none"
+          className="text-[40vw] font-black text-slate-50 leading-none select-none pointer-events-none"
           style={{
             textShadow: `
               2px 2px 0 #cbd5e1,
@@ -279,10 +279,10 @@ const pricing = {
   {/* propelling section */}
 
       <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-[1450px] mx-auto text-center">
 
     {/* Heading */}
-    <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
+    <h2 className="text-4xl  font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
       Propelling You Forward.
     </h2>
 
@@ -312,54 +312,92 @@ const pricing = {
     {/* Down Arrow */}
     <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
 
-    {/* Subheading */}
-    <div className="bg-blue-0 md:p-6 md:pb-12 rounded-3xl md:shadow-md">
-      <h3 className="text-3xl md:text-4xl font-semibold my-6 mb-9 text-slate-800">3 Steps To Deliver A Listing</h3>
 
-      {/* Steps Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        {
-          step: "1",
-          title: "Upload your media",
-          Icon: UploadIcon,
-          desc: "Drag and drop your photos, videos, virtual tours, floor plans, aerial photos, and more. Branded delivery pages are auto-generated and easy to use.",
-        },
-        {
-          step: "2",
-          title: "Share with a click",
-          Icon: Share2Icon,
-          desc: "Send your media right to your client in a clean, professional link straight to their phone and email — with no login required.",
-        },
-        {
-          step: "3",
-          title: "Get paid instantly",
-          Icon: DollarSignIcon,
-          desc: "VIMORA automatically tracks orders, services provided, and payments, and sends a clean, line-itemed invoice — so you don't have to.",
-        },
-      ].map(({ step, title, Icon, desc }) => (
-        <div
-          key={step}
-          className="group relative bg-white border border-slate-200 rounded-xl sm:rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1"
-        > <div className="group">
-        <div className="text-5xl sm:text-6xl mb-5 font-extrabold text-slate-300 select-none z-0
-          group-hover:text-slate-500 transition-colors duration-300 delay-200">
-        {step}
-      </div>
 
+ {/* Steps to Deliver Section */}
+<section className="relative bg-blue-950 md:px-12 py-20 rounded-3xl overflow-hidden">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.15),transparent_60%)] pointer-events-none" />
+
+  <h3 className="text-3xl md:text-4xl font-extrabold text-center mb-20 text-white tracking-tight">
+    3 Steps To Deliver A Listing
+  </h3>
+
+  <div className="max-w-6xl mx-auto space-y-24">
+    {/* STEP 1 */}
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="md:w-1/2 space-y-4">
+        <h4 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-white">
+          1. Upload Your Media
+        </h4>
+        <p className="text-slate-300 text-lg leading-relaxed">
+          Drag and drop your photos, videos, virtual tours, floor plans, and more.
+          Branded delivery pages are auto-generated and easy to use.
+        </p>
       </div>
-      
-    <div className="z-10 flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
-            <Icon className="h-10 w-10 text-blue-700 mb-4 transform transition-transform duration-300 group-hover:scale-110" />
-            <h4 className="text-xl font-semibold text-slate-950 mb-2 text-center">
-              {title}
-            </h4>
-            <p className="text-slate-600 text-sm text-center">{desc}</p>
-          </div>
-        </div>
-      ))}
+      <div className="md:w-1/2 relative group">
+        <div className="absolute -inset-2 bg-blue-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+        <img
+          src="/media/upload-illustration.jpg"
+          alt="Upload your media"
+          className="rounded-3xl w-full h-[350px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+      </div>
     </div>
-</div>
+
+    <div className="w-20 h-1  mx-auto bg-gradient-to-r from-blue-600 to-blue-100 rounded-full opacity-70 animate-pulse" />
+
+    {/* STEP 2 */}
+    <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+      <div className="md:w-1/2 space-y-4">
+        <h4 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-white">
+          2. Share With A Click
+        </h4>
+        <p className="text-slate-300 text-lg leading-relaxed">
+          Send your media directly to your client in a clean, professional link — no
+          login required. Perfectly formatted for any device.
+        </p>
+      </div>
+      <div className="md:w-1/2 relative group">
+        <div className="absolute -inset-2 bg-blue-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+        <img
+          src="/media/share-illustration.jpg"
+          alt="Share with a click"
+          className="rounded-3xl w-full h-[350px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+      </div>
+    </div>
+
+    <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 to-cyan-300 rounded-full opacity-70 animate-pulse" />
+
+    {/* STEP 3 */}
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="md:w-1/2 space-y-4">
+        <h4 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-white">
+          3. Get Paid Instantly
+        </h4>
+        <p className="text-slate-300 text-lg leading-relaxed">
+          VIMORA automatically tracks your services and payments, generating a clean,
+          itemized invoice — so you can focus on your craft. Integrated with
+          <span className="font-semibold text-blue-300"> Stripe</span> for instant,
+          secure payouts.
+        </p>
+      </div>
+      <div className="md:w-1/2 relative group">
+        <div className="absolute -inset-2 bg-blue-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+        <img
+          src="/media/get-paid-illustration.jpg"
+          alt="Get paid instantly"
+          className="rounded-3xl w-full h-[350px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 
 
@@ -700,14 +738,14 @@ const pricing = {
 
       
 {/* CTA */}
-<section className="px-4 sm:px-6 pb-5">
+<section className="px-4 sm:px-6 pb-5 mt-9">
   <div className="max-w-7xl mx-auto bg-gradient-to-b from-white via-blue-50 to-blue-100 rounded-3xl shadow-md shadow-slate-300 overflow-hidden">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
       {/* Left - Image */}
       <div className=" h-full">
         <img
-          src="/media/footer.png" 
+          src="/media/footer.jpg" 
           alt="Free Trial"
           className="w-[500px] h-full object-cover"
         />
@@ -715,7 +753,7 @@ const pricing = {
       
 
       {/* Right - Text & Form */}
-      <div className="p-8 sm:p-12 text-center md:text-left">
+      <div className="p-8 sm:p-12 text-center  md:text-left">
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
           Start Your 14 Day Free Trial
         </h2>
