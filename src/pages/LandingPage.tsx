@@ -1,5 +1,5 @@
 import Navbar from "@components/Navbar";
-import { DollarSignIcon, Share2Icon, UploadIcon,  Twitter, Facebook, Youtube, Instagram,
+import {  Twitter, Facebook, Youtube, Instagram,
   CheckCircle, ArrowRight, LayoutGrid,
   Rocket,
   ChevronDownIcon, 
