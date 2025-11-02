@@ -286,7 +286,7 @@ const pricing = {
       Propelling You Forward.
     </h2>
 
-    <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-10">
+    <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-10 px-2 lg:px-0">
       We took all the best aspects of every real estate media delivery platform and streamlined it,
       improving upon the user experience in every way so you don't have something holding you back —
       you have something propelling you forward.
@@ -314,85 +314,90 @@ const pricing = {
 
 
 
- {/* Steps to Deliver Section */}
-<section className="relative bg-blue-950 md:px-12 py-20 rounded-3xl overflow-hidden">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.15),transparent_60%)] pointer-events-none" />
+{/* Steps to Deliver Section */}
+<section className="relative bg-[#020617] py-28 md:px-16 overflow-hidden rounded-3xl">
+  {/* Background visual texture */}
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(56,189,248,0.15),transparent_60%)]" />
+  <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-blue-500/5 blur-[200px] -translate-x-1/2 -translate-y-1/2" />
 
-  <h3 className="text-3xl md:text-4xl font-extrabold text-center mb-20 text-white tracking-tight">
-    3 Steps To Deliver A Listing
-  </h3>
+  {/* Header */}
+  <div className="relative z-10 text-center mb-24">
+    <h3 className="text-4xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
+      3 Simple Steps To Deliver A Listing
+    </h3>
+    <p className="text-slate-400 mt-4 text-lg max-w-2xl mx-auto">
+      From upload to payout, experience a smooth and professional delivery process built for creators.
+    </p>
+  </div>
 
-  <div className="max-w-6xl mx-auto space-y-24">
-    {/* STEP 1 */}
-    <div className="flex flex-col md:flex-row items-center gap-10">
-      <div className="md:w-1/2 space-y-4">
-        <h4 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-white">
-          1. Upload Your Media
-        </h4>
-        <p className="text-slate-300 text-lg leading-relaxed">
-          Drag and drop your photos, videos, virtual tours, floor plans, and more.
-          Branded delivery pages are auto-generated and easy to use.
-        </p>
-      </div>
-      <div className="md:w-1/2 relative group">
-        <div className="absolute -inset-2 bg-blue-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-        <img
-          src="/media/upload-illustration.jpg"
-          alt="Upload your media"
-          className="rounded-3xl w-full h-[350px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-      </div>
-    </div>
+  {/* Steps */}
+  <div className="relative z-10 max-w-7xl mx-auto space-y-32">
+    {[
+      {
+        id: 1,
+        title: "Upload Your Media",
+        text: "Drag and drop your photos, videos, virtual tours, floor plans, and more. Branded delivery pages are automatically created and easy to use.",
+        img: "/media/upload-illustration.jpg",
+      },
+      {
+        id: 2,
+        title: "Share With A Click",
+        text: "Send your media directly to your client in a clean, professional link with no login required. Everything is perfectly formatted for any device.",
+        img: "/media/share-illustration.jpg",
+      },
+      {
+        id: 3,
+        title: "Get Paid Instantly",
+        text: "VIMORA tracks your services and payments automatically, creating clear, itemized invoices so you can focus on your craft. Integrated with Stripe for fast and secure payouts.",
+        img: "/media/get-paid-illustration.jpg",
+      },
+    ].map((step, index) => {
+      const imageOnRight = index % 2 === 0; // Step 1 right, Step 2 left, Step 3 right
+      return (
+        <div
+          key={step.id}
+          className={`flex flex-col ${
+            imageOnRight ? "md:flex-row-reverse" : "md:flex-row"
+          } items-center gap-10 md:gap-20 group`}
+        >
+          {/* Image Block */}
+          <div className="md:w-1/2 relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/30 to-cyan-400/10 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700" />
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)]">
+              <img
+                src={step.img}
+                alt={step.title}
+                className="w-full h-[220px] xl:h-[350px] object-cover transform transition duration-700 group-hover:scale-105"
+              />
+            </div>
+          </div>
 
-    <div className="w-20 h-1  mx-auto bg-gradient-to-r from-blue-600 to-blue-100 rounded-full opacity-70 animate-pulse" />
+          {/* Text Block */}
+          <div className="md:w-1/2 space-y-6 px-2">
+            <div className="flex items-center gap-3">
+              <span className="text-blue-400 text-xl font-semibold tracking-widest">
+                STEP 0{step.id}
+              </span>
+              <div className="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent" />
+            </div>
+            <h4 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+              {step.title}
+            </h4>
+            <p className="text-slate-300 text-lg leading-relaxed max-w-lg">
+              {step.text}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
 
-    {/* STEP 2 */}
-    <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-      <div className="md:w-1/2 space-y-4">
-        <h4 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-white">
-          2. Share With A Click
-        </h4>
-        <p className="text-slate-300 text-lg leading-relaxed">
-          Send your media directly to your client in a clean, professional link — no
-          login required. Perfectly formatted for any device.
-        </p>
-      </div>
-      <div className="md:w-1/2 relative group">
-        <div className="absolute -inset-2 bg-blue-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-        <img
-          src="/media/share-illustration.jpg"
-          alt="Share with a click"
-          className="rounded-3xl w-full h-[350px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-      </div>
-    </div>
-
-    <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 to-cyan-300 rounded-full opacity-70 animate-pulse" />
-
-    {/* STEP 3 */}
-    <div className="flex flex-col md:flex-row items-center gap-10">
-      <div className="md:w-1/2 space-y-4">
-        <h4 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-white">
-          3. Get Paid Instantly
-        </h4>
-        <p className="text-slate-300 text-lg leading-relaxed">
-          VIMORA automatically tracks your services and payments, generating a clean,
-          itemized invoice — so you can focus on your craft. Integrated with
-          <span className="font-semibold text-blue-300"> Stripe</span> for instant,
-          secure payouts.
-        </p>
-      </div>
-      <div className="md:w-1/2 relative group">
-        <div className="absolute -inset-2 bg-blue-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-        <img
-          src="/media/get-paid-illustration.jpg"
-          alt="Get paid instantly"
-          className="rounded-3xl w-full h-[350px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-      </div>
-    </div>
+  {/* Subtle line separator */}
+  <div className="mt-32 flex justify-center">
+    <div className="w-44 h-[2px] bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 rounded-full opacity-70 animate-pulse" />
   </div>
 </section>
+
 
 
 
