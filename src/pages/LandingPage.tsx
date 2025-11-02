@@ -325,13 +325,13 @@ const pricing = {
     <h3 className="text-4xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
       3 Simple Steps To Deliver A Listing
     </h3>
-    <p className="text-slate-400 mt-4 text-lg max-w-2xl mx-auto">
+    <p className="text-slate-400 mt-4 text-lg max-w-2xl mx-auto px-4">
       From upload to payout, experience a smooth and professional delivery process built for creators.
     </p>
   </div>
 
   {/* Steps */}
-  <div className="relative z-10 max-w-7xl mx-auto space-y-32">
+  <div className="relative z-10 max-w-7xl mx-auto space-y-32 px-4">
     {[
       {
         id: 1,
@@ -367,7 +367,7 @@ const pricing = {
               <img
                 src={step.img}
                 alt={step.title}
-                className="w-full h-[220px] xl:h-[350px] object-cover transform transition duration-700 group-hover:scale-105"
+                className="w-full h-[220px] xl:h-[350px]  object-cover transform transition duration-700 group-hover:scale-105"
               />
             </div>
           </div>
