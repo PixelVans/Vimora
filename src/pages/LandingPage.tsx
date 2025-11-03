@@ -137,37 +137,23 @@ const pricing = {
       <Navbar />
 
       {/* hero section */}
-    <section className="relative pt-20 mt-8 lg:mt-5 lg:min-h-[100dvh] flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
+    <section className="relative pt-20 mt-20 lg:mt-40  flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
         {/* --- Background image (soft blur pattern) --- */}
-        {/* <img
+        <img
           src="/media/footer.jpg"
           alt="Background pattern"
           className="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm"
-        /> */}
+        />
 
         {/* --- Gradient overlay --- */}
         <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
 
-        {/* Right Half (zero-index background) --- */}
-      <div className="hidden absolute inset-y-0 right-12 w-1/2 lg:flex items-center justify-end overflow-hidden z-0 mt-16">
-        <div
-          className="text-[40vw] font-black text-slate-50 leading-none select-none pointer-events-none"
-          style={{
-            textShadow: `
-              2px 2px 0 #cbd5e1,
-              -2px -2px 0 #cbd5e1,
-              2px -2px 0 #cbd5e1,
-              -2px 2px 0 #cbd5e1
-            `,
-          }}
-        >
-          V
-        </div>
-      </div>
+        
+      
 
 
         {/* --- Main Content --- */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 2xl:gap-32 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
           {/* Text Content */}
           <motion.div
             className="space-y-6 lg:space-y-9"
@@ -175,7 +161,7 @@ const pricing = {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-4xl xl:text-5xl  2xl:text-6xl font-bold leading-tight text-slate-900 flex flex-col sm:space-y-2">
+            <div className="text-4xl xl:text-4xl  2xl:text-5xl  font-bold leading-tight text-slate-900 flex flex-col xl:space-y-2">
               <h1>Better than Spiro.</h1>
               <h1>Cheaper than Aryeo.</h1>
               <h1 className="text-blue-700">Easier than Both.</h1>
@@ -192,7 +178,7 @@ const pricing = {
                 whileHover={{ scale: 1.05 }}
                 className="group relative overflow-hidden bg-primary text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg"
               >
-                <span className="z-10 relative">Get Started For Free</span>
+                <span className="z-10 relative">Get Started <span>For Free</span></span>
                 <ArrowRight
                   className="z-10 relative transition-transform group-hover:translate-x-2 duration-300"
                   size={18}
@@ -205,11 +191,11 @@ const pricing = {
 
               <motion.button
                 whileHover={{ scale: 1.03 }}
-                className="group relative bg-white/60 backdrop-blur-md ring-1 ring-primary text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
+                className="group relative bg-white/60 backdrop-blur-md ring-1 mb-5 xl:mb-0 ring-primary text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
               >
-                <span className="z-10 relative">Compare Between Competitors</span>
+                <span className="z-10 relative">Compare <span>Between Competitors</span> </span>
                 <LayoutGrid
-                  className="text-blue-950 transform transition-transform duration-500 group-hover:rotate-y-180"
+                  className="text-blue-950 transform transition-transform duration-500 group-hover:rotate-y-180 "
                   size={18}
                 />
               </motion.button>
@@ -243,12 +229,12 @@ const pricing = {
      <section className="relative py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
   <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(0,102,255,0.05),_transparent_70%)]"></div>
 
-  <div className="max-w-6xl mx-auto px-6 text-center relative">
+  <div className="max-w-6xl mx-auto px-6 text-center relative mt-5">
     {/* Heading */}
     <p className="text-sm uppercase tracking-widest text-blue-600 font-semibold mb-3">
       Trusted by leading brands
     </p>
-    <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 mb-10">
+    <h2 className="text-md  lg:text-2xl font-semibold text-slate-800 mb-10">
       Professionals and media teams worldwide rely on Vimora
     </h2>
 
@@ -262,12 +248,12 @@ const pricing = {
       ].map((logo, idx) => (
         <div
           key={idx}
-          className="group bg-white/70 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-md rounded-2xl p-4 transition-all duration-300 hover:scale-105"
+          className="group bg-white/70 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-md rounded-2xl p-3 sm:p-4 transition-all duration-300 hover:scale-105"
         >
           <img
             src={logo}
             alt="brand logo"
-            className="h-7 sm:h-10 w-auto  group-hover:grayscale-0 transition duration-300"
+            className="h-5 sm:h-7 w-auto  group-hover:grayscale-0 transition duration-300"
           />
         </div>
       ))}
@@ -279,14 +265,14 @@ const pricing = {
   {/* propelling section */}
 
       <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
-      <div className="max-w-[1450px] mx-auto text-center">
+      <div className="max-w-[1350px]  mx-auto text-center">
 
     {/* Heading */}
-    <h2 className="text-4xl  font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
+    <h2 className="text-2xl sm:text-4xl  font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
       Propelling You Forward.
     </h2>
 
-    <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-10 px-2 lg:px-0">
+    <p className="text-slate-700 text-sm sm:text-lg max-w-2xl mx-auto mb-10 px-2 lg:px-0">
       We took all the best aspects of every real estate media delivery platform and streamlined it,
       improving upon the user experience in every way so you don't have something holding you back —
       you have something propelling you forward.
@@ -321,17 +307,17 @@ const pricing = {
   <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-blue-500/5 blur-[200px] -translate-x-1/2 -translate-y-1/2" />
 
   {/* Header */}
-  <div className="relative z-10 text-center mb-24">
-    <h3 className="text-4xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
+  <div className="relative z-10 text-center mb-9 sm:mb-24">
+    <h3 className="text-lg md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
       3 Simple Steps To Deliver A Listing
     </h3>
-    <p className="text-slate-400 mt-4 text-lg max-w-2xl mx-auto px-4">
+    <p className="text-slate-400 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
       From upload to payout, experience a smooth and professional delivery process built for creators.
     </p>
   </div>
 
   {/* Steps */}
-  <div className="relative z-10 max-w-7xl mx-auto space-y-32 px-4">
+  <div className="relative z-10 max-w-7xl mx-auto space-y-12 md:space-y-32 px-4">
     {[
       {
         id: 1,
@@ -367,7 +353,7 @@ const pricing = {
               <img
                 src={step.img}
                 alt={step.title}
-                className="w-full h-[220px] xl:h-[350px]  object-cover transform transition duration-700 group-hover:scale-105"
+                className="w-full h-[220px] xl:h-[300px]  object-cover transform transition duration-700 "
               />
             </div>
           </div>
@@ -375,15 +361,15 @@ const pricing = {
           {/* Text Block */}
           <div className="md:w-1/2 space-y-6 px-2">
             <div className="flex items-center gap-3">
-              <span className="text-blue-400 text-xl font-semibold tracking-widest">
-                STEP 0{step.id}
+              <span className="text-blue-400 text-lg sm:text-xl font-semibold tracking-widest">
+                STEP <span className="text-yellow-100 text-lg sm:text-2xl  ">0{step.id}</span>
               </span>
               <div className="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent" />
             </div>
-            <h4 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+            <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
               {step.title}
             </h4>
-            <p className="text-slate-300 text-lg leading-relaxed max-w-lg">
+            <p className="text-slate-400 text-sm 2xl:text-lg leading-relaxed max-w-lg">
               {step.text}
             </p>
           </div>
@@ -393,7 +379,7 @@ const pricing = {
   </div>
 
   {/* Subtle line separator */}
-  <div className="mt-32 flex justify-center">
+  <div className="mt-9 lg:mt-32 flex justify-center">
     <div className="w-44 h-[2px] bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 rounded-full opacity-70 animate-pulse" />
   </div>
 </section>
@@ -418,17 +404,17 @@ const pricing = {
       {/* testimonials */}
       <section className="bg-white py-24 px-0 md:px-6">
       <div className="max-w-full mx-auto">
-          <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
+          <h2 className="sm:text-4xl text-2xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
           Over <span className="text-blue-900">
           <CountUp start={649700} end={650000} duration={190} separator="," />
 
           </span> Images Delivered
         </h2>
           <div className="text-center mb-12">
-          <h3 className="text-2xl sm:text-3xl font-semibold text-slate-800 mb-2 px-6">
+          <h3 className="text-xl sm:text-3xl font-semibold text-slate-800 mb-2 px-6">
           The Proof Is in the Platform
           </h3>
-          <p className="text-slate-600 text-lg px-6">
+          <p className="text-slate-600 text-md sm:text-lg px-6">
             Real feedback from real professionals who rely on VIMORA every day.
           </p>
         </div>
@@ -460,7 +446,7 @@ const pricing = {
       {/* key feature of vimora */}
       <section className="bg-slate-50 py-20  shadow">
     <div className="md:px-6 mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
+    <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
       Key VIMORA Features
     </h2>
 
@@ -492,14 +478,14 @@ const pricing = {
   id="pricing"
 >
   <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
+    <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Find the Right Plan for You
     </h2>
-    <p className="text-slate-600 text-lg mb-16">
+    <p className="text-slate-600 text-sm sm:text-lg mb-5 sm:mb-16">
       Transparent pricing. No surprises. Just pure value.
     </p>
 
-    <h3 className="text-2xl font-semibold text-slate-800 mb-4">Premium Subscriptions</h3>
+    <h3 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4">Premium Subscriptions</h3>
     <div className="mb-12 flex items-center justify-center gap-3">
       <span className={`font-bold ${!yearly ? "text-blue-600" : "text-slate-600"}`}>Monthly</span>
       <button
@@ -544,8 +530,7 @@ const pricing = {
         <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
           Get Started
         </button>
-
-      </div> 
+    </div> 
 
 
       {/* Solo */}
@@ -641,7 +626,7 @@ const pricing = {
   {/* Who is vilmora for section */}
   <section className="bg-white py-20 px-4 sm:px-6">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
+    <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
       Who VIMORA is For
     </h2>
 
@@ -723,11 +708,11 @@ const pricing = {
   <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
+      <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
         Everything You Need. <br className="hidden sm:block" />
         <span className="text-blue-900">Nothing You Don’t.</span>
       </h2>
-      <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
+      <p className="text-slate-600 sm:text-lg max-w-2xl mx-auto mb-12">
         VIMORA cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
       </p>
     </div>

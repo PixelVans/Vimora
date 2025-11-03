@@ -64,12 +64,12 @@ export function FeatureMarqueeRow({
           return (
             <div
               key={i}
-              className="bg-white rounded-xl shadow-md max-w-[320px] flex-shrink-0 px-4 
+              className="bg-white rounded-xl shadow-md max-w-[250px] sm:max-w-[320px] flex-shrink-0 px-4 
               sm:px-4 text-center flex flex-col items-center my-1 py-4 "
             >
-              <Icon className="w-8 h-8 sm:w-9 sm:h-9 text-blue-700 mb-3" />
-              <h3 className="font-semibold text-slate-900">{feature.title}</h3>
-              <p className="text-sm text-slate-600">{feature.description}</p>
+              <Icon className="w-7 h-7 sm:w-9 sm:h-9 text-blue-700 mb-3" />
+              <h3 className="font-semibold text-[12px] sm:text-sm text-slate-900">{feature.title}</h3>
+              <p className="text-[10px] sm:text-sm text-slate-600">{feature.description}</p>
             </div>
           );
         })}
@@ -112,20 +112,20 @@ export function MarqueeRow({
 
           <div
           key={i}
-          className="bg-white rounded-xl shadow-md max-w-[320px] flex-shrink-0 p-4 my-2"
+          className="bg-white rounded-xl shadow-md max-w-[220px] sm:max-w-[320px] flex-shrink-0 p-3 sm:p-4 my-2"
           >
             <div className="flex items-center gap-4 mb-4">
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover border border-slate-900"
+                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover border border-slate-900"
               />
               <div>
-                <p className="font-semibold text-sm sm:text-base text-slate-800">{t.name}</p>
-                <p className="text-xs text-slate-500">{t.title}</p>
+                <p className="font-semibold text-xs sm:text-base text-slate-800">{t.name}</p>
+                <p className="text-[10px] sm:text-xs text-slate-500">{t.title}</p>
               </div>
             </div>
-            <p className="text-slate-600 text-sm italic">&ldquo;{t.quote}&rdquo;</p>
+            <p className="text-slate-600 text-[9px] sm:text-sm italic">&ldquo;{t.quote}&rdquo;</p>
           </div>
         ))}
       </motion.div>
