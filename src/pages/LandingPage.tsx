@@ -230,7 +230,7 @@ const pricing = {
      <section className="relative py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
   <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(0,102,255,0.05),_transparent_70%)]"></div>
 
-  <div className="max-w-6xl mx-auto px-6 text-center relative mt-5">
+  <div className="max-w-6xl mx-auto px-6 text-center relative mt-5 xl:mt-9">
     {/* Heading */}
     <p className="text-sm uppercase tracking-widest text-blue-600 font-semibold mb-3">
       Trusted by leading brands
@@ -276,11 +276,12 @@ const pricing = {
       Propelling You Forward.
     </h2>
 
-    <p className="text-slate-700 text-sm sm:text-lg max-w-2xl mx-auto mb-10 px-2 lg:px-0">
-      We took all the best aspects of every real estate media delivery platform and streamlined it,
-      improving upon the user experience in every way so you don't have something holding you back —
-      you have something propelling you forward.
-    </p>
+      <p className="text-slate-700 text-sm sm:text-lg max-w-2xl mx-auto mb-10 px-2 lg:px-0">
+        We took all the best aspects of every real estate media delivery platform and streamlined it,
+        improving upon the user experience in every way so you don't have something holding you back,
+        you have something propelling you forward.
+      </p>
+
 
     {/* Image */}
     <motion.div

@@ -42,8 +42,8 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-sm shadow-slate-200 z-50">
-      <nav className="flex items-center justify-between p-3  mx-1 lg:mx-12 mt-2 sm:mt-4">
+    <div className="fixed top-0 left-0 w-full bg-white shadow-md shadow-slate-200 z-50">
+      <nav className="flex items-center justify-between p-2  mx-1 lg:mx-12 xl:mx-20 2xl:mx-28 mt-2 ">
         {/* Logo */}
         <Link to="/">
           <img src="/Logo_one-1.png" alt="Vimora Logo" className="h-8 lg:h-12" />
