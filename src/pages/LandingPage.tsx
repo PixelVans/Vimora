@@ -167,10 +167,11 @@ const pricing = {
               <h1 className="text-blue-700">Easier than Both.</h1>
             </div>
 
-            <p className="text-sm sm:text-lg text-slate-700 mx-2">
-              <strong className="text-blue-950">Vimora</strong> is the all-in-one platform for real estate photographers to
-              upload & deliver real estate media, and get paid — all without the dated and clunky tools or high monthly fees.
-            </p>
+              <p className="text-sm sm:text-lg text-slate-700 mx-2">
+                <strong className="text-blue-950">Vimora</strong> is the all-in-one platform for real estate photographers to
+                upload and deliver real estate media, and get paid easily without the dated and clunky tools or high monthly fees.
+              </p>
+
 
             <div className="flex flex-col xl:flex-row gap-4">
               {/* Buttons */}
@@ -245,15 +246,18 @@ const pricing = {
         "/media/logos/keller.png",
         "/media/logos/zillow.jpg",
         "/media/logos/compass.png",
+        "/media/logos/OIP.jpg",
+        "/media/logos/redfin.png",
+        "/media/logos/Zoopla-Logo.jpg",
       ].map((logo, idx) => (
         <div
           key={idx}
-          className="group bg-white/70 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-md rounded-2xl p-3 sm:p-4 transition-all duration-300 hover:scale-105"
+          className="group bg-white/70 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-md rounded-2xl p-3 sm:p-3 transition-all duration-300 hover:scale-105"
         >
           <img
             src={logo}
             alt="brand logo"
-            className="h-5 sm:h-7 w-auto  group-hover:grayscale-0 transition duration-300"
+            className="h-5 sm:h-9 w-auto  group-hover:grayscale-0 transition duration-300"
           />
         </div>
       ))}
