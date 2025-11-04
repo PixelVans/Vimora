@@ -456,7 +456,7 @@ const pricing = {
       <section className="bg-slate-50 py-20  shadow">
     <div className="md:px-6 mx-auto text-center">
     <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
-      Key VIMORA Features
+      KEY VIMORA Features
     </h2>
 
     {/* Gradient wrapper */}
