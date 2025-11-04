@@ -170,7 +170,7 @@ const pricing = {
               </p>
 
 
-            <div className="flex flex-col 2xl:flex-row gap-4">
+            <div className="flex flex-col xl:flex-row gap-4">
               {/* Buttons */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
