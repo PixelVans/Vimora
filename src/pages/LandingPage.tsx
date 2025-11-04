@@ -317,7 +317,7 @@ const pricing = {
 
   {/* Header */}
   <div className="relative z-10 text-center mb-9 sm:mb-24">
-    <h3 className="text-xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
+    <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
       3 Simple Steps To Deliver A Listing
     </h3>
     <p className="text-slate-400 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
