@@ -137,7 +137,7 @@ const pricing = {
       <Navbar />
 
       {/* hero section */}
-    <section className="relative pt-20 mt-20 lg:mt-40  flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
+    <section className="relative pt-20 mt-20 lg:mt-20 2xl:mt-40 flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
         {/* --- Background image (soft blur pattern) --- */}
         <img
           src="/media/footer.jpg"
@@ -149,9 +149,6 @@ const pricing = {
         <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
 
         
-      
-
-
         {/* --- Main Content --- */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 2xl:gap-32 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
           {/* Text Content */}
@@ -173,7 +170,7 @@ const pricing = {
               </p>
 
 
-            <div className="flex flex-col xl:flex-row gap-4">
+            <div className="flex flex-col 2xl:flex-row gap-4">
               {/* Buttons */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -204,21 +201,30 @@ const pricing = {
           </motion.div>
 
           {/* Image Section */}
-          <motion.div
-            className="relative flex justify-center lg:justify-end"
-            animate={{ scale: [1, 1.03, 1] }}
-            transition={{
-              repeat: Infinity,
-              duration: 5,
-              ease: "easeInOut",
-            }}
-          >
+          <div className="relative flex justify-center lg:justify-end">
+            {/* Main banner image (static) */}
             <img
-              src="/banner.jpeg"
+              src="/media/listings.png"
               alt="Landing visual"
-              className="relative z-10 max-w-full h-auto rounded-xl shadow-xl border border-slate-200 border-5"
+              className="relative z-10 max-w-full h-auto rounded-xl shadow-xl border border-slate-200"
             />
-          </motion.div>
+
+            {/* Animated camera overlay */}
+            <motion.img
+              src="/media/camera.png" // replace with your actual image
+              alt="Overlay visual"
+              className="hidden xl:flex absolute right-[-10px] 2xl:right-[-50px] bottom-0  transform translate-x-1/4 translate-y-1/4 
+                        z-20 w-1/3 max-w-[200px] rounded-lg shadow-lg"
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+
+
         </div>
       </section>
 
@@ -232,7 +238,7 @@ const pricing = {
 
   <div className="max-w-6xl mx-auto px-6 text-center relative mt-5 xl:mt-9">
     {/* Heading */}
-    <p className="text-sm uppercase tracking-widest text-blue-600 font-semibold mb-3">
+    <p className="text-sm uppercase tracking-widest text-orange-600 font-semibold mb-3">
       Trusted by leading brands
     </p>
     <h2 className="text-md  lg:text-2xl font-semibold text-slate-800 mb-10">
@@ -245,8 +251,6 @@ const pricing = {
         "/media/logos/remax.png",
         "/media/logos/keller.png",
         "/media/logos/zillow.jpg",
-        "/media/logos/compass.png",
-        "/media/logos/OIP.jpg",
         "/media/logos/redfin.png",
         "/media/logos/Zoopla-Logo.jpg",
       ].map((logo, idx) => (
@@ -313,7 +317,7 @@ const pricing = {
 
   {/* Header */}
   <div className="relative z-10 text-center mb-9 sm:mb-24">
-    <h3 className="text-lg md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
+    <h3 className="text-xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
       3 Simple Steps To Deliver A Listing
     </h3>
     <p className="text-slate-400 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
@@ -334,13 +338,13 @@ const pricing = {
         id: 2,
         title: "Share With A Click",
         text: "Send your media directly to your client in a clean, professional link with no login required. Everything is perfectly formatted for any device.",
-        img: "/media/share-illustration.jpg",
+        img: "/media/share.png",
       },
       {
         id: 3,
         title: "Get Paid Instantly",
         text: "VIMORA tracks your services and payments automatically, creating clear, itemized invoices so you can focus on your craft. Integrated with Stripe for fast and secure payouts.",
-        img: "/media/get-paid-illustration.jpg",
+        img: "/media/pay.png",
       },
     ].map((step, index) => {
       const imageOnRight = index % 2 === 0; // Step 1 right, Step 2 left, Step 3 right
@@ -354,11 +358,11 @@ const pricing = {
           {/* Image Block */}
           <div className="md:w-1/2 relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/30 to-cyan-400/10 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700" />
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)]">
+            <div className="overflow-hidden rounded-lg border border-white/10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)]">
               <img
                 src={step.img}
                 alt={step.title}
-                className="w-full h-[220px] xl:h-[300px]  object-cover transform transition duration-700 "
+                className="w-auto h-[220px] xl:h-auto  object-cover transform transition duration-700 "
               />
             </div>
           </div>
