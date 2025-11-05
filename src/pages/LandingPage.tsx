@@ -137,7 +137,7 @@ const pricing = {
       <Navbar />
 
       {/* hero section */}
-    <section className="relative pt-20 mt-20 lg:mt-20 2xl:mt-40 flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white overflow-hidden">
+    <section className="relative pt-20 mt-20 lg:mt-20 2xl:mt-40 flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white ">
         {/* --- Background image (soft blur pattern) --- */}
         <img
           src="/media/footer.jpg"
@@ -273,7 +273,7 @@ const pricing = {
   {/* propelling section */}
 
       <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
-      <div className="max-w-[1350px]  mx-auto text-center">
+      <div className="max-w-5xl 2xl:max-w-7xl  mx-auto text-center">
 
     {/* Heading */}
     <h2 className="text-2xl sm:text-4xl  font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
@@ -395,14 +395,108 @@ const pricing = {
 
 
 
-
-
-
-
-
-
         </div>
       </section>
+
+
+{/* Collaboration & Communication Section */}
+<section className="relative bg-white py-28 md:px-16 overflow-hidden">
+  {/* Subtle background accents */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,165,0,0.08),transparent_60%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_70%)]" />
+
+  {/* Header */}
+  <div className="relative z-10 text-center mb-20">
+    <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
+      Handle Revisions, Communicate Swiftly & Work as a Team
+    </h3>
+    <p className="text-slate-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
+      Vimora keeps collaboration effortless, helping clients and photographers stay in sync through fast communication,
+      streamlined revisions, and clear team delegation tools.
+    </p>
+  </div>
+
+  {/* Content Row */}
+  <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center xl:justify-between xl:gap-16 px-6">
+
+    {/* Image Cluster */}
+    <div className="relative flex justify-center lg:w-1/2">
+      {/* Background shape glow */}
+      <div className="absolute -inset-6 bg-gradient-to-tr from-orange-200/40 via-blue-100/30 to-transparent blur-3xl rounded-full" />
+
+      {/* Mobile (stacked overlap, topmost last) */}
+      <div className="relative flex flex-col items-center xl:hidden mt-10">
+        <img
+          src="/media/chat.png"
+          alt="Chat interface"
+          className="object-cover rounded-2xl shadow-xl border-4 border-blue-700 w-auto max-w-[80%] relative z-10 translate-y-0"
+        />
+        <img
+          src="/media/revision.png"
+          alt="Revision preview"
+          className="object-cover rounded-2xl shadow-lg border-4 border-orange-700 w-auto max-w-[80%] relative z-20 -translate-y-[75%]"
+        />
+        <img
+          src="/media/teams.png"
+          alt="Team management"
+          className="object-cover rounded-2xl shadow-lg border-4 border-slate-600 w-auto max-w-[80%] relative z-30 -translate-y-[150%]"
+        />
+      </div>
+
+
+
+      {/* Desktop (overlapping) view */}
+      <div className="hidden xl:flex relative">
+        <img
+          src="/media/chat.png"
+          alt="Chat interface"
+          className="object-cover rounded-2xl shadow-xl border-4 border-blue-700 transform rotate-[-3deg] translate-x-2"
+        />
+        <img
+          src="/media/revision.png"
+          alt="Revision preview"
+          className="object-cover rounded-2xl shadow-lg border-4 border-orange-700 absolute left-20 top-16 transform rotate-[6deg]"
+        />
+        <img
+          src="/media/teams.png"
+          alt="Team management"
+          className="object-cover rounded-2xl shadow-lg border-4 border-slate-600 absolute left-40 top-32 transform rotate-[-4deg]"
+        />
+      </div>
+    </div>
+
+    {/* Text Description */}
+    <div className="xl:w-1/2 space-y-10 ">
+      {[
+        {
+          id: 1,
+          title: "Handle Revisions with Ease",
+          text: "Clients can request edits directly in the project, so you never lose track of feedback. Every version stays organized and visible.",
+          color: "from-blue-600 to-blue-400",
+        },
+        {
+          id: 2,
+          title: "Swift Communication",
+          text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
+          color: "from-orange-700 to-orange-700",
+        },
+        {
+          id: 3,
+          title: "Teams & Delegation",
+          text: "Assign roles, manage assistants, or invite editors — Vimora makes teamwork fluid and transparent for every project.",
+          color: "from-blue-600 to-orange-500",
+        },
+      ].map((feature) => (
+        <div key={feature.id} className="flex flex-col gap-2">
+          <div className={`text-transparent bg-clip-text bg-gradient-to-r ${feature.color} font-semibold text-lg`}>
+            {feature.title}
+          </div>
+          <p className="text-slate-600 leading-relaxed max-w-md">{feature.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
 
 
@@ -423,7 +517,7 @@ const pricing = {
           <h3 className="text-xl sm:text-3xl font-semibold text-slate-800 mb-2 px-6">
           The Proof Is in the Platform
           </h3>
-          <p className="text-slate-600 text-md sm:text-lg px-6">
+          <p className="text-orange-700 text-md sm:text-lg px-6">
             Real feedback from real professionals who rely on VIMORA every day.
           </p>
         </div>
@@ -453,7 +547,8 @@ const pricing = {
 
 
       {/* key feature of vimora */}
-      <section className="bg-slate-50 py-20  shadow">
+
+    <section className="bg-slate-50 py-20  shadow">
     <div className="md:px-6 mx-auto text-center">
     <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
       KEY VIMORA Features
@@ -568,7 +663,7 @@ const pricing = {
       </div>
 
       {/* Growth */}
-            <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-950 text-white transition-all duration-300 
+            <div className="relative bg-gradient-to-tr from-yellow-500 to-yellow-950 text-white transition-all duration-300 
       delay-100 ease-out hover:scale-[1.02] active:scale-[1.01] rounded-2xl p-8  shadow-xl flex flex-col z-10">
         <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-4 py-1 rounded-br-xl rounded-tl-xl">
           Most Popular
