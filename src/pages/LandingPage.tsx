@@ -400,17 +400,17 @@ const pricing = {
 
 
 {/* Collaboration & Communication Section */}
-<section className="relative bg-white py-28 md:px-16 overflow-hidden">
+<section className="relative bg-white py-12 xl:py-28 md:px-16 overflow-hidden">
   {/* Subtle background accents */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,165,0,0.08),transparent_60%)]" />
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_70%)]" />
 
   {/* Header */}
   <div className="relative z-10 text-center mb-20">
-    <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-      Handle Revisions, Communicate Swiftly & Work as a Team
+    <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 px-6 md:px-2">
+      Seamless Collaboration, Swift Feedback, Stronger Teams
     </h3>
-    <p className="text-slate-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
+    <p className="text-slate-600 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
       Vimora keeps collaboration effortless, helping clients and photographers stay in sync through fast communication,
       streamlined revisions, and clear team delegation tools.
     </p>
@@ -424,8 +424,9 @@ const pricing = {
       {/* Background shape glow */}
       <div className="absolute -inset-6 bg-gradient-to-tr from-orange-200/40 via-blue-100/30 to-transparent blur-3xl rounded-full" />
 
-      {/* Mobile (stacked overlap, topmost last) */}
-      <div className="relative flex flex-col items-center xl:hidden mt-10">
+      
+     {/* Mobile (stacked overlap, topmost last) */}
+      <div className="relative flex flex-col items-center xl:hidden mt-[-30px] md:mt-10 mb-[-330px]">
         <img
           src="/media/chat.png"
           alt="Chat interface"
@@ -442,6 +443,7 @@ const pricing = {
           className="object-cover rounded-2xl shadow-lg border-4 border-slate-600 w-auto max-w-[80%] relative z-30 -translate-y-[150%]"
         />
       </div>
+
 
 
 
