@@ -326,7 +326,7 @@ const pricing = {
   </div>
 
   {/* Steps */}
-  <div className="relative z-10 max-w-7xl mx-auto space-y-12 md:space-y-32 px-4">
+  <div className="relative z-10 max-w-7xl mx-auto space-y-12 md:space-y-24 px-4">
     {[
       {
         id: 1,
@@ -388,8 +388,8 @@ const pricing = {
   </div>
 
   {/* Subtle line separator */}
-  <div className="mt-9 lg:mt-32 flex justify-center">
-    <div className="w-44 h-[2px] bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 rounded-full opacity-70 animate-pulse" />
+  <div className="mt-9 lg:mt-24 flex justify-center">
+    <div className="w-44 h-[4px] bg-gradient-to-r from-blue-400 via-orange-300 to-blue-400 rounded-full opacity-70 animate-pulse" />
   </div>
 </section>
 
@@ -426,7 +426,7 @@ const pricing = {
 
       
      {/* Mobile (stacked overlap, topmost last) */}
-      <div className="relative flex flex-col items-center xl:hidden mt-[-30px] md:mt-10 mb-[-330px]">
+      <div className="relative flex flex-col items-center xl:hidden mt-[-50px] md:mt-10 mb-[-350px]">
         <img
           src="/media/chat.png"
           alt="Chat interface"
@@ -435,7 +435,7 @@ const pricing = {
         <img
           src="/media/revision.png"
           alt="Revision preview"
-          className="object-cover rounded-2xl shadow-lg border-4 border-orange-700 w-auto max-w-[80%] relative z-20 -translate-y-[75%]"
+          className="object-cover rounded-2xl shadow-lg border-4 border-orange-700 w-auto max-w-[90%]  relative z-20 -translate-y-[65%]"
         />
         <img
           src="/media/teams.png"
@@ -448,7 +448,7 @@ const pricing = {
 
 
       {/* Desktop (overlapping) view */}
-      <div className="hidden xl:flex relative">
+      <div className="hidden xl:flex relative mt-[-80px] mr-10 ">
         <img
           src="/media/chat.png"
           alt="Chat interface"
@@ -468,32 +468,32 @@ const pricing = {
     </div>
 
     {/* Text Description */}
-    <div className="xl:w-1/2 space-y-10 ">
+    <div className="xl:w-1/2 space-y-9 ">
       {[
         {
           id: 1,
-          title: "Handle Revisions with Ease",
+          title: "Revisions",
           text: "Clients can request edits directly in the project, so you never lose track of feedback. Every version stays organized and visible.",
           color: "from-blue-600 to-blue-400",
         },
         {
           id: 2,
-          title: "Swift Communication",
+          title: "Communication",
           text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
           color: "from-orange-700 to-orange-700",
         },
         {
           id: 3,
           title: "Teams & Delegation",
-          text: "Assign roles, manage assistants, or invite editors — Vimora makes teamwork fluid and transparent for every project.",
-          color: "from-blue-600 to-orange-500",
+          text: "Assign roles, manage assistants, or invite editors. Vimora makes teamwork fluid and transparent for every project.",
+          color: "from-slate-900 to-slate-900",
         },
       ].map((feature) => (
         <div key={feature.id} className="flex flex-col gap-2">
           <div className={`text-transparent bg-clip-text bg-gradient-to-r ${feature.color} font-semibold text-lg`}>
             {feature.title}
           </div>
-          <p className="text-slate-600 leading-relaxed max-w-md">{feature.text}</p>
+          <p className="text-slate-500 leading-relaxed max-w-md">{feature.text}</p>
         </div>
       ))}
     </div>
@@ -510,7 +510,7 @@ const pricing = {
       <section className="bg-white py-24 px-0 md:px-6">
       <div className="max-w-full mx-auto">
           <h2 className="sm:text-4xl text-2xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
-          Over <span className="text-blue-900">
+          Over <span className="text-blue-950">
           <CountUp start={649700} end={650000} duration={190} separator="," />
 
           </span> Images Delivered
@@ -519,7 +519,7 @@ const pricing = {
           <h3 className="text-xl sm:text-3xl font-semibold text-slate-800 mb-2 px-6">
           The Proof Is in the Platform
           </h3>
-          <p className="text-orange-700 text-md sm:text-lg px-6">
+          <p className="text-orange-800 text-md sm:text-lg px-6 italic">
             Real feedback from real professionals who rely on VIMORA every day.
           </p>
         </div>
@@ -552,9 +552,14 @@ const pricing = {
 
     <section className="bg-slate-50 py-20  shadow">
     <div className="md:px-6 mx-auto text-center">
-    <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-8 font-inter">
-      KEY VIMORA Features
-    </h2>
+
+<div className="text-center mb-5">
+  <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-inter mb-3">
+    What Powers Vimora
+  </h2>
+  <div className="w-24 h-[4px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
+</div>
+
 
     {/* Gradient wrapper */}
     <div className="relative overflow-hidden">
@@ -810,13 +815,13 @@ const pricing = {
 
 
   {/* Everything You need */}
-  <section className="bg-gradient-to-b from-blue-50 via-blue-50 to-white  py-20 px-6 rounded-t-[100px] lg:rounded-t-[220px]">
+  <section className="bg-slate-100  py-20 px-6 rounded--[100px] lg:rounded--[220px]">
   <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">
       <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
         Everything You Need. <br className="hidden sm:block" />
-        <span className="text-blue-900">Nothing You Don’t.</span>
+        <span className="text-orange-700">Nothing You Don’t.</span>
       </h2>
       <p className="text-slate-600 sm:text-lg max-w-2xl mx-auto mb-12">
         VIMORA cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
@@ -824,9 +829,10 @@ const pricing = {
     </div>
 
     {/* Feature List - Left aligned */}
-    <div className=" mt-12">
+  <div className="mt-16 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 py-10 rounded-3xl shadow-inner border border-slate-300/50">
   <EverythingYouNeedMarquee />
 </div>
+
 </div>
 </section>
 
@@ -850,7 +856,7 @@ const pricing = {
 
       {/* Right - Text & Form */}
       <div className="p-8 sm:p-12 text-center  md:text-left">
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+        <h2 className="text-2xl sm:text-4xl font-bold text-slate-900">
           Start Your 14 Day Free Trial
         </h2>
         <p className="mb-8 mt-3 text-slate-800 text-center">
