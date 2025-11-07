@@ -491,8 +491,7 @@ const pricing = {
 
             {/* Gradient wrapper */}
             <div className="relative overflow-hidden">
-              {/* Left Gradient */}
-              <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
 
               {/* Right Gradient */}
               <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
@@ -513,25 +512,20 @@ const pricing = {
       
 
 
-      {/* key feature of vimora */}
-
-    <section className="bg-slate-50 py-20  shadow">
+ {/* key feature of vimora */}
+<section className="bg-slate-50 py-20  shadow">
     <div className="md:px-6 mx-auto text-center">
-
-<div className="text-center mb-5">
-  <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-inter mb-3">
-    What Powers Vimora
-  </h2>
-  <div className="w-24 h-[6px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
-</div>
-
-
-    {/* Gradient wrapper */}
+  <div className="text-center mb-5">
+    <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-inter mb-3">
+      What Powers Vimora
+    </h2>
+    <div className="w-24 h-[6px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
+  </div>
+{/* Gradient wrapper */}
     <div className="relative overflow-hidden">
       <div className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 right-0 h-full w-4 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
-
-      {/* Marquee rows */}
+{/* Marquee rows */}
       <div className="space-y-8">
       {featureRows.map((row, i) => (
         <FeatureMarqueeRow
