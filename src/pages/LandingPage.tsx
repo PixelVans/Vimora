@@ -189,7 +189,7 @@ const pricing = {
 
               <motion.button
                 whileHover={{ scale: 1.03 }}
-                className="group relative bg-white/60 backdrop-blur-md ring-1 mb-5 xl:mb-0 ring-primary text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
+                className="group relative bg-white/60 backdrop-blur-md ring-2 mb-5 xl:mb-0  ring-orange-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
               >
                 <span className="z-10 relative">Compare <span>Between Competitors</span> </span>
                 <LayoutGrid
@@ -245,7 +245,7 @@ const pricing = {
       Propelling You Forward.
     </h2>
 
-      <p className="text-slate-700 text-sm sm:text-lg max-w-2xl mx-auto mb-10 px-2 lg:px-0">
+      <p className="text-slate-700 text-sm sm:text-lg max-w-6xl mx-auto mb-10 px-2 lg:px-0">
         We took all the best aspects of every real estate media delivery platform and streamlined it,
         improving upon the user experience in every way so you don't have something holding you back,
         you have something propelling you forward.
@@ -433,35 +433,52 @@ const pricing = {
     </div>
 
     {/* Text Description */}
-    <div className="xl:w-1/2 space-y-9 ">
-      {[
-        {
-          id: 1,
-          title: "Revisions",
-          text: "Clients can request edits directly in the project, so you never lose track of feedback. Every version stays organized and visible.",
-          color: "from-blue-600 to-blue-400",
-        },
-        {
-          id: 2,
-          title: "Communication",
-          text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
-          color: "from-orange-700 to-orange-700",
-        },
-        {
-          id: 3,
-          title: "Teams & Delegation",
-          text: "Assign roles, manage assistants, or invite editors. Vimora makes teamwork fluid and transparent for every project.",
-          color: "from-slate-900 to-slate-900",
-        },
-      ].map((feature) => (
-        <div key={feature.id} className="flex flex-col gap-2">
-          <div className={`text-transparent bg-clip-text bg-gradient-to-r ${feature.color} font-semibold text-lg`}>
-            {feature.title}
-          </div>
-          <p className="text-slate-500 leading-relaxed max-w-md">{feature.text}</p>
-        </div>
-      ))}
+ <div className="xl:w-1/2 space-y-5">
+  {[
+    {
+      id: 1,
+      title: "Revisions",
+      text: "Clients can request edits directly in the project, so you never lose track of feedback. Every version stays organized and visible.",
+      color: "from-blue-400 via-sky-400 to-cyan-300",
+      glow: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]",
+    },
+    {
+      id: 2,
+      title: "Communication",
+      text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
+      color: "from-orange-400 via-amber-400 to-yellow-300",
+      glow: "group-hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]",
+    },
+    {
+      id: 3,
+      title: "Teams & Delegation",
+      text: "Assign roles, manage assistants, or invite editors. Vimora makes teamwork fluid and transparent for every project.",
+      color: "from-slate-100 via-gray-400 to-gray-100",
+      glow: "group-hover:shadow-[0_0_25px_rgba(148,163,184,0.4)]",
+    },
+  ].map((feature) => (
+    <div
+      key={feature.id}
+      className={`group relative flex flex-col gap-2 rounded-xl p-[1px] bg-gradient-to-r ${feature.color} ${feature.glow} transition-all duration-500`}
+    >
+      {/* Inner card */}
+      <div className="flex flex-col gap-2 rounded-[10px] bg-slate-950/80 p-6 backdrop-blur-xl transition-all duration-500 group-hover:bg-slate-900/80">
+        {/* Title */}
+        <h3
+          className={`text-lg font-semibold bg-gradient-to-r ${feature.color} bg-clip-text text-transparent tracking-tight`}
+        >
+          {feature.title}
+        </h3>
+
+        {/* Text */}
+        <p className="text-slate-300 text-sm leading-relaxed max-w-md">
+          {feature.text}
+        </p>
+      </div>
     </div>
+  ))}
+</div>
+
   </div>
 </section>
 
