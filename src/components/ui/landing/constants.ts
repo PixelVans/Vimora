@@ -212,10 +212,10 @@ export const features = [
           image: "/profiles/p-9.jpeg",
         },
         {
-          name: "JJ.",
+          name: "J.drew S.",
           title: "Owner - Pen RE Media Group",
           quote: "Easy to use and snappy. I like them property websites.",
-          image: "/profiles/p-4.jpg",
+          image: "/profiles/p-23.jpg",
         },
         {
         name: "Carlos D.",
@@ -315,6 +315,56 @@ export const features = [
           "Every delivery feels like a branded experience now. Clients think I built some custom system just for them. Love how professional it looks.",
         image: "/profiles/p19.jpg",
       },
+      {
+        name: "Megan H.",
+        title: "Owner - Elevate Realty Media",
+        quote:
+          "Finally, a platform that doesn’t overcomplicate things. My team actually enjoys using it, and our clients noticed the upgrade instantly.",
+        image: "/profiles/p20.png",
+      },
+      {
+        name: "Ryan C.",
+        title: "Founder - PixelHaus Media",
+        quote:
+          "The delivery pages look premium without me lifting a finger. It honestly makes our small studio look way bigger.",
+        image: "/profiles/p21.jpg",
+      },
+      {
+        name: "Sofia L.",
+        title: "Owner - Lightline Photography",
+        quote:
+          "Everything feels faster — uploads, previews, even client downloads. It just flows. Huge improvement over what we used before.",
+        image: "/profiles/p22.jpg",
+      },
+      {
+        name: "Jake B.",
+        title: "Freelance Real Estate Photographer",
+        quote:
+          "I like how simple it is. No fluff, no setup headaches. Just shoot, upload, deliver — done.",
+        image: "/profiles/p24.jpg",
+      },
+      {
+        name: "Hannah W.",
+        title: "Co-Founder - Estate Media Works",
+        quote:
+          "Our agents love the clean layout and how easy it is to view everything. Makes us look so much more professional.",
+        image: "/profiles/p25.jpg",
+      },
+      {
+        name: "Omar K.",
+        title: "Owner - UrbanFrame Visuals",
+        quote:
+          "VIMORA really nailed the client experience. My realtors actually mention how smooth it feels to get their files now.",
+        image: "/profiles/p26.jpg",
+      },
+      {
+        name: "Vanessa R.",
+        title: "Founder - FrameSpace Studios",
+        quote:
+          "I used to stress about delivery links breaking or expiring. Now it’s automatic and clean. Total peace of mind.",
+        image: "/profiles/p27.jpg",
+      },
+
 
 ];
   

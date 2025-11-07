@@ -24,7 +24,7 @@ export default function MeaningPage() {
         </motion.h1>
 
         <p className="text-center text-lg sm:text-xl mb-12 text-slate-700">
-          Vi (vee) - mo (m'oh') - ra (r'ah'): <strong>Send Dwelling Images</strong>
+          Vi (vih) - mo (m'oh') - ra (r'ah'): <strong>Send Dwelling Images</strong>
         </p>
 
         {/* Language Roots Section */}

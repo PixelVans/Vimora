@@ -78,61 +78,61 @@ export function FeatureMarqueeRow({
   );
 }
 
+
+
 export function MarqueeRow({
   items,
   reverse = false,
-  speed = 50,
+  speed = 70,
 }: MarqueeRowProps) {
-  const controls = useAnimation();
-  const rowRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    controls.start({
-      x: reverse ? "100%" : "-100%",
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: speed,
-          ease: "linear",
-        },
-      },
-    });
-  }, [controls, reverse, speed]);
-
   return (
     <div className="overflow-hidden">
       <motion.div
-        className="flex gap-6"
-        animate={controls}
-        ref={rowRef}
-        style={{ willChange: "transform" }}
+        className="flex gap-6 min-w-max"
+        style={{
+          willChange: "transform",
+          animation: `marquee ${speed}s linear infinite`,
+          animationDirection: reverse ? "reverse" : "normal",
+        }}
       >
-        {[...items, ...items, ...items].map((t, i) => (
-
+        {[...items, ...items].map((t, i) => (
           <div
-          key={i}
-          className="bg-white rounded-xl shadow-md max-w-[220px] sm:max-w-[320px] flex-shrink-0 p-3 sm:p-4 my-2"
+            key={i}
+            className="bg-white rounded-xl  shadow-md max-w-[220px] sm:max-w-[320px] flex-shrink-0 p-3 sm:p-4 my-2"
           >
             <div className="flex items-center gap-4 mb-4">
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover border border-slate-900"
+                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-cover border-2 border-slate-900"
               />
               <div>
-                <p className="font-semibold text-xs sm:text-base text-slate-800">{t.name}</p>
+                <p className="font-semibold text-xs sm:text-base text-slate-800">
+                  {t.name}
+                </p>
                 <p className="text-[10px] sm:text-xs text-blue-900">{t.title}</p>
               </div>
             </div>
-            <p className="text-slate-600 text-[9px] sm:text-sm italic">&ldquo;{t.quote}&rdquo;</p>
+            <p className="text-slate-600 text-[9px] sm:text-sm italic">
+              &ldquo;{t.quote}&rdquo;
+            </p>
           </div>
         ))}
       </motion.div>
+
+      <style >{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </div>
   );
 }
-
 
 
 export function splitFeaturesIntoRows(features: Feature[], rows: number): Feature[][] {

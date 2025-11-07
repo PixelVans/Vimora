@@ -2,7 +2,7 @@ import Navbar from "@components/Navbar";
 import {  Twitter, Facebook, Youtube, Instagram,
   CheckCircle, ArrowRight, LayoutGrid,
   Rocket,
-  ChevronDownIcon, 
+  ChevronDownIcon,User, TrendingUp, Crown, 
 } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect,  useState,  } from "react";
@@ -233,41 +233,6 @@ const pricing = {
 
         
 
-     <section className="relative py-16 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
-  <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(0,102,255,0.05),_transparent_70%)]"></div>
-
-  <div className="max-w-6xl mx-auto px-6 text-center relative mt-5 xl:mt-9">
-    {/* Heading */}
-    <p className="text-sm uppercase tracking-widest text-orange-600 font-semibold mb-3">
-      Trusted by leading brands
-    </p>
-    <h2 className="text-md  lg:text-2xl font-semibold text-slate-800 mb-10">
-      Professionals and media teams worldwide rely on Vimora
-    </h2>
-
-    {/* Logos */}
-    <div className="flex flex-wrap justify-center items-center gap-2 md:gap-16">
-      {[
-        "/media/logos/remax.png",
-        "/media/logos/keller.png",
-        "/media/logos/zillow.jpg",
-        "/media/logos/redfin.png",
-        "/media/logos/Zoopla-Logo.jpg",
-      ].map((logo, idx) => (
-        <div
-          key={idx}
-          className="group bg-white/70 backdrop-blur-sm border border-slate-200 shadow-sm hover:shadow-md rounded-2xl p-3 sm:p-3 transition-all duration-300 hover:scale-105"
-        >
-          <img
-            src={logo}
-            alt="brand logo"
-            className="h-5 sm:h-9 w-auto  group-hover:grayscale-0 transition duration-300"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 
 
   {/* propelling section */}
@@ -321,7 +286,7 @@ const pricing = {
       3 Simple Steps To Deliver A Listing
     </h3>
     <p className="text-slate-400 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
-      From upload to payout, experience a smooth and professional delivery process built for creators.
+      From upload to payout, experience a smooth and professional delivery process built for real estate photographers.
     </p>
   </div>
 
@@ -343,7 +308,7 @@ const pricing = {
       {
         id: 3,
         title: "Get Paid Instantly",
-        text: "VIMORA tracks your services and payments automatically, creating clear, itemized invoices so you can focus on your craft. Integrated with Stripe for fast and secure payouts.",
+        text: "Vimora tracks your services and payments automatically, creating clear, itemized invoices so you can focus on your craft. Integrated with Stripe for fast and secure payouts.",
         img: "/media/pay.png",
       },
     ].map((step, index) => {
@@ -511,7 +476,7 @@ const pricing = {
       <div className="max-w-full mx-auto">
           <h2 className="sm:text-4xl text-2xl font-bold text-slate-900 mb-6 text-center bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
           Over <span className="text-blue-950">
-          <CountUp start={649700} end={650000} duration={190} separator="," />
+          <CountUp start={449100} end={449585} duration={290} separator="," />
 
           </span> Images Delivered
         </h2>
@@ -520,7 +485,7 @@ const pricing = {
           The Proof Is in the Platform
           </h3>
           <p className="text-orange-800 text-md sm:text-lg px-6 italic">
-            Real feedback from real professionals who rely on VIMORA every day.
+            Real feedback from real professionals who rely on Vimora every day.
           </p>
         </div>
 
@@ -538,7 +503,7 @@ const pricing = {
                   <MarqueeRow
                     key={i}
                     items={row}
-                    speed={40}
+                    speed={70}
                   />
                 ))}
               </div>
@@ -557,7 +522,7 @@ const pricing = {
   <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-inter mb-3">
     What Powers Vimora
   </h2>
-  <div className="w-24 h-[4px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
+  <div className="w-24 h-[6px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
 </div>
 
 
@@ -583,8 +548,9 @@ const pricing = {
 
 
   
+ 
  {/* pricing section */}
- <section
+<section
   className="scroll-mt-20 container rounded-3xl py-20 px-6 shadow bg-gradient-to-b from-blue-50 to-blue-200 mt-9"
   id="pricing"
 >
@@ -597,6 +563,8 @@ const pricing = {
     </p>
 
     <h3 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4">Premium Subscriptions</h3>
+
+    {/* Billing toggle */}
     <div className="mb-12 flex items-center justify-center gap-3">
       <span className={`font-bold ${!yearly ? "text-blue-600" : "text-slate-600"}`}>Monthly</span>
       <button
@@ -614,11 +582,11 @@ const pricing = {
       </span>
     </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
 
-       {/* Pay As You Go */}
-       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col relative overflow-hidden">
-        <div className=" bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
+      {/* Pay As You Go */}
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col relative overflow-hidden">
+        <div className="bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
           <Rocket className="w-5 h-5" />
         </div>
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pay As You Go</h3>
@@ -641,11 +609,13 @@ const pricing = {
         <button className="mt-6 bg-blue-500 text-white rounded-md py-2 px-4 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
           Get Started
         </button>
-    </div> 
-
+      </div>
 
       {/* Solo */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col">
+        <div className="bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
+          <User className="w-5 h-5" />
+        </div>
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Solo</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">${pricing.solo}</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">{yearly ? "per year" : "per month"}</p>
@@ -670,8 +640,11 @@ const pricing = {
       </div>
 
       {/* Growth */}
-            <div className="relative bg-gradient-to-tr from-yellow-500 to-yellow-950 text-white transition-all duration-300 
-      delay-100 ease-out hover:scale-[1.02] active:scale-[1.01] rounded-2xl p-8  shadow-xl flex flex-col z-10">
+      <div className="relative bg-gradient-to-tr from-yellow-500 to-yellow-950 text-white transition-all duration-300 
+        delay-100 ease-out hover:scale-[1.02] active:scale-[1.01] rounded-2xl p-8 shadow-xl flex flex-col z-10">
+        <div className="bg-white/20 p-3 mb-4 rounded-full shadow-md shadow-slate-800 mx-auto">
+          <TrendingUp className="w-5 h-5 text-white" />
+        </div>
         <div className="absolute top-0 right-0 bg-white text-blue-800 text-xs font-bold px-4 py-1 rounded-br-xl rounded-tl-xl">
           Most Popular
         </div>
@@ -694,13 +667,15 @@ const pricing = {
           </li>
         </ul>
         <button className="mt-6 bg-white text-blue-600 rounded-md py-2 px-4 font-medium hover:bg-slate-100 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-        Get Started
-      </button>
-
+          Get Started
+        </button>
       </div>
 
       {/* Pro */}
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out flex flex-col">
+        <div className="bg-blue-100 text-blue-800 p-3 mb-4 rounded-full shadow-md shadow-slate-500 mx-auto">
+          <Crown className="w-5 h-5" />
+        </div>
         <h3 className="text-lg font-semibold text-slate-800 mb-2">Pro</h3>
         <div className="text-4xl font-bold text-blue-800 mb-1">${pricing.pro}</div>
         <p className="text-sm text-slate-600 mb-6 font-semibold">{yearly ? "per year" : "per month"}</p>
@@ -731,14 +706,11 @@ const pricing = {
 
 
 
-
-
-
   {/* Who is vilmora for section */}
   <section className="bg-white py-20 px-4 sm:px-6">
   <div className="max-w-7xl mx-auto text-center">
     <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter">
-      Who VIMORA is For
+      Who Vimora is For
     </h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
@@ -824,7 +796,7 @@ const pricing = {
         <span className="text-orange-700">Nothing You Don’t.</span>
       </h2>
       <p className="text-slate-600 sm:text-lg max-w-2xl mx-auto mb-12">
-        VIMORA cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
+        Vimora cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
       </p>
     </div>
 
@@ -856,8 +828,8 @@ const pricing = {
 
       {/* Right - Text & Form */}
       <div className="p-8 sm:p-12 text-center  md:text-left">
-        <h2 className="text-2xl sm:text-4xl font-bold text-slate-900">
-          Start Your 14 Day Free Trial
+        <h2 className="text-xl sm:text-3xl font-bold text-slate-900 text-center ">
+          Get Your First 5 deliveries On Us
         </h2>
         <p className="mb-8 mt-3 text-slate-800 text-center">
           No contracts. No hidden fees. Cancel anytime.
@@ -867,7 +839,7 @@ const pricing = {
           <input
             type="email"
             placeholder="Your Email"
-            className="w-[300px] px-4 py-2 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-slate-200 focus:ring-2 focus:ring-slate-400 focus:outline-none"
+            className="w-[300px] px-4 py-2 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-orange-700 focus:ring-2 focus:ring-slate-400 focus:outline-none"
           />
           <button
             type="submit"
