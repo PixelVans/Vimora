@@ -59,7 +59,7 @@ function EssentialsMarqueeRow({
         {[...items, ...items].map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center text-slate-900 text-base w-[300px] flex-shrink-0"
+            className="flex items-center text-slate-900 text-base w-[200px] lg:w-[300px] flex-shrink-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ function EssentialsMarqueeRow({
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span>{item}</span>
+            <span className="text-xs lg:text-sm my-2 lg:my-0">{item}</span>
           </div>
         ))}
       </motion.div>
@@ -87,7 +87,7 @@ function EverythingYouNeedMarquee() {
   const rows = splitEssentialsIntoRows(essentials, 4);
 
   return (
-    <div className="relative space-y-4 py-6">
+    <div className="relative lg:space-y-4 py-6">
       <div className="absolute left-0 top-0 h-full w-2 sm:w-4 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 h-full w-2 sm:w-4 bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none" />
 
@@ -153,7 +153,7 @@ const pricing = {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 2xl:gap-32 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
           {/* Text Content */}
           <motion.div
-            className="space-y-6 lg:space-y-9"
+            className="space-y-4 lg:space-y-9"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -446,14 +446,14 @@ const pricing = {
       id: 2,
       title: "Communication",
       text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
-      color: "from-orange-400 via-amber-400 to-yellow-300",
+      color: "from-orange-300 via-orange-300 to-orange-300",
       glow: "group-hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]",
     },
     {
       id: 3,
       title: "Teams & Delegation",
       text: "Assign roles, manage assistants, or invite editors. Vimora makes teamwork fluid and transparent for every project.",
-      color: "from-slate-100 via-gray-400 to-gray-100",
+      color: "from-slate-100 via-gray-100 to-gray-100",
       glow: "group-hover:shadow-[0_0_25px_rgba(148,163,184,0.4)]",
     },
   ].map((feature) => (
@@ -798,7 +798,7 @@ const pricing = {
 
 
   {/* Everything You need */}
-  <section className="bg-slate-100  py-20 px-6 rounded--[100px] lg:rounded--[220px]">
+  <section className="bg-slate-100 py-6 lg:py-20 px-2 sm:px-6 rounded--[100px] lg:rounded--[220px]">
   <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">
@@ -812,7 +812,7 @@ const pricing = {
     </div>
 
     {/* Feature List - Left aligned */}
-  <div className="mt-16 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 py-10 rounded-3xl shadow-inner border border-slate-300/50">
+  <div className="mt-16 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 py-4 lg:py-10 rounded-3xl shadow-inner border border-slate-300/50">
   <EverythingYouNeedMarquee />
 </div>
 
@@ -838,7 +838,7 @@ const pricing = {
       
 
       {/* Right - Text & Form */}
-      <div className="p-8 sm:p-12 text-center  md:text-left">
+      <div className="p-4 py-6 sm:py-0 sm:p-12 text-center  md:text-left">
         <h2 className="text-xl sm:text-3xl font-bold text-slate-900 text-center ">
           Get Your First 5 deliveries On Us
         </h2>
