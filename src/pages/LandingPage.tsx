@@ -59,7 +59,7 @@ function EssentialsMarqueeRow({
         {[...items, ...items].map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center text-slate-900 text-base w-[200px] lg:w-[300px] flex-shrink-0"
+            className="flex items-center text-slate-900 text-base w-[220px] lg:w-[300px] flex-shrink-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -802,11 +802,11 @@ const pricing = {
   <div className=" mx-auto">
     {/* Heading */}
     <div className="text-center">
-      <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4 font-inter leading-snug">
+      <h2 className="text-2xl sm:text-4xl px-4 sm:px-0 font-bold text-slate-900 mb-4 font-inter leading-snug">
         Everything You Need. <br className="hidden sm:block" />
         <span className="text-orange-700">Nothing You Don’t.</span>
       </h2>
-      <p className="text-slate-600 sm:text-lg max-w-2xl mx-auto mb-12">
+      <p className="text-slate-600 sm:text-lg max-w-2xl mx-auto mb-12 px-4 sm:px-0">
         Vimora cuts the fluff and gives you the real estate media delivery platform that works exactly how it should.
       </p>
     </div>
