@@ -63,14 +63,16 @@ export function FeatureMarqueeRow({
           const Icon = feature.icon;
           return (
             <div
-              key={i}
-              className="bg-blue-50 rounded-xl shadow-md max-w-[250px] sm:max-w-[300px] flex-shrink-0 px-2 
-              sm:px-3 text-center flex flex-col items-center my-1 py-4 "
-            >
-              <Icon className="w-7 h-7 sm:w-9 sm:h-9 text-black mb-3" />
-              <h3 className="font-semibold text-[12px] sm:text-sm text-blue-700">{feature.title}</h3>
-              <p className="text-[10px] sm:text-sm text-slate-600">{feature.description}</p>
-            </div>
+                key={i}
+                className="bg-slate-200 rounded-xl shadow-md 
+                max-w-[250px] sm:max-w-[300px] flex-shrink-0 px-2 sm:px-3 text-center flex flex-col 
+                items-center my-1 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <Icon className="w-7 h-7 sm:w-9 sm:h-9 text-blue-950 mb-3" />
+                <h3 className="font-semibold text-[12px] sm:text-sm text-blue-800">{feature.title}</h3>
+                <p className="text-[10px] sm:text-sm text-slate-700">{feature.description}</p>
+              </div>
+
           );
         })}
       </motion.div>
@@ -98,7 +100,7 @@ export function MarqueeRow({
         {[...items, ...items].map((t, i) => (
           <div
             key={i}
-            className="bg-white rounded-xl  shadow-md max-w-[220px] sm:max-w-[320px] flex-shrink-0 p-3 sm:p-4 my-2"
+            className="bg-white rounded-xl  shadow-md max-w-[220px] sm:max-w-[330px] flex-shrink-0 p-3 sm:p-4 my-2"
           >
             <div className="flex items-center gap-4 mb-4">
               <img

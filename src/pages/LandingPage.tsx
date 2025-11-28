@@ -103,9 +103,13 @@ function EverythingYouNeedMarquee() {
 }
 
 
+
+
+
 export default function LandingPage() {
 
   const location = useLocation();
+  
 
   useEffect(() => {
     const hash = location.hash;
@@ -530,10 +534,10 @@ const pricing = {
 
 
  {/* key feature of vimora */}
-<section className="bg-slate-50 py-20  shadow">
+<section className="bg-blue-950 py-20 xl:py-32  shadow">
     <div className="md:px-6 mx-auto text-center">
-  <div className="text-center mb-5">
-    <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-inter mb-3">
+  <div className="text-center mb-10 xl:mb-14">
+    <h2 className="text-2xl sm:text-4xl font-bold text-white font-inter mb-3">
       What Powers Vimora
     </h2>
     <div className="w-24 h-[6px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
