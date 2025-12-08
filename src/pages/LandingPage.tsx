@@ -154,7 +154,9 @@ const pricing = {
 
         
         {/* --- Main Content --- */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 2xl:gap-32 items-center max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 2xl:gap-32 
+        2xl:max-w-[1500px]
+        lg:mb-9 2xl:mb-12 items-center max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           {/* Text Content */}
           <motion.div
             className="space-y-4 lg:space-y-9"
@@ -174,7 +176,7 @@ const pricing = {
               </p>
 
 
-            <div className="flex flex-col xl:flex-row gap-4">
+            <div className="flex flex-col xl:flex-row gap-4 items-start  mt-4 ">
               {/* Buttons */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -193,7 +195,7 @@ const pricing = {
 
               <motion.button
                 whileHover={{ scale: 1.03 }}
-                className="group relative bg-white/60 backdrop-blur-md ring-2 mb-5 xl:mb-0  ring-orange-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
+                className="group relative bg-white/60 backdrop-blur-md ring-2  xl:mb-0  ring-orange-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
               >
                 <span className="z-10 relative">Compare <span>Between Competitors</span> </span>
                 <LayoutGrid
@@ -245,11 +247,15 @@ const pricing = {
       <div className="max-w-5xl 2xl:max-w-7xl  mx-auto text-center">
 
     {/* Heading */}
-    <h2 className="text-2xl sm:text-4xl  font-bold mb-4 bg-gradient-to-r from-black to-blue-500 text-transparent bg-clip-text">
+    <div className="max-w-3xl mx-auto lg:bg-gradient-to-r  rounded-r-full from-blue-950 to-slate-50">
+   <h2 className="text-2xl sm:text-4xl   lg:text-white text-blue-600 lg:py-4 2xl:text-4xl font-bold  mb-4   ">
       Propelling You Forward.
     </h2>
+</div>
 
-      <p className="text-slate-700 text-sm sm:text-lg max-w-6xl mx-auto mb-10 px-2 lg:px-0">
+   
+
+      <p className="text-slate-700 text-sm sm:text-lg max-w-6xl mx-auto mb-10 px-2 md:px-9 lg:px-0">
         We took all the best aspects of every real estate media delivery platform and streamlined it,
         improving upon the user experience in every way so you don't have something holding you back,
         you have something propelling you forward.
