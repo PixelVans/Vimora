@@ -154,9 +154,9 @@ const pricing = {
 
         
         {/* --- Main Content --- */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 2xl:gap-32 
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-16  
         2xl:max-w-[1500px]
-        lg:mb-9 2xl:mb-12 items-center max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+        lg:mb-9 2xl:mb-12 items-center max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 2xl:px-16">
           {/* Text Content */}
           <motion.div
             className="space-y-4 lg:space-y-9"
@@ -248,7 +248,7 @@ const pricing = {
 
     {/* Heading */}
     <div className="max-w-3xl mx-auto lg:bg-gradient-to-r  rounded-r-full from-blue-950 to-slate-50">
-   <h2 className="text-2xl sm:text-4xl   lg:text-white text-blue-600 lg:py-4 2xl:text-4xl font-bold  mb-4   ">
+   <h2 className="text-2xl sm:text-4xl   lg:text-white text-blue-600 lg:py-3 2xl:text-4xl font-bold  mb-4   ">
       Propelling You Forward.
     </h2>
 </div>
