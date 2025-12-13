@@ -1,6 +1,6 @@
 import Navbar from "@components/Navbar";
 import {  Twitter, Facebook, Youtube, Instagram,
-  CheckCircle, ArrowRight, LayoutGrid,
+  CheckCircle, ArrowRight, 
   Rocket,
   ChevronDownIcon,User, TrendingUp, Crown, 
 } from "lucide-react";
@@ -155,8 +155,8 @@ const pricing = {
         
         {/* --- Main Content --- */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-16  
-        2xl:max-w-[1500px]
-        lg:mb-9 2xl:mb-12 items-center max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 2xl:px-16">
+        
+        lg:mb-9 2xl:mb-12 items-center max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-10 2xl:px-16">
           {/* Text Content */}
           <motion.div
             className="space-y-4 lg:space-y-9"
@@ -195,13 +195,10 @@ const pricing = {
 
               <motion.button
                 whileHover={{ scale: 1.03 }}
-                className="group relative bg-white/60 backdrop-blur-md ring-2  xl:mb-0  ring-orange-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
+                className="group relative bg-white/60 backdrop-blur-md ring-2  xl:mb-0  ring-blue-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
               >
                 <span className="z-10 relative">Compare <span>Between Competitors</span> </span>
-                <LayoutGrid
-                  className="text-blue-950 transform transition-transform duration-500 group-hover:rotate-y-180 "
-                  size={18}
-                />
+               
               </motion.button>
             </div>
           </motion.div>
@@ -247,11 +244,14 @@ const pricing = {
       <div className="max-w-5xl 2xl:max-w-7xl  mx-auto text-center">
 
     {/* Heading */}
-    <div className="max-w-3xl mx-auto lg:bg-gradient-to-r  rounded-r-full from-blue-950 to-slate-50">
-   <h2 className="text-2xl sm:text-4xl   lg:text-white text-blue-600 lg:py-3 2xl:text-4xl font-bold  mb-4   ">
-      Propelling You Forward.
-    </h2>
-</div>
+<h2 className="text-2xl sm:text-4xl 2xl:text-5xl font-bold mb-4 leading-tight">
+  <span className="inline-block bg-gradient-to-r from-blue-900 via-blue-600 to-blue-500 bg-clip-text text-transparent pb-1">
+    Propelling You Forward.
+  </span>
+</h2>
+
+
+
 
    
 
@@ -272,7 +272,7 @@ const pricing = {
           ease: "easeInOut",
         }}>
         <img
-          src="/media/propel.jpg"
+          src="/media/propelling.jpg"
           alt="Propelling Illustration"
           className="w-full h-60 mx-auto sm:h-80 md:h-96 lg:h-[450px] object-cover"
         />
@@ -550,8 +550,8 @@ const pricing = {
   </div>
 {/* Gradient wrapper */}
     <div className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 right-0 h-full w-4 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+      {/* <div className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 right-0 h-full w-4 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" /> */}
 {/* Marquee rows */}
       <div className="space-y-8">
       {featureRows.map((row, i) => (
