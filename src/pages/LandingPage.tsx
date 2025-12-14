@@ -239,7 +239,7 @@ const pricing = {
 
   {/* propelling section */}
 
-      <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[140px] mt-5 md:mt-9 md:rounded-tr-[250px] shadow-md">
+      <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[100px] md:rounded-tr-[200px] lg:rounded-tr-[250px] mt-5 md:mt-9  shadow-md">
       <div className="max-w-5xl 2xl:max-w-7xl  mx-auto text-center">
 
     {/* Heading */}
