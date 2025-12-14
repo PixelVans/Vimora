@@ -228,14 +228,14 @@ export const features = [
           title: "Owner",
           quote:
             "Pay-as-you-go pricing made way more sense for my business. I’m paying less now.",
-          image: "/profiles/p34.jpg",
+          image: "/profiles/p11.jpg",
         },
         {
           name: "Hannah K.",
           title: "Owner",
           quote:
             "Support actually replies. Like real replies. That was refreshing.",
-          image: "/profiles/p35.jpg",
+          image: "/profiles/p21.jpg",
         },
         {
           name: "Ryan F.",
@@ -263,21 +263,21 @@ export const features = [
           title: "Owner",
           quote:
             "I didn’t realize how clunky my old system was until I switched.",
-          image: "/profiles/p21.jpg",
+          image: "/profiles/p35.jpg",
         },
         {
           name: "Sofia M.",
           title: "Owner",
           quote:
             "Invoices with line items have been great. Clients understand what they’re paying for.",
-          image: "/profiles/p40.jpg",
+          image: "/profiles/p41.jpg",
         },
         {
           name: "Andrew H.",
           title: "Owner",
           quote:
             "It’s clean, straightforward, and doesn’t overcomplicate things.",
-          image: "/profiles/p41.jpg",
+          image: "/profiles/p40.jpg",
         },
         {
           name: "Laura P.",
@@ -391,7 +391,7 @@ export const features = [
         title: "Owner - Skyline Media Group",
         quote:
           "Our agents love how professional the listings look. It honestly makes our media stand out. I wish we made the switch sooner!",
-        image: "/profiles/p11.jpg",
+        image: "/profiles/p6.jpg",
       },
       {
         name: "Leo N.",
@@ -412,14 +412,14 @@ export const features = [
         title: "Owner - SharpFrame Media",
         quote:
           "VIMORA has honestly simplified my workflow so much. My clients get their listings faster, and everything just feels more polished and organized.",
-        image: "/profiles/p14.jpg",
+        image: "/profiles/p15.jpg",
       },
       {
         name: "Marcus G.",
         title: "Founder - BrightHaus Visuals",
         quote:
           "I’ve tried a few platforms before this, but VIMORA just nails the user experience. Uploading, delivering, even billing — it all feels smooth and thought-out.",
-        image: "/profiles/p15.jpg",
+        image: "/profiles/p14.jpg",
       },
       {
         name: "Tanya R.",
@@ -440,14 +440,14 @@ export const features = [
         title: "Creative Director - HouseLens Studio",
         quote:
           "Support is actually responsive — real humans who understand what photographers deal with. That alone made the switch worth it.",
-        image: "/profiles/p18.jpg",
+        image: "/profiles/p19.jpg",
       },
       {
         name: "Noah P.",
         title: "Owner - ClearFocus Media",
         quote:
           "Every delivery feels like a branded experience now. Clients think I built some custom system just for them. Love how professional it looks.",
-        image: "/profiles/p19.jpg",
+        image: "/profiles/p18.jpg",
       },
       {
         name: "Megan H.",
