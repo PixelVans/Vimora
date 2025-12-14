@@ -169,10 +169,6 @@ const pricing = {
                 Real estate media delivery, done right.
               </h1>
 
-
-
-             
-
               <p className="text-sm sm:text-lg text-slate-700 mx-2">
                 <strong className="text-blue-950">Vimora</strong> is the only platform you’ll ever need to deliver listings, manage revisions,
                  and get paid on time, every time - without the clutter or high fees
@@ -248,7 +244,7 @@ const pricing = {
 
     {/* Heading */}
 <h2 className="text-2xl sm:text-4xl 2xl:text-5xl font-bold mb-4 leading-tight">
-  <span className="inline-block bg-gradient-to-r from-blue-950 via-blue-800 to-blue-500 bg-clip-text text-transparent pb-1">
+  <span className="inline-block bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 bg-clip-text text-transparent pb-1">
     Propelling You Forward.
   </span>
 </h2>
