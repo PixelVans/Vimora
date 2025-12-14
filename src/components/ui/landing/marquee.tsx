@@ -85,7 +85,7 @@ export function FeatureMarqueeRow({
 export function MarqueeRow({
   items,
   reverse = false,
-  speed = 70,
+  speed = 80,
 }: MarqueeRowProps) {
   return (
     <div className="overflow-hidden">
@@ -100,7 +100,7 @@ export function MarqueeRow({
         {[...items, ...items].map((t, i) => (
           <div
             key={i}
-            className="bg-white rounded-xl  shadow-md max-w-[220px] sm:max-w-[330px] flex-shrink-0 p-3 sm:p-4 my-2"
+            className="bg-white rounded-xl  shadow-md max-w-[220px] sm:max-w-[350px] flex-shrink-0 p-3 sm:p-4 my-2"
           >
             <div className="flex items-center gap-4 mb-4">
               <img

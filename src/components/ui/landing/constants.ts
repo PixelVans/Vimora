@@ -181,6 +181,140 @@ export const features = [
 
   // Sample testimonials data
   export const testimonials = [
+            {
+          name: "Marcos R.",
+          title: "Owner",
+          quote:
+            "Honestly didn’t expect to like it this much. I switched mostly for pricing, but the delivery experience is just way cleaner.",
+          image: "/profiles/p28.jpg",
+        },
+        {
+          name: "Ashley P.",
+          title: "Owner",
+          quote:
+            "I don’t usually leave reviews but this actually made my workflow easier. Clients don’t get confused anymore.",
+          image: "/profiles/p29.jpg",
+        },
+        {
+          name: "Justin L.",
+          title: "Owner",
+          quote:
+            "VIMORA just works. Upload, send, done. I’m spending less time on admin stuff.",
+          image: "/profiles/p33.jpg",
+        },
+        {
+          name: "Nicole S.",
+          title: "Owner",
+          quote:
+            "My clients LOVE the property websites. I’ve had multiple agents comment on them.",
+          image: "/profiles/p32.jpg",
+        },
+        {
+          name: "Eric M.",
+          title: "Owner",
+          quote:
+            "I moved from another platform and the difference was immediate. Everything feels faster.",
+          image: "/profiles/p31.jpg",
+        },
+        {
+          name: "Brianna T.",
+          title: "Owner",
+          quote:
+            "I like that it’s simple. No extra junk I don’t need.",
+          image: "/profiles/p30.jpg",
+        },
+        {
+          name: "Carlos D.",
+          title: "Owner",
+          quote:
+            "Pay-as-you-go pricing made way more sense for my business. I’m paying less now.",
+          image: "/profiles/p34.jpg",
+        },
+        {
+          name: "Hannah K.",
+          title: "Owner",
+          quote:
+            "Support actually replies. Like real replies. That was refreshing.",
+          image: "/profiles/p35.jpg",
+        },
+        {
+          name: "Ryan F.",
+          title: "Owner",
+          quote:
+            "It looks professional without me having to customize anything. That was a big plus.",
+          image: "/profiles/p36.jpg",
+        },
+        {
+          name: "Melissa A.",
+          title: "Owner",
+          quote:
+            "Some of my agents aren’t techy at all and they’ve had zero issues using this.",
+          image: "/profiles/p37.jpg",
+        },
+        {
+          name: "Jordan W.",
+          title: "Owner",
+          quote:
+            "Deliveries feel smoother now. Fewer emails back and forth.",
+          image: "/profiles/p38.jpg",
+        },
+        {
+          name: "Kevin R.",
+          title: "Owner",
+          quote:
+            "I didn’t realize how clunky my old system was until I switched.",
+          image: "/profiles/p21.jpg",
+        },
+        {
+          name: "Sofia M.",
+          title: "Owner",
+          quote:
+            "Invoices with line items have been great. Clients understand what they’re paying for.",
+          image: "/profiles/p40.jpg",
+        },
+        {
+          name: "Andrew H.",
+          title: "Owner",
+          quote:
+            "It’s clean, straightforward, and doesn’t overcomplicate things.",
+          image: "/profiles/p41.jpg",
+        },
+        {
+          name: "Laura P.",
+          title: "Owner",
+          quote:
+            "My clients think I built a custom system. I didn’t correct them.",
+          image: "/profiles/p42.jpg",
+        },
+        {
+          name: "Mike C.",
+          title: "Owner",
+          quote:
+            "I like that I don’t have to babysit deliveries anymore.",
+          image: "/profiles/p43.jpg",
+        },
+        {
+          name: "Vanessa L.",
+          title: "Owner",
+          quote:
+            "Everything just feels more polished.",
+          image: "/profiles/p44.jpg",
+        },
+        {
+          name: "Tom S.",
+          title: "Owner",
+          quote:
+            "No learning curve really. I just started using it.",
+          image: "/profiles/p45.jpg",
+        },
+        {
+          name: "Rachel D.",
+          title: "Owner",
+          quote:
+            "I switched for cost but stayed because it’s easier.",
+          image: "/profiles/p46.jpg",
+        },
+
         {
           name: "Marisela A.",
           title: "Owner - Twin Lakes Photography",
@@ -191,13 +325,13 @@ export const features = [
           name: "Christina E.",
           title: "Owner - Marketplace Photography",
           quote: "My clients LOVE LOVE LOVE VIMORA. Some realtors aren't really that techy, so having an interface that's designed so ANYONE can use it is just so helpful.",
-          image: "/profiles/p-6.jpeg",
+          image: "/profiles/p-7.jpeg",
         },
         {
           name: "Justin T.",
           title: "Owner - Chicago REP",
           quote: "VIMORA just works so much better. I moved from photohub and it just looks so clean, and I'm paying LESS.",
-          image: "/profiles/p-7.jpeg",
+          image: "/profiles/p-6.jpeg",
         },
         {
           name: "Ronald M.",
@@ -209,7 +343,7 @@ export const features = [
           name: "Thomas T.",
           title: "Owner - Pen RE Media Group",
           quote: "Easy to use and snappy. I like them property websites.",
-          image: "/profiles/p-9.jpeg",
+          image: "/profiles/p7.jpg",
         },
         {
           name: "J.drew S.",
@@ -229,7 +363,7 @@ export const features = [
         title: "Co-Founder - Realty Shots",
         quote:
           "Super intuitive platform. I didn’t even need a tutorial. The branding options make my deliveries look custom and premium.",
-        image: "/profiles/p7.jpg",
+        image: "/profiles/p9.jpg",
       },
       {
         name: "Daniel K.",
@@ -327,7 +461,7 @@ export const features = [
         title: "Founder - PixelHaus Media",
         quote:
           "The delivery pages look premium without me lifting a finger. It honestly makes our small studio look way bigger.",
-        image: "/profiles/p21.jpg",
+        image: "/profiles/p39.jpg",
       },
       {
         name: "Sofia L.",

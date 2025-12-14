@@ -164,15 +164,18 @@ const pricing = {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-4xl xl:text-4xl  2xl:text-5xl  font-bold leading-tight text-slate-900 flex flex-col xl:space-y-2">
-              <h1>Better than Spiro.</h1>
-              <h1>Cheaper than Aryeo.</h1>
-              <h1 className="text-blue-700">Easier than Both.</h1>
-            </div>
+            
+              <h1 className="font-bold leading-[1.05] xl:leading-[1.1] text-slate-900 text-4xl xl:text-4xl 2xl:text-[57px]">
+                Real estate media delivery, done right.
+              </h1>
+
+
+
+             
 
               <p className="text-sm sm:text-lg text-slate-700 mx-2">
-                <strong className="text-blue-950">Vimora</strong> is the all-in-one platform for real estate photographers to
-                upload and deliver real estate media, and get paid easily without the dated and clunky tools or high monthly fees.
+                <strong className="text-blue-950">Vimora</strong> is the only platform you’ll ever need to deliver listings, manage revisions,
+                 and get paid on time, every time - without the clutter or high fees
               </p>
 
 
@@ -245,7 +248,7 @@ const pricing = {
 
     {/* Heading */}
 <h2 className="text-2xl sm:text-4xl 2xl:text-5xl font-bold mb-4 leading-tight">
-  <span className="inline-block bg-gradient-to-r from-blue-900 via-blue-600 to-blue-500 bg-clip-text text-transparent pb-1">
+  <span className="inline-block bg-gradient-to-r from-blue-950 via-blue-800 to-blue-500 bg-clip-text text-transparent pb-1">
     Propelling You Forward.
   </span>
 </h2>
@@ -263,20 +266,7 @@ const pricing = {
 
 
     {/* Image */}
-    <motion.div
-        className="overflow-hidden mx-auto rounded-2xl max-w-5xl shadow-md mb-12"
-        animate={{ y: [0, -10, 0] }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}>
-        <img
-          src="/media/propelling.jpg"
-          alt="Propelling Illustration"
-          className="w-full h-60 mx-auto sm:h-80 md:h-96 lg:h-[450px] object-cover"
-        />
-      </motion.div>
+   
 
 
     {/* Down Arrow */}
@@ -489,6 +479,7 @@ const pricing = {
   ))}
 </div>
 
+
   </div>
 </section>
 
@@ -529,7 +520,7 @@ const pricing = {
                   <MarqueeRow
                     key={i}
                     items={row}
-                    speed={70}
+                    speed={140}
                   />
                 ))}
               </div>
@@ -540,7 +531,7 @@ const pricing = {
 
 
  {/* key feature of vimora */}
-<section className="bg-blue-950 py-20 xl:py-32  shadow">
+<section className="bg-blue-950 py-20 xl:py-32 hidden shadow">
     <div className="md:px-6 mx-auto text-center">
   <div className="text-center mb-10 xl:mb-14">
     <h2 className="text-2xl sm:text-4xl font-bold text-white font-inter mb-3">
@@ -550,8 +541,7 @@ const pricing = {
   </div>
 {/* Gradient wrapper */}
     <div className="relative overflow-hidden">
-      {/* <div className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 right-0 h-full w-4 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" /> */}
+      
 {/* Marquee rows */}
       <div className="space-y-8">
       {featureRows.map((row, i) => (
@@ -834,46 +824,36 @@ const pricing = {
       
 {/* CTA */}
 <section className="px-4 sm:px-6 pb-5 mt-9">
-  <div className="max-w-7xl mx-auto bg-gradient-to-b from-white via-blue-50 to-blue-100 rounded-3xl shadow-md shadow-slate-300 overflow-hidden">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <div className="max-w-4xl mx-auto bg-gradient-to-b from-white via-blue-50 to-blue-100 rounded-3xl shadow-md shadow-slate-300 overflow-hidden">
+    
+    <div className="p-6 sm:p-12 text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+        Get Your First 5 Deliveries For Free!
+      </h2>
 
-      {/* Left - Image */}
-      <div className=" h-full">
-        <img
-          src="/media/footer.jpg" 
-          alt="Free Trial"
-          className="w-[500px] h-full object-cover"
+      <p className="mb-8 mt-3 text-slate-700">
+        No contracts. No hidden fees. Cancel anytime.
+      </p>
+
+      <form className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
+        <input
+          type="email"
+          placeholder="Your email"
+          className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-white text-slate-900 placeholder-slate-400 border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition"
         />
-      </div>
-      
 
-      {/* Right - Text & Form */}
-      <div className="p-4 py-6 sm:py-0 sm:p-12 text-center  md:text-left">
-        <h2 className="text-xl sm:text-3xl font-bold text-slate-900 text-center ">
-          Get Your First 5 deliveries On Us
-        </h2>
-        <p className="mb-8 mt-3 text-slate-800 text-center">
-          No contracts. No hidden fees. Cancel anytime.
-        </p>
-
-        <form className="justify-between mx-auto md:mx-0 flex flex-col  items-center gap-4">
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-[300px] px-4 py-2 rounded-md bg-white text-slate-800 placeholder-slate-500 border border-slate-400 ring-1 ring-orange-700 focus:ring-2 focus:ring-slate-400 focus:outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition w-[300px] "
-          >
-            Get Started For Free
-          </button>
-        </form>
-      </div>
-
+        <button
+          type="submit"
+          className="w-full sm:w-auto bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-medium"
+        >
+          Get started for free
+        </button>
+      </form>
     </div>
+
   </div>
 </section>
+
 
 
 
