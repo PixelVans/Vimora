@@ -1,5 +1,5 @@
 import Navbar from "@components/Navbar";
-import {  Twitter, Facebook, Youtube, Instagram,
+import {   Facebook, Youtube, Instagram,
   CheckCircle, ArrowRight, 
   Rocket,
   ChevronDownIcon,User, TrendingUp, Crown, 
@@ -9,12 +9,13 @@ import { useEffect,  useState,  } from "react";
 import CountUp from 'react-countup';
 import { FeatureMarqueeRow, MarqueeRow, splitIntoRows,   } from "@/components/ui/landing/marquee";
 import { features, essentials, testimonials } from "@/components/ui/landing/constants";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 
 const testimonialRows = splitIntoRows(testimonials, 2);
 const featureRows = splitIntoRows(features, 2);
+
 
 
 // Helper to split essentials into N rows
@@ -113,26 +114,26 @@ export default function LandingPage() {
 
   useEffect(() => {
     const hash = location.hash;
-    if (hash) {
-      // Wait for DOM to render before scrolling
-      setTimeout(() => {
-        const el = document.querySelector(hash);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (hash) {
+          // Wait for DOM to render before scrolling
+          setTimeout(() => {
+            const el = document.querySelector(hash);
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }, 100); 
         }
-      }, 100); 
-    }
-  }, [location]);
+      }, [location]);
 
-  const [yearly, setYearly] = useState(false);
+      const [yearly, setYearly] = useState(false);
 
-const toggleBilling = () => setYearly(!yearly);
+    const toggleBilling = () => setYearly(!yearly);
 
-const pricing = {
-  solo: yearly ? 400 : 40,
-  growth: yearly ? 700 : 70,
-  pro: yearly ? 1200 : 120,
-};
+    const pricing = {
+      solo: yearly ? 500 : 50,
+      growth: yearly ? 800 : 80,
+      pro: yearly ? 1200 : 120,
+    };
 
   
   
@@ -166,8 +167,12 @@ const pricing = {
           >
             
               <h1 className="font-bold leading-[1.05] xl:leading-[1.1] text-slate-900 text-4xl xl:text-4xl 2xl:text-[57px]">
-                Real estate media delivery, done right.
+                  Real estate media delivery,{" "}
+                  <span className="text-blue-600">
+                    done right.
+                  </span>
               </h1>
+
 
               <p className="text-sm sm:text-lg text-slate-700 mx-2">
                 <strong className="text-blue-950">Vimora</strong> is the only platform you’ll ever need to deliver listings, manage revisions,
@@ -178,27 +183,46 @@ const pricing = {
             <div className="flex flex-col xl:flex-row gap-4 items-start  mt-4 ">
               {/* Buttons */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="group relative overflow-hidden bg-primary text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg"
-              >
-                <span className="z-10 relative">Get Started <span>For Free</span></span>
-                <ArrowRight
-                  className="z-10 relative transition-transform group-hover:translate-x-2 duration-300"
-                  size={18}
-                />
-                <span
-                  className="absolute inset-0 bg-gradient-to-r from-black to-blue-300 opacity-0 
-                  group-hover:opacity-30 transition-opacity duration-300 rounded-lg"
-                />
-              </motion.button>
+                  animate={{ y: [0, -2, 0] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                  whileHover={{ scale: 1.07 }}
+                  className="group relative overflow-hidden bg-primary text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg shadow-blue-500/40"
+                >
+                  {/* Content */}
+                  <span className="z-10 relative">
+                    Get Started <span>For Free</span>
+                  </span>
 
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                className="group relative bg-white/60 backdrop-blur-md ring-2  xl:mb-0  ring-blue-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
-              >
-                <span className="z-10 relative">Compare <span>Between Competitors</span> </span>
-               
-              </motion.button>
+                  <ArrowRight
+                    className="z-10 relative transition-transform group-hover:translate-x-2 duration-300"
+                    size={18}
+                  />
+
+                  {/* INTENSE SHIMMER */}
+                  <span className="absolute inset-0 pointer-events-none">
+                    <span
+                      className="absolute -inset-x-full top-0 h-full w-2/3
+                      bg-gradient-to-r from-transparent via-white/60 to-transparent
+                      animate-shimmer-fast"
+                    />
+                  </span>
+
+                  {/* GLOW PULSE */}
+                  <span className="absolute inset-0 rounded-lg ring-2 ring-blue-400/40 animate-pulse-glow" />
+                </motion.button>
+
+
+
+              <Link to="/comparison">
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  className="group relative bg-white/60 backdrop-blur-md ring-2 xl:mb-0 ring-blue-700 text-blue-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 hover:ring-2 hover:ring-blue-500 transition-all duration-300"
+                >
+                  <span className="z-10 relative">
+                    Compare <span>Between Competitors</span>
+                  </span>
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
 
@@ -243,11 +267,11 @@ const pricing = {
       <div className="max-w-5xl 2xl:max-w-7xl  mx-auto text-center">
 
     {/* Heading */}
-<h2 className="text-2xl sm:text-4xl 2xl:text-5xl font-bold mb-4 leading-tight">
-  <span className="inline-block bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 bg-clip-text text-transparent pb-1">
-    Propelling You Forward.
-  </span>
-</h2>
+    <h2 className="text-2xl sm:text-4xl 2xl:text-5xl font-bold mb-4 leading-tight">
+      <span className="inline-block bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 bg-clip-text text-transparent pb-1">
+        Propelling You Forward.
+      </span>
+    </h2>
 
 
 
@@ -868,10 +892,10 @@ const pricing = {
       <div>
         <h4 className="text-slate-900 font-semibold mb-3">Tutorials</h4>
         <ul className="space-y-2 text-slate-600">
-          <li><a href="#" className="hover:underline">Resources</a></li>
-          <li><a href="#" className="hover:underline">Guides</a></li>
+          <li><a href="#" className="hover:underline">How-To's</a></li>
+          <li><a href="#" className="hover:underline">YouTube Channel</a></li>
           <li><a href="#" className="hover:underline">Examples</a></li>
-          <li><a href="#" className="hover:underline">Docs</a></li>
+          <li><a href="#" className="hover:underline">Documentation</a></li>
         </ul>
       </div>
       {/* Column 2 */}
@@ -900,7 +924,16 @@ const pricing = {
       <div>
         <h4 className="text-slate-900 font-semibold mb-3">Join the Community</h4>
         <div className="flex gap-4 mt-2 text-slate-600">
-          <a href="#" className="hover:text-slate-900"><Twitter className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-slate-900">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 300 271"
+            className="w-5 h-5 fill-current"
+          >
+            <path d="M236 0h46l-101 115 118 156h-92l-72-94-82 94H0l108-124L0 0h94l65 85zm-14 244h22L76 26H52z"/>
+          </svg>
+      </a>
+
           <a href="#" className="hover:text-slate-900"><Facebook className="w-5 h-5" /></a>
           <a href="#" className="hover:text-slate-900"><Youtube className="w-5 h-5" /></a>
           <a href="#" className="hover:text-slate-900"><Instagram className="w-5 h-5" /></a>

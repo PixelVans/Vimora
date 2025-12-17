@@ -27,7 +27,11 @@ export default function ComparisonPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <strong className="text-blue-900">VIMORA</strong> vs HDPhotoHub vs Spiro vs Aryeo
+            <strong className="text-blue-600">VIMORA</strong>{" "}
+              <span className="text-slate-700 font-medium">
+                vs HDPhotoHub vs Spiro vs Aryeo
+              </span>
+
           </motion.h1>
           <motion.p
             className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto"
@@ -56,16 +60,16 @@ export default function ComparisonPage() {
             <tbody className="divide-y divide-slate-200">
               {[
                 ["Cost per Delivery", "$3 pay-as-you-go, as low as $1.20 w/ plan", "$5–$10", "$5", "$4.90–$17.40"],
-                ["Storage Policy", "12 months, easily extended", "Unclear, long-term cost unknown", "Not documented", "Included, capped by listings"],
+                ["Storage Policy", "12 months, easily extended", "Unclear, long-term cost unknown", "12 months", "Included, capped by listings"],
                 ["Revision Requests", "Built-in, tracked, chargeable", "Email-based notes", "Not supported", "Basic comment feature"],
                 ["White Glove Brokerage Support", "Yes (custom onboarding)", "No", "No", "Enterprise only"],
                 ["User Experience", "Modern (2025-level)", "Feels like 2015", "Fast but basic", "Clean but heavy"],
                 ["Property Websites", "Premium, modern", "Dated, clunky", "Clean, basic", "Customizable, complex"],
-                ["Who's It For?", "Photographers, teams, brokerages", "Solo photographers", "Solo photographers", "Media companies, brokerages"],
+                ["Who's It For?", "Photographers, teams, brokerages", "Solo photographers", "Photographers, teams, brokerages", "Media companies, brokerages"],
                 ["Built By", "Active RE photographers", "1990s RE photographer", "Indie Devs", "Zillow"]
               ].map(([label, vimora, hdp, spiro, aryeo], idx) => (
                 <tr key={idx} className={idx % 2 === 0 ? "bg-blue-50" : "bg-white"}>
-                  <td className="p-4 font-medium text-slate-700">{label}</td>
+                  <td className="p-4 font-semibold text-blue-950">{label}</td>
                   <td className="p-4">{vimora}</td>
                   <td className="p-4">{hdp}</td>
                   <td className="p-4">{spiro}</td>
