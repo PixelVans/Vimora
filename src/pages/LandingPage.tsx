@@ -1,5 +1,5 @@
 import Navbar from "@components/Navbar";
-import {   Facebook, Youtube, Instagram,
+import { 
   CheckCircle, ArrowRight, 
   Rocket,
   ChevronDownIcon,User, TrendingUp, Crown, 
