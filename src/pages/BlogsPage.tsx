@@ -93,7 +93,7 @@ export default function BlogsPage() {
       <Navbar />
       <section className="bg-slate-50 py-12 mt-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-center text-3xl sm:text-4xl font-bold mb-9 text-transparent bg-clip-text bg-gradient-to-r from-blue-950 to-sky-400">
+          <h1 className="text-center text-3xl sm:text-4xl font-bold mb-9 text-slate-700"> 
             Vimora Blog
           </h1>
 
@@ -133,7 +133,45 @@ export default function BlogsPage() {
             {loading
               ? Array.from({ length: 6 }).map((_, i) => <BlogSkeleton key={i} />)
               : posts.length === 0 ? (
-                <p className="text-center col-span-full text-slate-500">No posts found.</p>
+               <div className="text-center col-span-full py-16 flex flex-col items-center gap-4 text-slate-500">
+                  <img
+                      src="/media/no blogs.jpg"
+                      alt="No blog posts yet"
+                      className="w-96 h-auto opacity-90 mix-blend-multiply"
+                    />
+
+
+                  <p className="text-3xl font-semibold text-slate-700">
+                    No posts yet
+                  </p>
+
+                   <p className="text-lg text-slate-600 leading-relaxed font-light">
+                    Looks like there's nothing here right now. We're working on helpful content 
+                  </p>
+                   {/* Decorative Separator */}
+                  <div className="flex items-center justify-center py-4">
+                    <div className="h-px w-16 bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                    <div className="mx-4 w-2 h-2 rounded-full bg-slate-300"></div>
+                    <div className="h-px w-16 bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                  </div>
+                  
+                  {/* Action Indicators */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <div className="flex items-center gap-2 text-sm text-slate-500">
+                      <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+                      <span>Content in progress</span>
+                    </div>
+                    <div className="hidden sm:block text-slate-300">•</div>
+                    <div className="flex items-center gap-2 text-sm text-slate-500">
+                      <svg className="w-4 h-4 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
+                      </svg>
+                      <span>Check back soon</span>
+                    </div>
+                  </div>
+                </div>
+
+
               ) : (
                 posts.map((post) => (
                   <div
