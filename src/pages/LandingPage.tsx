@@ -143,20 +143,17 @@ export default function LandingPage() {
       <Navbar />
 
       {/* hero section */}
-    <section className="relative pt-20 mt-20 lg:mt-20 2xl:mt-40 flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white ">
-        {/* --- Background image (soft blur pattern) --- */}
+    <section className="relative pt-20 mt-20 lg:mt-20 2xl:mt-40 mb-5 2xl:mb-15 flex justify-center bg-gradient-to-b from-white via-blue-100/30 to-white ">
+        
         <img
           src="/media/footer.jpg"
           alt="Background pattern"
           className="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm"
         />
 
-        {/* --- Gradient overlay --- */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70"></div>
 
-        
-        {/* --- Main Content --- */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-16  
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-16  
         
         lg:mb-9 2xl:mb-12 items-center max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-10 2xl:px-16">
           {/* Text Content */}
@@ -203,7 +200,7 @@ export default function LandingPage() {
                     size={18}
                   />
 
-                  {/* INTENSE SHIMMER */}
+                  
                   <span className="absolute inset-0 pointer-events-none">
                     <span
                       className="absolute -inset-x-full top-0 h-full w-2/3
@@ -212,7 +209,7 @@ export default function LandingPage() {
                     />
                   </span>
 
-                  {/* GLOW PULSE */}
+                  
                   <span className="absolute inset-0 rounded-lg ring-2 ring-blue-400/40 animate-pulse-glow" />
                 </motion.button>
 
@@ -233,7 +230,7 @@ export default function LandingPage() {
 
           {/* Image Section */}
           <div className="relative flex justify-center lg:justify-end ">
-            {/* Main banner image */}
+            
             <img
               src="/media/listings.png"
               alt="Landing visual"
@@ -267,8 +264,7 @@ export default function LandingPage() {
 
 
   {/* propelling section */}
-
-      <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[100px] md:rounded-tr-[200px] lg:rounded-tr-[250px] mt-5 md:mt-9  shadow-md">
+    <section className="bg-slate-100 py-20 px-4 sm:px-6 rounded-tl-none rounded-tr-[100px] md:rounded-tr-[200px] lg:rounded-tr-[250px] mt-5 md:mt-9  shadow-md">
       <div className="max-w-5xl 2xl:max-w-7xl  mx-auto text-center">
 
     {/* Heading */}
@@ -288,87 +284,87 @@ export default function LandingPage() {
     <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
 {/* Steps to Deliver Section */}
 <section className="relative bg-[#020617] py-28 md:px-16 overflow-hidden rounded-3xl">
-  {/* Background visual texture */}
-  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(56,189,248,0.15),transparent_60%)]" />
-  <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-blue-500/5 blur-[200px] -translate-x-1/2 -translate-y-1/2" />
+        {/* Background visual texture */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(56,189,248,0.15),transparent_60%)]" />
+        <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-blue-500/5 blur-[200px] -translate-x-1/2 -translate-y-1/2" />
 
-  {/* Header */}
-  <div className="relative z-10 text-center mb-9 sm:mb-24">
-    <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
-      3 Simple Steps To Deliver A Listing
-    </h3>
-    <p className="text-slate-400 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
-      From upload to payout, experience a smooth and professional delivery process built for real estate photographers.
-    </p>
-  </div>
-
-  {/* Steps */}
-  <div className="relative z-10 max-w-7xl mx-auto space-y-12 md:space-y-24 px-4">
-    {[
-      {
-        id: 1,
-        title: "Upload Your Media",
-        text: "Drag and drop your photos, videos, virtual tours, floor plans, and more. Branded delivery pages are automatically created and easy to use.",
-        img: "/media/upload-illustration.jpg",
-      },
-      {
-        id: 2,
-        title: "Share With A Click",
-        text: "Send your media directly to your client in a clean, professional link with no login required. Everything is perfectly formatted for any device.",
-        img: "/media/share.png",
-      },
-      {
-        id: 3,
-        title: "Get Paid Instantly",
-        text: "Vimora tracks your services and payments automatically, creating clear, itemized invoices so you can focus on your craft. Integrated with Stripe for fast and secure payouts.",
-        img: "/media/pay.png",
-      },
-    ].map((step, index) => {
-      const imageOnRight = index % 2 === 0; 
-      return (
-        <div
-          key={step.id}
-          className={`flex flex-col ${
-            imageOnRight ? "md:flex-row-reverse" : "md:flex-row"
-          } items-center gap-10 md:gap-20 group`}
-        >
-          {/* Image Block */}
-          <div className="md:w-1/2 relative">
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/30 to-cyan-400/10 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700" />
-            <div className="overflow-hidden rounded-lg border border-white/10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)]">
-              <img
-                src={step.img}
-                alt={step.title}
-                className="w-auto h-[220px] xl:h-auto  object-cover transform transition duration-700 "
-              />
-            </div>
-          </div>
-
-          {/* Text Block */}
-          <div className="md:w-1/2 space-y-6 px-2">
-            <div className="flex items-center gap-3">
-              <span className="text-blue-400 text-lg sm:text-xl font-semibold tracking-widest">
-                STEP <span className="text-yellow-100 text-lg sm:text-2xl  ">0{step.id}</span>
-              </span>
-              <div className="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent" />
-            </div>
-            <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
-              {step.title}
-            </h4>
-            <p className="text-slate-400 text-sm 2xl:text-lg leading-relaxed max-w-lg">
-              {step.text}
-            </p>
-          </div>
+        {/* Header */}
+        <div className="relative z-10 text-center mb-9 sm:mb-24">
+          <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-200 text-transparent bg-clip-text">
+            3 Simple Steps To Deliver A Listing
+          </h3>
+          <p className="text-slate-400 mt-4 text-sm sm:text-lg max-w-2xl mx-auto px-4">
+            From upload to payout, experience a smooth and professional delivery process built for real estate photographers.
+          </p>
         </div>
-      );
-    })}
-  </div>
 
-  {/* Subtle line separator */}
-  <div className="mt-9 lg:mt-24 flex justify-center">
-    <div className="w-44 h-[4px] bg-gradient-to-r from-blue-400 via-orange-300 to-blue-400 rounded-full opacity-70 animate-pulse" />
-  </div>
-</section>
+        {/* Steps */}
+        <div className="relative z-10 max-w-7xl mx-auto space-y-12 md:space-y-24 px-4">
+          {[
+            {
+              id: 1,
+              title: "Upload Your Media",
+              text: "Drag and drop your photos, videos, virtual tours, floor plans, and more. Branded delivery pages are automatically created and easy to use.",
+              img: "/media/upload-illustration.jpg",
+            },
+            {
+              id: 2,
+              title: "Share With A Click",
+              text: "Send your media directly to your client in a clean, professional link with no login required. Everything is perfectly formatted for any device.",
+              img: "/media/share.png",
+            },
+            {
+              id: 3,
+              title: "Get Paid Instantly",
+              text: "Vimora tracks your services and payments automatically, creating clear, itemized invoices so you can focus on your craft. Integrated with Stripe for fast and secure payouts.",
+              img: "/media/pay.png",
+            },
+          ].map((step, index) => {
+            const imageOnRight = index % 2 === 0; 
+            return (
+              <div
+                key={step.id}
+                className={`flex flex-col ${
+                  imageOnRight ? "md:flex-row-reverse" : "md:flex-row"
+                } items-center gap-10 md:gap-20 group`}
+              >
+                {/* Image Block */}
+                <div className="md:w-1/2 relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/30 to-cyan-400/10 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700" />
+                  <div className="overflow-hidden rounded-lg border border-white/10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)]">
+                    <img
+                      src={step.img}
+                      alt={step.title}
+                      className="w-auto h-[220px] xl:h-auto  object-cover transform transition duration-700 "
+                    />
+                  </div>
+                </div>
+
+                {/* Text Block */}
+                <div className="md:w-1/2 space-y-6 px-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-blue-400 text-lg sm:text-xl font-semibold tracking-widest">
+                      STEP <span className="text-yellow-100 text-lg sm:text-2xl  ">0{step.id}</span>
+                    </span>
+                    <div className="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent" />
+                  </div>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
+                    {step.title}
+                  </h4>
+                  <p className="text-slate-400 text-sm 2xl:text-lg leading-relaxed max-w-lg">
+                    {step.text}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Subtle line separator */}
+        <div className="mt-9 lg:mt-24 flex justify-center">
+          <div className="w-44 h-[4px] bg-gradient-to-r from-blue-400 via-orange-300 to-blue-400 rounded-full opacity-70 animate-pulse" />
+        </div>
+      </section>
 
 
 
@@ -446,50 +442,50 @@ export default function LandingPage() {
 
     {/* Text Description */}
  <div className="xl:w-1/2 space-y-5">
-  {[
-    {
-      id: 1,
-      title: "Revisions",
-      text: "Clients can request edits directly in the project, so you never lose track of feedback. Every version stays organized and visible.",
-      color: "from-blue-400 via-sky-400 to-cyan-300",
-      glow: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]",
-    },
-    {
-      id: 2,
-      title: "Communication",
-      text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
-      color: "from-orange-300 via-orange-300 to-orange-300",
-      glow: "group-hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]",
-    },
-    {
-      id: 3,
-      title: "Teams & Delegation",
-      text: "Assign roles, manage assistants, or invite editors. Vimora makes teamwork fluid and transparent for every project.",
-      color: "from-slate-100 via-gray-100 to-gray-100",
-      glow: "group-hover:shadow-[0_0_25px_rgba(148,163,184,0.4)]",
-    },
-  ].map((feature) => (
-    <div
-      key={feature.id}
-      className={`group relative flex flex-col gap-2 rounded-xl p-[1px] bg-gradient-to-r ${feature.color} ${feature.glow} transition-all duration-500`}
-    >
-      {/* Inner card */}
-      <div className="flex flex-col gap-2 rounded-[10px] bg-slate-950/80 p-6 backdrop-blur-xl transition-all duration-500 group-hover:bg-slate-900/80">
-        {/* Title */}
-        <h3
-          className={`text-lg font-semibold bg-gradient-to-r ${feature.color} bg-clip-text text-transparent tracking-tight`}
+      {[
+        {
+          id: 1,
+          title: "Revisions",
+          text: "Clients can request edits directly in the project, so you never lose track of feedback. Every version stays organized and visible.",
+          color: "from-blue-400 via-sky-400 to-cyan-300",
+          glow: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]",
+        },
+        {
+          id: 2,
+          title: "Communication",
+          text: "Stay connected with built-in chat and notifications. Discuss project details without leaving the Vimora workspace.",
+          color: "from-orange-300 via-orange-300 to-orange-300",
+          glow: "group-hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]",
+        },
+        {
+          id: 3,
+          title: "Teams & Delegation",
+          text: "Assign roles, manage assistants, or invite editors. Vimora makes teamwork fluid and transparent for every project.",
+          color: "from-slate-100 via-gray-100 to-gray-100",
+          glow: "group-hover:shadow-[0_0_25px_rgba(148,163,184,0.4)]",
+        },
+      ].map((feature) => (
+        <div
+          key={feature.id}
+          className={`group relative flex flex-col gap-2 rounded-xl p-[1px] bg-gradient-to-r ${feature.color} ${feature.glow} transition-all duration-500`}
         >
-          {feature.title}
-        </h3>
+          {/* Inner card */}
+          <div className="flex flex-col gap-2 rounded-[10px] bg-slate-950/80 p-6 backdrop-blur-xl transition-all duration-500 group-hover:bg-slate-900/80">
+            {/* Title */}
+            <h3
+              className={`text-lg font-semibold bg-gradient-to-r ${feature.color} bg-clip-text text-transparent tracking-tight`}
+            >
+              {feature.title}
+            </h3>
 
-        {/* Text */}
-        <p className="text-slate-300 text-sm leading-relaxed max-w-md">
-          {feature.text}
-        </p>
-      </div>
+            {/* Text */}
+            <p className="text-slate-300 text-sm leading-relaxed max-w-md">
+              {feature.text}
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
-  ))}
-</div>
 
 
   </div>
