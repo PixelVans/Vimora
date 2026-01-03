@@ -168,11 +168,15 @@ export default function LandingPage() {
           >
             
               <h1 className="font-bold leading-[1.05] xl:leading-[1.1] text-slate-900 text-4xl xl:text-4xl 2xl:text-[57px]">
-                  Real estate media delivery,{" "}
-                  <span className="text-blue-600">
-                    done right.
-                  </span>
+                Better workflows.{" "}
+                <span className="text-blue-600">Lower fees.</span>
               </h1>
+
+              <p className=" text-slate-700 font-semibold text-lg xl:text-xl 2xl:text-2xl">
+                A better way to deliver real estate media.
+              </p>
+
+
 
 
               <p className="text-sm sm:text-lg text-slate-700 mx-2">
@@ -228,8 +232,8 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Image Section */}
-          <div className="relative flex justify-center lg:justify-end">
-            {/* Main banner image (static) */}
+          <div className="relative flex justify-center lg:justify-end ">
+            {/* Main banner image */}
             <img
               src="/media/listings.png"
               alt="Landing visual"
@@ -238,10 +242,10 @@ export default function LandingPage() {
 
             {/* Animated camera overlay */}
             <motion.img
-              src="/media/camera.png" // replace with your actual image
+              src="/media/Photographer-stats.png" 
               alt="Overlay visual"
-              className="hidden xl:flex absolute right-[-10px] 2xl:right-[-50px] bottom-0  transform translate-x-1/4 translate-y-1/4 
-                        z-20 w-1/3 max-w-[200px] rounded-lg shadow-lg"
+              className="hidden xl:flex absolute right-[-0px] 2xl:right-[-40px] bottom-[-20px] border  transform translate-x-1/4 translate-y-1/4 
+                        z-20 w-[500px] max-w-[1400px] h-auto rounded-lg  shadow-md"
               animate={{ scale: [1, 1.03, 1] }}
               transition={{
                 repeat: Infinity,
@@ -273,28 +277,15 @@ export default function LandingPage() {
         Propelling You Forward.
       </span>
     </h2>
-
-
-
-
-   
-
-      <p className="text-slate-700 text-sm sm:text-lg max-w-6xl mx-auto mb-10 px-2 md:px-9 lg:px-0">
+    <p className="text-slate-700 text-sm sm:text-lg max-w-6xl mx-auto mb-10 px-2 md:px-9 lg:px-0">
         We took all the best aspects of every real estate media delivery platform and streamlined it,
         improving upon the user experience in every way so you don't have something holding you back,
         you have something propelling you forward.
       </p>
 
 
-    {/* Image */}
-   
-
-
-    {/* Down Arrow */}
+     {/* Down Arrow */}
     <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
-
-
-
 {/* Steps to Deliver Section */}
 <section className="relative bg-[#020617] py-28 md:px-16 overflow-hidden rounded-3xl">
   {/* Background visual texture */}
@@ -333,7 +324,7 @@ export default function LandingPage() {
         img: "/media/pay.png",
       },
     ].map((step, index) => {
-      const imageOnRight = index % 2 === 0; // Step 1 right, Step 2 left, Step 3 right
+      const imageOnRight = index % 2 === 0; 
       return (
         <div
           key={step.id}
@@ -387,7 +378,7 @@ export default function LandingPage() {
 
 {/* Collaboration & Communication Section */}
 <section className="relative bg-white py-12 xl:py-28 md:px-16 overflow-hidden">
-  {/* Subtle background accents */}
+  {/* background accents */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,165,0,0.08),transparent_60%)]" />
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_70%)]" />
 
@@ -552,30 +543,30 @@ export default function LandingPage() {
 
 
  {/* key feature of vimora */}
-<section className="bg-blue-950 py-20 xl:py-32 hidden shadow">
-    <div className="md:px-6 mx-auto text-center">
-  <div className="text-center mb-10 xl:mb-14">
-    <h2 className="text-2xl sm:text-4xl font-bold text-white font-inter mb-3">
-      What Powers Vimora
-    </h2>
-    <div className="w-24 h-[6px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
-  </div>
-{/* Gradient wrapper */}
-    <div className="relative overflow-hidden">
-      
-{/* Marquee rows */}
-      <div className="space-y-8">
-      {featureRows.map((row, i) => (
-        <FeatureMarqueeRow
-          key={i}
-          items={row}
-          speed={50}
-        />
-      ))}
-    </div>
-    </div>
-  </div>
-</section>
+    <section className="bg-blue-950 py-20 xl:py-32 hidden shadow">
+        <div className="md:px-6 mx-auto text-center">
+      <div className="text-center mb-10 xl:mb-14">
+        <h2 className="text-2xl sm:text-4xl font-bold text-white font-inter mb-3">
+          What Powers Vimora
+        </h2>
+        <div className="w-24 h-[6px] mx-auto bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500 rounded-full blur-[0.5px]" />
+      </div>
+    {/* Gradient wrapper */}
+        <div className="relative overflow-hidden">
+          
+    {/* Marquee rows */}
+          <div className="space-y-8">
+          {featureRows.map((row, i) => (
+            <FeatureMarqueeRow
+              key={i}
+              items={row}
+              speed={50}
+            />
+          ))}
+        </div>
+        </div>
+      </div>
+    </section>
    
 
 
