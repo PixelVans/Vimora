@@ -282,6 +282,8 @@ export default function LandingPage() {
 
      {/* Down Arrow */}
     <ChevronDownIcon className="h-9 w-9 text-blue-600 mx-auto mb-6 animate-bounce" />
+
+
 {/* Steps to Deliver Section */}
 <section className="relative bg-[#020617] py-28 md:px-16 overflow-hidden rounded-3xl">
         {/* Background visual texture */}
@@ -394,11 +396,10 @@ export default function LandingPage() {
 
     {/* Image Cluster */}
     <div className="relative flex justify-center lg:w-1/2">
-      {/* Background shape glow */}
-      <div className="absolute -inset-6 bg-gradient-to-tr from-orange-200/40 via-blue-100/30 to-transparent blur-3xl rounded-full" />
+     <div className="absolute -inset-6 bg-gradient-to-tr from-orange-200/40 via-blue-100/30 to-transparent blur-3xl rounded-full" />
 
       
-     {/* Mobile (stacked overlap, topmost last) */}
+     {/* Mobile (stacked overlap, ) */}
       <div className="relative flex flex-col items-center xl:hidden mt-[-50px] md:mt-10 mb-[-350px]">
         <img
           src="/media/chat.png"
@@ -471,15 +472,12 @@ export default function LandingPage() {
         >
           {/* Inner card */}
           <div className="flex flex-col gap-2 rounded-[10px] bg-slate-950/80 p-6 backdrop-blur-xl transition-all duration-500 group-hover:bg-slate-900/80">
-            {/* Title */}
-            <h3
+             <h3
               className={`text-lg font-semibold bg-gradient-to-r ${feature.color} bg-clip-text text-transparent tracking-tight`}
             >
               {feature.title}
             </h3>
-
-            {/* Text */}
-            <p className="text-slate-300 text-sm leading-relaxed max-w-md">
+          <p className="text-slate-300 text-sm leading-relaxed max-w-md">
               {feature.text}
             </p>
           </div>

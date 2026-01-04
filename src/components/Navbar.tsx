@@ -66,7 +66,7 @@ export default function Navbar() {
             }}
             onMouseLeave={() => {
               if (!isMobile) {
-                setTimeout(() => setResourcesOpen(false), 100); // slight delay
+                setTimeout(() => setResourcesOpen(false), 100); 
               }
             }}
           >
@@ -83,8 +83,6 @@ export default function Navbar() {
 
               {/* Spacer to prevent hover gap */}
               <div className="h-4 pointer-events-none" />
-
-              {/* Dropdown with smooth animation */}
               <div
                 className={`
                   absolute left-1/2 top-full -translate-x-1/2 z-20
@@ -120,7 +118,7 @@ export default function Navbar() {
                   />
                 </button>
 
-                {/* Spacer to visually separate without hover gap */}
+                {/* Spacer */}
                 <div className="h-4 pointer-events-none" />
 
                 {/* Dropdown with transition */}
@@ -264,9 +262,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-
-
-
 
     </div>
   );

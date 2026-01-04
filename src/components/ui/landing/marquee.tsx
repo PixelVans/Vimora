@@ -29,6 +29,7 @@ export type MarqueeRowProps = {
   speed?: number;
 };
 
+// Feature Marquee Row Component
 export function FeatureMarqueeRow({
   items,
   reverse = false,
@@ -81,7 +82,7 @@ export function FeatureMarqueeRow({
 }
 
 
-
+// Marquee Row Component
 export function MarqueeRow({
   items,
   reverse = false,
@@ -136,7 +137,7 @@ export function MarqueeRow({
   );
 }
 
-
+// Utility function to split features into rows
 export function splitFeaturesIntoRows(features: Feature[], rows: number): Feature[][] {
     const res = Array.from({ length: rows }, () => [] as Feature[]);
     features.forEach((feature, i) => res[i % rows].push(feature));
