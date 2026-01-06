@@ -307,7 +307,7 @@ export default function LandingPage() {
               id: 1,
               title: "Upload Your Media",
               text: "Drag and drop your photos, videos, virtual tours, floor plans, and more. Branded delivery pages are automatically created and easy to use.",
-              img: "/media/upload-illustration.jpg",
+              img: "/media/listings.png",
             },
             {
               id: 2,
