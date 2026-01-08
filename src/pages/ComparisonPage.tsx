@@ -136,6 +136,11 @@ export default function ComparisonPage() {
           </div>
         </section>
       </div>
+
+      {/* CTA section */}
+      <div className="py-9">
+        {/* <CtaSection /> */}
+      </div>
       <Footer />
     </>
   );

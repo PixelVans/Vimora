@@ -2,7 +2,8 @@ import {  Send, ImageIcon, HomeIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { keyFeatures } from '@/components/ui/landing/constants';
+import { keyFeatures } from '@/components/landingPageUtils/constants';
+// import CtaSection from '@/components/landingPageUtils/CtaSection';
 
 
   
@@ -107,6 +108,9 @@ export default function MeaningPage() {
 
 
      {/* Call to Action */}
+     <div className='py-9'>
+      {/* <CtaSection /> */}
+     </div>
       
       </div>
         </div>
