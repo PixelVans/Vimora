@@ -9,7 +9,7 @@ export default function Footer() {
 
     {/* Middle - Links */}
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 text-sm">
-      {/* Column 1 */}
+      {/* tutorials */}
       <div>
         <h4 className="text-slate-900 font-semibold mb-3">Tutorials</h4>
         <ul className="space-y-2 text-slate-600">
@@ -19,7 +19,7 @@ export default function Footer() {
           <li><a href="#" className="hover:underline">Documentation</a></li>
         </ul>
       </div>
-      {/* Column 2 */}
+      {/* about */}
       <div>
         <h4 className="text-slate-900 font-semibold mb-3">About</h4>
         <ul className="space-y-2 text-slate-600">
@@ -30,7 +30,7 @@ export default function Footer() {
           <li><a href="#" className="hover:underline">Feature Roadmap</a></li>
         </ul>
       </div>
-      {/* Column 3 */}
+      {/* support */}
       <div>
         <h4 className="text-slate-900 font-semibold mb-3">Support</h4>
         <ul className="space-y-2 text-slate-600">
@@ -41,7 +41,7 @@ export default function Footer() {
           <li><a href="#" className="hover:underline">White Glove Onboarding</a></li>
         </ul>
       </div>
-      {/* Column 4 - Socials */}
+      {/*  Socials */}
       <div>
         <h4 className="text-slate-900 font-semibold mb-3">Join the Community</h4>
         <div className="flex gap-4 mt-2 text-slate-600">

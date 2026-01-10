@@ -121,7 +121,7 @@ export default function Navbar() {
                 {/* Spacer */}
                 <div className="h-4 pointer-events-none" />
 
-                {/* Dropdown with transition */}
+                {/* Dropdown  */}
                 <div
                   className={`
                     absolute left-1/2 top-full -translate-x-1/2 z-20
@@ -179,7 +179,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Content */}
+          {/* Menu Items */}
           <div className="p-6 pt-20 space-y-4 font-inter text-slate-900 text-sm">
             <Link
               to="/#pricing"

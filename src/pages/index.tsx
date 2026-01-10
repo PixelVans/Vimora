@@ -13,6 +13,8 @@ import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+
+
 const Index = () => {
 
   const location = useLocation();
@@ -21,6 +23,7 @@ const Index = () => {
   useEffect(() => {
     const hash = location.hash;
         if (hash) {
+
           // DOM to render before scrolling
           setTimeout(() => {
             const el = document.querySelector(hash);
